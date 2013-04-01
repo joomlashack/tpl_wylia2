@@ -36,20 +36,23 @@ if ($responsivePage == 0) {
 </head>
 <body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass . $responsive?>"<?php endif; ?>>
     
-
-    <div class="<?php echo $containerClass ?>">
-        <!-- header -->
-        <header id="header">
+    <!-- header -->
+    <header id="header">
+        <div class="<?php echo $containerClass ?>">
             <div class="wrapper-toolbar"> 
                 <?php if ($this->countModules('toolbar') or $this->countModules('menu') or $this->countModules('logo')) : ?>
                     <w:logo name="toolbar" menuWrapClass="navbar-fixed-top navbar-inverse" containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode ?>" />
                     <!-- menu -->
-                    <div class="<?php echo $gridMode; ?> clearfix">
-                        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-inverse" name="menu" />
-                    </div>
+                    <?php if ($this->countModules('menu')) : ?>
+                        <div class="<?php echo $gridMode; ?> clearfix">
+                            <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-inverse" name="menu" />
+                        </div>
+                    <?php endif; ?>
                 <?php endif; ?>
            </div>
-        </header>
+       </div>
+    </header>
+    <div class="<?php echo $containerClass ?>">
         <?php if ($this->countModules('menu')) : ?>
         <!-- menu -->
         <w:nav name="menu" />
