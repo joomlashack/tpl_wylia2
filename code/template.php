@@ -27,7 +27,6 @@ $responsive = ' responsive';
 if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
-
 ?>
 <doctype>
 <html>
@@ -35,36 +34,36 @@ if ($responsivePage == 0) {
     
 <w:head />
 </head>
-<body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass .  $responsive?>"<?php endif; ?>>
-    <div class="bgGradient"></div>
-    <?php if ($this->countModules('toolbar')) : ?>
-        <!-- menu -->
-        <div class="wrappToolbar">
-            <w:logo name="toolbar" menuWrapClass="navbar-fixed-top navbar-inverse" containerClass="container-fluid" rowClass="<?php echo $gridMode ?>" />
-        </div>
-        <?php if ($this->countModules('menu')) : ?>
-                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-inverse" name="menu" />
-        <?php endif; ?>
-    <?php endif; ?>
-    <div class="<?php echo $containerClass ?> container-showtime">
+<body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass . $responsive?>"<?php endif; ?>>
+    
+
+    <div class="<?php echo $containerClass ?>">
         <!-- header -->
         <header id="header">
-            <div class="<?php echo $gridMode; ?> clearfix">
-                <w:logo name="menu" />
-                <div class="clear"></div>
-            </div>
+            <div class="wrapper-toolbar"> 
+                <?php if ($this->countModules('toolbar') or $this->countModules('menu') or $this->countModules('logo')) : ?>
+                    <w:logo name="toolbar" menuWrapClass="navbar-fixed-top navbar-inverse" containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode ?>" />
+                    <!-- menu -->
+                    <div class="<?php echo $gridMode; ?> clearfix">
+                        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-inverse" name="menu" />
+                    </div>
+                <?php endif; ?>
+           </div>
         </header>
-   
+        <?php if ($this->countModules('menu')) : ?>
+        <!-- menu -->
+        <w:nav name="menu" />
+        <?php endif; ?>
         <!-- featured -->
         <?php if ($this->countModules('featured')) : ?>
-        <div id="featured" class="featured-position">
+        <div id="featured">
             <w:module type="none" name="featured" chrome="xhtml" />
         </div>
         <?php endif; ?>
         <!-- grid-top -->
         <?php if ($this->countModules('grid-top')) : ?>
-        <div id="grid-top" class="hero-unit grid-top">
-            <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
+        <div id="grid-top">
+            <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
         <?php if ($this->countModules('grid-top2')) : ?>
@@ -106,10 +105,9 @@ if ($responsivePage == 0) {
                 <w:module name="sidebar2" chrome="xhtml" />
             </aside>
         </div>
-        <hr class="showtime-hr">
         <?php if ($this->countModules('grid-bottom')) : ?>
         <!-- grid-bottom -->
-        <div id="grid-bottom" class="grid-bottom">
+        <div id="grid-bottom" >
                 <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
@@ -124,36 +122,8 @@ if ($responsivePage == 0) {
         <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
         <?php endif; ?>
         
-        <hr class="showtime-hr">
     </div>
-    <script type="text/javascript">
-
-     jQuery.noConflict();
-        jQuery(document).ready(function(){
-
-            var wrapperToolbarHeight = jQuery('.wrapper-toolbar').css('min-height');
-
-            jQuery('.wrappToolbar').css('height','11px');
-            jQuery('#toolbar ul.nav').css('padding-bottom','20px');
-
-            jQuery("#btnToolbar").click(function(){
-
-                jQuery('.wrapper-toolbar').toggleClass('wtheight')
-
-
-                if (jQuery('.wrapper-toolbar').hasClass('wtheight')) {
-                    jQuery('.wrappToolbar').css('height',wrapperToolbarHeight);
-                    jQuery('#toolbar ul.nav').css('padding-bottom','0');
-                }else{
-
-                    jQuery('.wrappToolbar').css('height','11px');
-                    jQuery('#toolbar ul.nav').css('padding-bottom','20px');
-                };
-            });
-            
-        });
-
-  </script>
+    
     <!-- footer -->
     <div class="wrapper-footer">
         <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
@@ -165,6 +135,6 @@ if ($responsivePage == 0) {
             </div>
         </footer>
     </div>
-    <div class="bg-footer"></div>
+    
 </body>
 </html>
