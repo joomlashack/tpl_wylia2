@@ -18,6 +18,7 @@ if ($gridMode == 'row-fluid') {
     $containerClass = 'container-fluid';
 }else{
     $fixedClass = ' fixed';
+    $contentFixed = ' content-fixed';
 }
 
 $bodyclass = "";
@@ -55,7 +56,7 @@ if ($responsivePage == 0) {
            </div>
        </div>
     </header>
-    <div class="<?php echo $containerClass ?>">
+    <div class="<?php echo $containerClass . $contentFixed?>">
         <div class="container-fluid">       
             <?php if ($this->countModules('menu')) : ?>
                 <!-- menu -->
