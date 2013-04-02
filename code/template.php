@@ -40,6 +40,9 @@ if ($responsivePage == 0) {
 </head>
 <body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass . $responsive . $fixedClass?>"<?php endif; ?>>
     
+    <?php if ($fixedClass ==" fixed") : ?>
+    
+    <?php else : ?>
     <!-- header -->
     <header id="header">
         <div class="<?php echo $containerClass ?>">
@@ -56,7 +59,27 @@ if ($responsivePage == 0) {
            </div>
        </div>
     </header>
+    <?php endif; ?>
     <div class="<?php echo $containerClass . $contentFixed?>">
+        <?php if ($fixedClass ==" fixed") : ?>
+           <!-- header -->
+            <header id="header">
+                <div class="<?php echo $containerClass ?>">
+                    <div class="wrapper-toolbar"> 
+                        <?php if ($this->countModules('toolbar') or $this->countModules('menu') or $this->countModules('logo')) : ?>
+                            <w:logo name="toolbar" menuWrapClass="navbar-fixed-top navbar-inverse" containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode ?>" />
+                            <!-- menu -->
+                            <?php if ($this->countModules('menu')) : ?>
+                                <div class="<?php echo $gridMode; ?> clearfix">
+                                    <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-inverse" name="menu" />
+                                </div>
+                            <?php endif; ?>
+                        <?php endif; ?>
+                   </div>
+               </div>
+            </header>
+        <?php endif; ?>
+
         <div class="container-fluid">       
             <?php if ($this->countModules('menu')) : ?>
                 <!-- menu -->
