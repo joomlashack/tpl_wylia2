@@ -34,23 +34,16 @@ if ($responsivePage == 0) {
 ?>
 <doctype>
 <html>
-<head>
-    
-<w:head />
+<head>  
+    <w:head />
 </head>
-<body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass . $responsive . $fixedClass?>"<?php endif; ?>>
+<body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass . $responsive . $fixedClass?>" <?php endif; ?>>
     <!-- header -->
     <header id="header">
         <div class="<?php echo $containerClass ?>">
             <div class="wrapper-toolbar"> 
-               <?php if ($this->countModules('toolbar') or $this->countModules('menu') or $this->countModules('logo')) : ?>
+               <?php if ($this->countModules('toolbar') or $this->countModules('logo')) : ?>
                    <w:logo name="toolbar" menuWrapClass="navbar-fixed-top navbar-inverse  <?php if ($fixedClass ==" fixed") : ?> container<?php endif; ?>" containerClass="container-fluid" rowClass="row-fluid" />
-                   <!-- menu -->
-                   <?php if ($this->countModules('menu')) : ?>
-                       <div class="<?php echo $gridMode; ?> clearfix">
-                           <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-inverse" name="menu" />
-                       </div>
-                   <?php endif; ?>
                <?php endif; ?>
             </div>
        </div>
@@ -70,13 +63,13 @@ if ($responsivePage == 0) {
              <!-- grid-top -->
              <?php if ($this->countModules('grid-top')) : ?>
              <div id="grid-top">
-                 <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+                 <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
              </div>
              <?php endif; ?>
              <?php if ($this->countModules('grid-top2')) : ?>
              <!-- grid-top2 -->
              <div id="grid-top2">
-                 <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+                 <w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
              </div>
              <?php endif; ?>
             <div id="main-content" class="row-fluid">
@@ -115,13 +108,13 @@ if ($responsivePage == 0) {
              <?php if ($this->countModules('grid-bottom')) : ?>
              <!-- grid-bottom -->
              <div id="grid-bottom" >
-                     <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
+                     <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
              </div>
              <?php endif; ?>
              <?php if ($this->countModules('grid-bottom2')) : ?>
              <!-- grid-bottom2 -->
              <div id="grid-bottom2" >
-                     <w:module type="<?php echo $gridMode; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+                     <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
              </div>
              <?php endif; ?>
              <?php if ($this->countModules('bottom-menu')) : ?>
@@ -131,7 +124,6 @@ if ($responsivePage == 0) {
         </div>
         
     </div>
-    
     <!-- footer -->
     <div class="wrapper-footer">
         <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
