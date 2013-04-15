@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.0_beta</version>
+	<version>1.0.0_beta1</version>
     <description>TPL_JS_WYLIA_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -45,6 +45,7 @@
 		<position>featured</position>
 		<position>grid-top</position>
 		<position>grid-top2</position>
+		<position>grid-top3</position>
 		<position>above-content</position>
 		<position>breadcrumbs</position>
 		<position>sidebar1</position>
@@ -102,7 +103,6 @@
 				</field>
                 <!-- End of default Wright params -->
 			</fieldset>
-			
 		</fields>
 	</config>
 </extension>

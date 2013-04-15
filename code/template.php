@@ -19,6 +19,7 @@ if ($gridMode == 'row-fluid') {
 }else{
     $fixedClass = ' fixed';
     $contentFixed = ' content-fixed';
+    $footerWrapperClass = ' container';
 }
 
 $bodyclass = "";
@@ -37,7 +38,7 @@ if ($responsivePage == 0) {
 <head>  
     <w:head />
 </head>
-<body<?php if ($bodyclass != "") :?> class="<?php echo $bodyclass . $responsive . $fixedClass?>" <?php endif; ?>>
+<body class="<?php if ($bodyclass != "") :?><?php echo $bodyclass?> <?php endif; ?><?php   echo $responsive . $fixedClass?>">
     <!-- header -->
     <header id="header">
         <div class="<?php echo $containerClass ?>">
@@ -72,8 +73,20 @@ if ($responsivePage == 0) {
                  <w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
              </div>
              <?php endif; ?>
+             <?php if ($this->countModules('grid-top3')) : ?>
+             <!-- grid-top3 -->
+             <div id="grid-top3">
+                 <w:module type="row-fluid" name="grid-top3" chrome="wrightflexgrid" />
+             </div>
+             <?php endif; ?>
+             <?php if ($this->countModules('breadcrumbs')) : ?>
+                 <!-- breadcrumbs -->
+                 <div id="breadcrumbs">
+                         <w:module type="single" name="breadcrumbs" chrome="none" />
+                 </div>
+             <?php endif; ?>
             <div id="main-content" class="row-fluid">
-                 <!-- sidebar1 -->
+                <!-- sidebar1 -->
                  <aside id="sidebar1">
                      <w:module name="sidebar1" chrome="xhtml" />
                  </aside>
@@ -85,56 +98,54 @@ if ($responsivePage == 0) {
                          <w:module type="none" name="above-content" chrome="xhtml" />
                      </div>
                      <?php endif; ?>
-                     <?php if ($this->countModules('breadcrumbs')) : ?>
-                     <!-- breadcrumbs -->
-                     <div id="breadcrumbs">
-                             <w:module type="single" name="breadcrumbs" chrome="none" />
-                     </div>
-                     <?php endif; ?>
                      <!-- component -->
                      <w:content />
-                     <?php if ($this->countModules('below-content')) : ?>
-                     <!-- below-content -->
-                     <div id="below-content">
-                         <w:module type="none" name="below-content" chrome="xhtml" />
-                     </div>
-                     <?php endif; ?>
                  </section>
                  <!-- sidebar2 -->
                  <aside id="sidebar2">
                      <w:module name="sidebar2" chrome="xhtml" />
                  </aside>
              </div>
+             <?php if ($this->countModules('below-content')) : ?>
+                <!-- below-content -->
+                <div id="below-content">
+                    <w:module type="none" name="below-content" chrome="xhtml" />
+                </div>
+             <?php endif; ?>
              <?php if ($this->countModules('grid-bottom')) : ?>
              <!-- grid-bottom -->
              <div id="grid-bottom" >
                      <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
              </div>
              <?php endif; ?>
-             <?php if ($this->countModules('grid-bottom2')) : ?>
-             <!-- grid-bottom2 -->
-             <div id="grid-bottom2" >
-                     <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
-             </div>
-             <?php endif; ?>
-             <?php if ($this->countModules('bottom-menu')) : ?>
-             <!-- bottom-menu -->
-             <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" />
-             <?php endif; ?>
         </div>
         
     </div>
     <!-- footer -->
-    <div class="wrapper-footer">
+    <div class="wrapper-footer<?php echo $footerWrapperClass?>">
         <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
-             <div class="<?php echo $containerClass ?>">
+            <hr class="hr-footer">
+            <div class="<?php echo $containerClass ?>">
+            <div class="container-fluid">
+                <?php if ($this->countModules('grid-bottom2')) : ?>
+                <!-- grid-bottom2 -->
+                <div id="grid-bottom2" >
+                        <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
+                </div>
+                <?php endif; ?>
+                <?php if ($this->countModules('bottom-menu')) : ?>
+                    <!-- bottom-menu -->
+                    <w:nav containerClass="contaniner-fluid" rowClass="row-fluid" name="bottom-menu" />
+                <?php endif; ?>
                 <?php if ($this->countModules('footer')) : ?>
                     <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
                 <?php endif; ?>
                 <w:footer />
+            </div>
             </div>
         </footer>
     </div>
     
 </body>
 </html>
+    
