@@ -754,7 +754,7 @@ div.img-peak-bottom{
 			text-shadow: none;
 		}
 		span.separator{
-			color: @navbarLinkColor !important;
+			color: @navbarLinkColor;
 			&:hover{
 				color: @navbarLinkColorHover;
 				background-color: @navbarInverseLinkBackgroundHover;
@@ -780,7 +780,7 @@ div.img-peak-bottom{
 		}
 	}
 	.nav > li:hover,.nav > li.active:hover {
-		> a{
+		> a, > span.separator{
 			color:@dropdownLinkColorHover;
 			background-color: @navbarInverseLinkBackgroundHover;
 		}
@@ -803,6 +803,12 @@ div.img-peak-bottom{
 				padding-bottom: 5px;
 				padding-top: 5px;
 				position: relative;
+				&:hover{
+					background-image:none;
+					-ms-filter:none;
+					    filter:none;
+					background-color: transparent;
+				}
 			}
 			&:first-child{
 				margin-top: 0;
@@ -898,8 +904,47 @@ div.img-peak-bottom{
 		}
 	}
 }
-.navbar-inverse .nav > .active > a, .navbar-inverse .nav > .active > a:hover, .navbar-inverse .nav > .active > a:focus{
+.navbar-inverse {
+	.nav > .active > a, .navbar-inverse .nav > .active > a:hover, .navbar-inverse .nav > .active > a:focus{
 	.box-shadow(none);
+	}
+	li{
+		a,span.separator{
+			text-shadow: none;
+		}
+		span.separator{
+			color: @navbarInverseLinkColor;
+			&:hover{
+				color: @navbarInverseLinkColorHover;
+				background-color: @navbarInverseLinkBackgroundHover;
+				background-image:none;
+				-ms-filter:none;
+				    filter:none;
+			}
+		}
+	}
+	.nav li.dropdown{
+		>.dropdown-toggle .caret{
+			background-image: url(../images/caret.jpg);
+			background-position: right top;
+			background-repeat: no-repeat;
+			border: none;
+			height: 6px;
+			width: 17px;
+		}
+		&:hover{
+			>.dropdown-toggle .caret{
+				background-image: url(../images/caret-hover.jpg);
+			}	
+		}
+	}
+	.nav > li:hover,.nav > li.active:hover {
+		> a, > span.separator{
+			color:@dropdownLinkColorHover;
+			background-color: @navbarInverseLinkBackgroundHover;
+		}
+	}
+
 }
 .nav-tabs{
 	border-bottom: none;
