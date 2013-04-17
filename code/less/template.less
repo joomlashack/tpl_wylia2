@@ -750,6 +750,9 @@ div.img-peak-bottom{
 	-ms-filter:none;
 	    filter:none;
 	li{
+		a,span.separator{
+			text-shadow: none;
+		}
 		span.separator{
 			color: @navbarLinkColor;
 			&:hover{
@@ -761,33 +764,94 @@ div.img-peak-bottom{
 			}
 		}
 	}
-	.dropdown-menu{
+	.nav li.dropdown{
+		>.dropdown-toggle .caret{
+			background-image: url(../images/caret.jpg);
+			background-position: right top;
+			background-repeat: no-repeat;
+			border: none;
+			height: 6px;
+			width: 17px;
+		}
+		&:hover{
+			>.dropdown-toggle .caret{
+				background-image: url(../images/caret-hover.jpg);
+			}	
+		}
+	}
+	.nav > li:hover,.nav > li.active:hover {
+		> a{
+			color:@dropdownLinkColorHover;
+			background-color: @navbarInverseLinkBackgroundHover;
+		}
+	}
+	.dropdown-menu {
 		.border-radius(0 0 0 0);
-		padding-left: 5px;
+		border: none;
+		padding-bottom: 0;
 		padding-right: 5px;
+		padding-top: 0;
+		left: 10px;
 		&::before,&::after{
 			border: none !important;
 		}
+		
 		li{
 			border-bottom: 1px solid @color_five;
-			padding-bottom: 3px;
-			padding-top: 3px;
+			margin-top: -1px;
+			a{
+				padding-bottom: 5px;
+				padding-top: 5px;
+				position: relative;
+			}
+			&:first-child{
+				margin-top: 0;
+			}
 			&:last-child{
 				border-bottom: none;
+				&.parent{
+					.icon-caret-right{
+						&::after{
+							border: none;
+							content: none;
+							width: 0;
+						}
+					}
+				}
+			}
+			a::after{
+				background-color: @dropdownBackground;
+				content: '';
+				height: 100%;
+				position: absolute;
+				right: 100%;
+				top: 0;
+				width: 10px;
+			}
+			&:hover > a::after, &.active > a::after{
+				background-image: url(../images/bg-link-hover.png);
+				background-color: transparent;
 			}
 			&.parent{
 				.icon-caret-right{
 					color: @color_five;
 					float: right;
 					font-size: 20px;
+					margin-top: -5px;
 					margin-right: -20px;
-					margin-top: -7px;
-					padding-bottom: 8px;
-					padding-left: 10px;
-					padding-right: 10px;
-					padding-top: 8px;
+					padding: 4px 10px 3px;
 					text-align: right;
 					width: 10px;
+					position: relative;
+					&::after{
+						border-bottom: 1px solid @color_five;
+						bottom: -1px;
+						content: "";
+						height: 0;
+						left: 0;
+						position: absolute;
+						width: 100%;
+					}
 				}
 				&:hover{
 					.icon-caret-right{
@@ -809,8 +873,9 @@ div.img-peak-bottom{
 		}
 		.dropdown-menu{
 			background-color: @color_five;
-			left: 103%;
 			border: none;
+			left: 103%;
+			margin-top: 0;
 			li{
 				border-bottom-color: @dropdownBackground;
 				&.parent{
@@ -823,6 +888,11 @@ div.img-peak-bottom{
 							color: @dropdownLinkColorHover;
 						}
 					}
+				}
+				a::after{
+					content: none;
+					height: 0;
+					width: 0;
 				}
 			}
 		}
@@ -1890,7 +1960,10 @@ ol.linenums {
 				.ie7-inline-block();
 				display: inline-block;
 				float: none;
+				padding-bottom: 4px;
+				padding-top: 4px;
 				text-transform: lowercase;
+				text-shadow: none;
 			}
 		}
 		.dropdown-menu{
