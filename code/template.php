@@ -125,6 +125,12 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
                      <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
              </div>
              <?php endif; ?>
+             <?php if ($this->countModules('grid-bottom2')) : ?>
+             <!-- grid-bottom2 -->
+             <div id="grid-bottom2" >
+                     <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
+             </div>
+             <?php endif; ?>
         </div>
         
     </div>
@@ -134,10 +140,10 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
             <hr class="hr-footer">
             <div class="<?php echo $containerClass ?>">
             <div class="container-fluid">
-                <?php if ($this->countModules('grid-bottom2')) : ?>
-                <!-- grid-bottom2 -->
-                <div id="grid-bottom2" >
-                        <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
+                <?php if ($this->countModules('grid-bottom3')) : ?>
+                <!-- grid-bottom3 -->
+                <div id="grid-bottom3" >
+                        <w:module type="row-fluid" name="grid-bottom3" chrome="wrightflexgrid" />
                 </div>
                 <?php endif; ?>
                 <?php if ($this->countModules('bottom-menu')) : ?>
