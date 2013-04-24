@@ -31,6 +31,13 @@ $responsive = ' responsive';
 if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
+if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
+    $sidebarClass= ' sb1 sb2';
+}elseif ($this->countModules('sidebar2')) {
+        $sidebarClass = ' sb2';
+}elseif ($this->countModules('sidebar1')) {
+        $sidebarClass = ' sb1';
+}
 
 ?>
 <doctype>
@@ -38,7 +45,7 @@ if ($responsivePage == 0) {
 <head>  
     <w:head />
 </head>
-<body class="<?php if ($bodyclass != "") :?><?php echo $bodyclass?> <?php endif; ?><?php   echo $responsive . $fixedClass?>">
+<body class="<?php if ($bodyclass != "") :?><?php echo $bodyclass?> <?php endif; ?><?php   echo $responsive . $fixedClass . $sidebarClass?>">
     <!-- header -->
     <header id="header">
         <div class="<?php echo $containerClass ?>">
