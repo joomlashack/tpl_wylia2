@@ -50,6 +50,11 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
     <header id="header">
         <div class="<?php echo $containerClass ?>">
             <div class="wrapper-toolbar"> 
+                <?php if ($this->countModules('top')) : ?>
+                    <div id="top">
+                         <w:module type="row-fluid" name="top" chrome="wrightflexgrid" />
+                    </div>
+                <?php endif; ?>
                <?php if ($this->countModules('toolbar') or $this->countModules('logo')) : ?>
                    <w:logo name="toolbar" menuWrapClass="navbar-fixed-top navbar-inverse  <?php if ($fixedClass ==" fixed") : ?> container<?php endif; ?>" containerClass="container-fluid" rowClass="row-fluid" />
                <?php endif; ?>
