@@ -370,8 +370,8 @@ ul.ul-inline{
 	.content-fixed{
 		background-color: @white;
 	}
-	.wrapper-footer{
-		position: relative;
+	#footer.sticky{
+		width: auto;
 	}
 	#header{
 		margin-bottom: 0;
@@ -591,7 +591,7 @@ div.img-peak-bottom{
 			}	
 		}
 	}
-	.slidermanDescriptionCont{
+	#slider2{
 		.slideTitle{
 			background-color: @btnPrimaryColor;
 			color: @gridBottom3Color;
@@ -747,20 +747,20 @@ div.img-peak-bottom{
 			top: 0;
 			width: 82px;
 		}
-		&.wylia-featured-two::after{
+		&.wylia-featured-secondary{
+			background-color: @white;
+			border: 1px solid @featuredBackground;
+		}
+		&.wylia-featured-tertiary::after{
 			background-color: @color_five;
 		}
-		&.wylia-featured-three{
+		&.wylia-featured-inverse{
 			background-color: @color_five;
 			color:@btnSecondaryColor;
 			&::after{
 				background-color: @btnPrimaryBackground;
 				color:@color_five;
 			}
-		}
-		&.wylia-featured-four{
-			background-color: @white;
-			border: 1px solid @featuredBackground;
 		}
 	}
 }
@@ -993,6 +993,7 @@ div.img-peak-bottom{
 	-ms-filter:none;
 	    filter:none;
 	.btn-navbar{
+		.box-shadow(none);
 		background-image:none;
 		-ms-filter:none;
 		    filter:none;
@@ -1322,12 +1323,14 @@ dl.nav-tabs{
 	h5{
 		font-size: 16px;
 	}
-	p{
-		margin-bottom: 20px;
-		&:first-letter{
+	.wylia-featured{
+		p:first-of-type:first-letter{
 			font-size: 20px;
 			font-weight: bold;
 		}
+	}
+	p{
+		margin-bottom: 20px;
 		+ .readmore{
 			border-bottom: 1px solid @featuredBackground;
 			display: block;
@@ -1383,8 +1386,11 @@ ol.linenums {
 .radio, .checkbox{
 	float: none;
 }
-.rm-mb{
+.rm-margin-bottom{
 	margin-bottom: 0!important;
+}
+.rm-padding-bottom{
+	padding-bottom: 0 !important;
 }
 .row-fluid{
 	> .module_ms3,>.moduletable_ms3,> .moduletext_ms3 > .well{
@@ -1981,6 +1987,9 @@ ol.linenums {
 .thumbnail{
 	background-color: @white;
 }
+.wrapper-white{
+	background-color: @white;
+}
 .wrapper-menu{
 	margin-top: 10px;
 }
@@ -2113,6 +2122,7 @@ ol.linenums {
 	input[type="text"],input[type="password"]{
 		border-color: @btnPrimaryColor;
 		background-color: @btnPrimaryColor;
+		color: @featuredBackground;
 	}
 	a{
 		color:@navbarFooterLinkColor;
@@ -2244,6 +2254,9 @@ ol.linenums {
 }
 #header{
 	background-color: @navbarInverseBackground;
+	.container{
+		background-color:@navbarInverseBackground;
+	}
 }
 #login-form{
 	.nav.nav-list.well{
@@ -2255,12 +2268,11 @@ ol.linenums {
 }
 #logo{
 	.box-sizing(border-box);
-	border-right: 1px solid @navtabsBgHover;
-	padding-bottom: 11px;
-	padding-top: 17px;
 	display: inline-block;
 	.ie7-inline-block();
+	border-right: 1px solid @navtabsBgHover;
 	float: none;
+	padding: 17px 20px 11px;
 	vertical-align: middle;
 }
 #main-content{
@@ -2292,6 +2304,10 @@ ol.linenums {
 	.module{
 		> .module_ms3:first-child,.moduletable_ms3:first-child,.moduletext_ms3:first-child,> .well:first-child{
 			margin-top: 10px;
+		}
+		.moduletable_ms2,.moduletext_ms2,.module_ms2{
+			border-bottom: 1px solid @featuredBackground;
+			border-top: 1px solid @featuredBackground;
 		}
 	}
 }
@@ -2411,29 +2427,41 @@ ol.linenums {
 		}
 	}
 		
-	.slidermanButtonsCont{
-		.sliderPrev,  .sliderNext{
-			text-indent: -9999px;
-			width: 51px !important;
-			height: 60px;
-		} 
-		
-		.sliderPrev {
-			background-image: url(../images/ss-prev.png) !important;
-		}
-		.sliderNext{
-			background-image: url(../images/ss-next.png) !important;
-		}
+}
+.slidermanButtonsCont{
+	.sliderPrev,  .sliderNext{
+		text-indent: -9999px;
+		width: 51px !important;
+		height: 60px;
+	} 
+	
+	.sliderPrev {
+		background-image: url(../images/ss-prev.png) !important;
+	}
+	.sliderNext{
+		background-image: url(../images/ss-next.png) !important;
 	}
 }
-#toolbar{
+#toolbar,#menu{
+	float: none;
+	margin-bottom: 0;
+	.navbar-inner{
+		border: none;
+	}
+}
+#menu{
 	display: inline-block;
 	.ie7-inline-block();
-	float: none;
+	.navbar-inner{
+		padding-left: 0;
+		padding-right: 0;
+		text-align: right;
+	}
 	.nav{
 		display: inline-block;
 		.ie7-inline-block();
 		float: none;
+		text-align: left;
 		li{
 			display: inline-block;
 			.ie7-inline-block();
@@ -2471,6 +2499,7 @@ ol.linenums {
 			}
 		}
 	}
+
 }
 // // ---------------------------
 .responsive-utilities-test li + li {
