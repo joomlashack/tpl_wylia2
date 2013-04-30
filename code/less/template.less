@@ -2449,6 +2449,42 @@ ol.linenums {
 		border: none;
 	}
 }
+#top{
+	color:@navbarFooterLinkColor;
+	border-bottom: 1px solid @btnPrimaryColor;
+	h1,h2,h3,h4,h5,h6{
+		color: @btnSecondaryColor;
+		font-weight: normal;
+	}
+	.module{
+		border-left: 1px solid @btnPrimaryColor;
+		margin-bottom: 0;
+		padding-top: 10px;
+		> form{
+			margin-bottom: 0;	
+		}
+		&.first{
+			border-left: none;
+		}
+	}
+	input{
+		background-color: @btnPrimaryColor;
+		border-color: @btnPrimaryColor;
+		color: @tableBorder;
+		&[type="image"]{
+			background-color: transparent;
+			margin-bottom: 10px;
+			min-height: 24px;
+			width: 23px;
+		}
+		+ input[type="image"]{
+			margin-left: 15px;
+		}
+		&#mod-search-searchword{
+			width: auto;
+		}
+	}
+}
 #menu{
 	display: inline-block;
 	.ie7-inline-block();
