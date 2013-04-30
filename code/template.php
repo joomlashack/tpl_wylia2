@@ -150,11 +150,12 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
 
             jQuery.noConflict();
             jQuery(document).ready(function(){
-                var heightHeader = jQuery('#header').height();
-                var heightToolbar = jQuery('#toolbar').height();
                 var menuNavCollapse = jQuery('#menu .nav-collapse');
                 var toolbarNavCollapse = jQuery('#toolbar .nav-collapse');
+
                 function navPositionMobile() {
+                    var heightHeader = jQuery('#header').height();
+                    var heightToolbar = jQuery('#toolbar').height();
                     menuNavCollapse.css('top',heightHeader);
                     toolbarNavCollapse.css('top',heightToolbar);
                 }
