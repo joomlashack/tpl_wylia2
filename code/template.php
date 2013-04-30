@@ -57,7 +57,9 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
             <?php endif; ?>
             <?php if ($this->countModules('top')) : ?>
                 <div id="top">
-                     <w:module type="row-fluid" name="top" chrome="wrightflexgrid" />
+                    <div class="container-fluid">
+                        <w:module type="row-fluid" name="top" chrome="wrightflexgrid" />
+                    </div>
                 </div>
             <?php endif; ?>
             <?php if ($this->countModules('menu')) : ?>
@@ -144,6 +146,33 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
             </div>
             
         </div>
+        <script type="text/javascript">
+
+            jQuery.noConflict();
+            jQuery(document).ready(function(){
+                var heightHeader = jQuery('#header').height();
+                var heightToolbar = jQuery('#toolbar').height();
+                var menuNavCollapse = jQuery('#menu .nav-collapse');
+                var toolbarNavCollapse = jQuery('#toolbar .nav-collapse');
+                function navPositionMobile() {
+                    menuNavCollapse.css('top',heightHeader);
+                    toolbarNavCollapse.css('top',heightToolbar);
+                }
+                function navPosition(){
+                    if (jQuery(window).width() <= 979){
+                        navPositionMobile();
+                    }else{
+                        menuNavCollapse.css('top','auto');
+                        toolbarNavCollapse.css('top','auto');
+                    }
+                }
+                navPosition();
+                jQuery(window).resize(function() {
+                    navPosition();
+                });
+            });
+
+        </script>
         <!-- footer -->
         <div class="wrapper-footer<?php echo $footerWrapperClass?>">
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
