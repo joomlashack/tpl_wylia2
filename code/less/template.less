@@ -2442,11 +2442,30 @@ ol.linenums {
 		background-image: url(../images/ss-next.png) !important;
 	}
 }
-#toolbar,#menu{
+#menu{
 	float: none;
 	margin-bottom: 0;
 	.navbar-inner{
 		border: none;
+	}
+}
+#toolbar{
+	float: none;
+	margin-bottom: 0;
+	.nav{
+		> li{
+			border-left: 1px solid @color_five;
+			&:first-child{
+				border-left: none;
+			}
+		}
+	}
+}
+.nav {
+	li >a.action{
+		.transition(all 0.25s ease-in-out);
+		background-color: @ms5linkColor;
+		color: @color_five;
 	}
 }
 #top{
