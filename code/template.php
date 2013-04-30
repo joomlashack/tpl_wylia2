@@ -52,7 +52,7 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
             <?php if ($this->countModules('toolbar')) : ?>
                 <div class="wrapper-toolbar"> 
                     <!-- toolbar -->
-                    <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+                    <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top <?php echo $footerWrapperClass?>" type="toolbar" name="toolbar" />
                 </div>
             <?php endif; ?>
             <?php if ($this->countModules('top')) : ?>
