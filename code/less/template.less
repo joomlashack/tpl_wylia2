@@ -85,6 +85,9 @@ blockquote{
 		}
 	}
 }
+cite{
+	color: @linkColor;
+}
 small{
 	color:@blockquoteSmallColor;
 	font-size: 12px;
@@ -642,7 +645,7 @@ div.img-peak-bottom{
 ._article{
 	.slideTitle{
 		border-top: 2px solid @btnPrimaryBackground;
-		background-color: @btnPrimaryColor;
+		background-color: @navtabsBgHover;
 		color: @gridBottom3Color;
 		font-family: @serifFontFamily;
 		font-size: 14px;
@@ -983,7 +986,7 @@ div.img-peak-bottom{
 	text-align: center;
  
 	&::after{
-		border-bottom: 1px solid @btnPrimaryColor;
+		border-bottom: 1px solid @navtabsBgHover;
 		bottom: 10px;
 		content: '';
 		height: 0;
@@ -992,7 +995,7 @@ div.img-peak-bottom{
 		width: 100%;
 	}
 	&::before{
-		border-top: 1px solid @btnPrimaryColor;
+		border-top: 1px solid @navtabsBgHover;
 		content: '';
 		height: 0;
 		left: 0;
@@ -2608,13 +2611,13 @@ ol.linenums {
 }
 #top{
 	color:@navbarFooterLinkColor;
-	border-bottom: 1px solid @btnPrimaryColor;
+	border-bottom: 1px solid @navtabsBgHover;
 	h1,h2,h3,h4,h5,h6{
 		color: @btnSecondaryColor;
 		font-weight: normal;
 	}
 	.module{
-		border-left: 1px solid @btnPrimaryColor;
+		border-left: 1px solid @navtabsBgHover;
 		margin-bottom: 0;
 		padding-top: 10px;
 		> form{
@@ -2625,8 +2628,8 @@ ol.linenums {
 		}
 	}
 	input{
-		background-color: @btnPrimaryColor;
-		border-color: @btnPrimaryColor;
+		background-color: @navtabsBgHover;
+		border-color: @navtabsBgHover;
 		color: @tableBorder;
 		&[type="image"]{
 			background-color: transparent;
@@ -2895,10 +2898,13 @@ ol.linenums {
 		padding-left: 15px;
 	}
 }
-.contact .thumbnail.pull-right{
-	float: none;
-	display: table;
-	margin-left: 140px;
+.contact {
+	margin-bottom: 20px;
+	.thumbnail.pull-right{
+		float: none;
+		display: table;
+		margin-left: 140px;
+	}
 }
 #myTab li {
 	margin-bottom: 0;
@@ -2947,4 +2953,10 @@ div.categories-list li {
 }
 .accordion-inner{
 	border-top-color: @wellBackground;
+}
+div:first-child+.panel{
+	.border-radius(0 0 0 0);
+}
+#footer{
+	color: @white;
 }
