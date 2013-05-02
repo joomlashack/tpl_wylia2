@@ -1,0 +1,106 @@
+
+.fixed{
+	background-image: url(../images/teenstyle/bg.jpg);
+}
+#breadcrumbs,#breadcrumb{
+	.icon-caret-right{
+		background-image: url('../images/vintage/bread-arrow.png') !important;
+		background-repeat: no-repeat;
+		&::before{
+			content: '';
+		}
+	}
+}
+[class^="module"] .tag, [class*="module"] .tag{
+	background-color: @navbarLinkColor;
+	color: @white;
+}
+[class^="latestnews"]{
+	li {
+		a{
+			.icon-file {
+				&::before{
+					background-image: url(../images/teenstyle/arrow-latest-news.png);
+				}
+			}
+		}
+	}
+}
+.module_ms5,
+.moduletable_ms5,
+.moduletext_ms5{
+	color: @white;
+	div.lifestream ul.stream{
+		color: @white;
+	}
+}
+#top {
+	h1,h2,h3,h4,h5,h6{
+		color:@white;
+	}
+	input[type="image"]{
+		position: relative;
+		&::after{
+			position: absolute;
+			height: 100%;
+			width: 1005px;
+			background-image: url(../images/teenstyle/searchButton.gif);
+			background-repeat: no-repeat;
+		}
+	}
+}
+hr{
+	border-bottom-color: @navtabsBg;
+	border-top-color: @navtabsBg;
+	&.wylia-hr-one{
+		background-image: url(../images/teenstyle/wylia-hr-one.png);
+	}
+	&.wylia-hr-two{
+		background-image: url(../images/wylia-hr-two.png);
+	}
+	&.wylia-hr-three{
+		border-bottom: 1px solid @featuredBackground;
+	}
+	&.hr-footer{
+		border-top: 4px solid @white;
+	}
+}
+[class^="mostread"] li{
+		background-image: url(../images/teenstyle/wylia-hr-one.png);
+}
+._article{
+	.slideTitle{
+		cite{
+			color: @navbarLinkColor;
+		}
+	}
+}
+.wylia-price {
+	span.wylia-price{
+		color: @white;
+	}
+}
+a[data-icon="icon-fb"]{
+	background-image: url(../images/teenstyle/icon-fb.png);
+}
+a[data-icon="icon-twitter"]{
+	background-image: url(../images/teenstyle/icon-twitter.png);
+}
+a[data-icon="icon-rss"]{
+	background-image: url(../images/teenstyle/icon-rss.png);
+}
+a[data-icon="icon-flickr"]{
+	background-image: url(../images/teenstyle/icon-flickr.png);
+}
+a[data-icon="icon-gplus"]{
+	background-image: url(../images/teenstyle/icon-gplus.png);
+}
+a[data-icon="icon-yt"]{
+	background-image: url(../images/teenstyle/icon-yt.png);
+}
+#grid-bottom3{
+	color: @white;
+	strong{
+		color: @gridBottom3Color;
+	}
+}
