@@ -411,9 +411,11 @@ p.p-featured:first-letter{
 		width: auto;
 	}
 	#header{
-		margin-bottom: 0;
 		background-color: transparent;
 	}
+}
+#header{
+	margin-bottom: 0;
 }
 #main:first-child:last-child{
 	#above-content [class^="module"]:first-child>h3::before{
@@ -513,6 +515,7 @@ p.p-featured:first-letter{
 }
 div.img-peak-right{
 	display: inline-block;
+	max-width: 100%;
 	overflow: hidden;
 	position: relative;
 	img.img-peak-right{
@@ -541,6 +544,7 @@ div.img-peak-right{
 }
 div.img-peak-bottom{
 	display: inline-block;
+	max-width: 100%;
 	overflow: hidden;
 	position: relative;
 	img.img-peak-bottom{
@@ -2102,6 +2106,12 @@ ol.linenums {
 }
 .wrapper-white{
 	background-color: @white;
+	padding-left: 0;
+	padding-right: 0;
+	> .container-fluid{
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 .wrapper-menu{
 	margin-top: 10px;
@@ -2377,6 +2387,10 @@ ol.linenums {
 	background-color: @navbarInverseBackground;
 	> .container{
 		background-color:@navbarInverseBackground;
+	}
+	> [class^="container"]{
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 #login-form{
