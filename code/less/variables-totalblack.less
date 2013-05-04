@@ -7,23 +7,26 @@
 @color_two:#DFBF8D;
 @color_three:#FFFEDF;
 @color_four:#990819;
-@color_five:@color_one;
+@color_five:@white;
+@borderColor:#3E4147;
+@bgContainer:#131416;
 // Tabs 
-@navtabsColor:@color_five;
+@navtabsColor:@white;
 @navtabsColorHover:@color_three;
-@navtabsBg:#DFC08F;
+@navtabsBg:@navbarLinkColor;
 @navtabsBgHover:#3E4147;
 //_________________
 @pageHeaderBorder:#ddd; 
 @codeColor:#B28500;
 @blockquoteColor:#3E4147;
 @blockquoteSmallColor:#3E3F46;
-@featuredBackground:#DDD;
+@featuredBackground:#1C1E21;
 @featuredBorder:#AAA;
-@gridBottom3Color:#F0F0DF;
-@navbarFooterLinkColor:#DFBF8E;
-@ms5linkColor:#DFBF8E;
+@gridBottom3Color:#F0F0E0;
+@navbarFooterLinkColor:@navbarLinkColor;
+@ms5linkColor:@navbarLinkColor;
 // Tables Colors
+@tableVintageBackground:#dfc08f;
 @tableVintageBackgroundAccent:#F0E2CA;
 @tableTeenBackgroundAccent:#C2E3E5;
 @tableTeenTheadBackground:#62B7BC;
@@ -37,9 +40,9 @@
 @tableNaturalTheadBackground:#77E393;
 // Btn Colors
 @btnPrimaryColor:@white;
-@btnPrimaryBorder:#D4A968;
+@btnPrimaryBorder:#878481;
 @btnSecondaryColor:#FFFEDF;
-@btnSecondaryBorder:#660000;
+@btnSecondaryBorder:#C40E3B;
 @btnNavbar:#232629;
 //
 // Variables
@@ -76,7 +79,7 @@
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
-@textColor:             @color_five;
+@textColor:             @white;
 
 
 // Links
@@ -152,11 +155,11 @@
 
 // Forms
 // -------------------------
-@inputBackground:               @featuredBackground;
-@inputBorder:                   @featuredBackground;
+@inputBackground:               #ddd;
+@inputBorder:                   #ddd;
 @inputBorderRadius:             0;
 @inputDisabledBackground:       desaturate(@grayLight,13%);
-@formActionsBackground:         #f5f5f5;
+@formActionsBackground:         @borderColor;
 @inputHeight:                   @baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
 
 
@@ -167,7 +170,7 @@
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
-@dropdownLinkColor:             #DFC08F;
+@dropdownLinkColor:             @navbarLinkColor;
 @dropdownLinkColorHover:        @navbarInverseLinkColorHover;
 @dropdownLinkColorActive:       @navbarInverseLinkColorHover;
 
@@ -215,7 +218,7 @@
 
 // Wells
 // -------------------------
-@wellBackground:                  #f5f5f5;
+@wellBackground:                  @borderColor;
 
 
 // Navbar
@@ -228,12 +231,12 @@
 @navbarBackground:                #1C1E21;
 @navbarBorder:                    #111;
 
-@navbarText:                      @ms5linkColor;
-@navbarLinkColor:                 @ms5linkColor;
-@navbarLinkColorHover:            #FFFDDD;
-@navbarLinkColorActive:           #FFFDDD;
-@navbarLinkBackgroundHover:       #101010;
-@navbarLinkBackgroundActive:      #101010;
+@navbarText:                      #A8A09E;
+@navbarLinkColor:                 #A8A09E;
+@navbarLinkColorHover:            @white;
+@navbarLinkColorActive:           @white;
+@navbarLinkBackgroundHover:       @navtabsBgHover;
+@navbarLinkBackgroundActive:      @navtabsBgHover;
 
 @navbarBrandColor:                @navbarLinkColor;
 
@@ -243,10 +246,10 @@
 @navbarInverseBorder:                    #1C1D1F;
 
 @navbarInverseText:                      @color_three;
-@navbarInverseLinkColor:                 @color_two;
-@navbarInverseLinkColorHover:            @color_three;
-@navbarInverseLinkColorActive:           @color_three;
-@navbarInverseLinkBackgroundHover:       @btnPrimaryColor;
+@navbarInverseLinkColor:                 @navbarLinkColor;
+@navbarInverseLinkColorHover:            @navbarLinkColorHover;
+@navbarInverseLinkColorActive:           @navbarLinkColorHover;
+@navbarInverseLinkBackgroundHover:       @navbarLinkBackgroundHover;
 @navbarInverseLinkBackgroundActive:      transparent;
 
 @navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
@@ -266,7 +269,7 @@
 
 // Hero unit
 // -------------------------
-@heroUnitBackground:              @white;
+@heroUnitBackground:              #3E4147;
 @heroUnitHeadingColor:            inherit;
 @heroUnitLeadColor:               inherit;
 

@@ -11,6 +11,27 @@
 		}
 	}
 }
+
+[class^="module"],[class*="module"]{
+
+	&.wylia-new{
+		&.wylia-new-primary::before{
+			color:@white;
+		}
+	}
+	&.wylia-hot{
+		&.wylia-hot-primary::before{
+			color:@white;
+		}
+	}
+	.wylia-featured.wylia-featured-inverse{
+		color:@white;
+		&::after{
+			color:@white;
+		}
+	}
+}
+
 [class^="module"] .tag, [class*="module"] .tag{
 	background-color: @navbarLinkColor;
 	color: @white;
@@ -109,4 +130,12 @@ a[data-icon="icon-yt"]{
 }
 #footer{
 	color: @white;
+}
+.hero-unit{
+	h1,h2,h3,h4,h5,h6{
+		font-family: 'Abril Fatface';
+	}
+}
+.prettyprint {
+	background-color: #C2E3E5!important;
 }
