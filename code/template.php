@@ -168,12 +168,12 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
                     }
                 }
                 navPosition();
-                function footerWidth(){
+                 function footerWidth(){
                     var wrapperFooter = jQuery('.wrapper-footer');
                     var Footer = jQuery('#footer');
                     var wrapperFooterWidth = wrapperFooter.width();
                     console.log(wrapperFooterWidth);
-                    Footer.css('width',wrapperFooterWidht);
+                    Footer.css('width',wrapperFooterWidth);
                 }
                 footerWidth();
                 jQuery(window).resize(function() {
