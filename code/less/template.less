@@ -220,6 +220,9 @@ p.p-normal{
 		font-weight: normal !important;
 	}
 }
+p.p-base-font-size{
+	font-size: @baseFontSize;
+}
 pre{
 	.border-radius(0 0 0 0);
 	background-color: @tableVintageBackgroundAccent !important;
@@ -1520,6 +1523,7 @@ ol.linenums {
 		margin-top: 10px;
 	}
 }
+
 .table{
 	.border-radius(0 0 0 0);
 	background-color: @pageHeaderBorder;
@@ -2147,6 +2151,9 @@ ol.linenums {
 		}
 	}
 }
+.wylia-readmore{
+	color: #ccc;
+}
 // ______________________
 #above-content{
 	[class^="module"]:first-child{
@@ -2317,6 +2324,24 @@ ol.linenums {
 		&::after{
 			border-right-color: @color_one;
 		}
+	}
+}
+#form-login-username{
+	#modlgn-username{
+		width: -webkit-calc(100%- 96px);
+		width: -moz-calc(100%- 96px);
+		width: -ms-calc(100%- 96px);
+		width: -o-calc(100%- 96px);
+		width: calc(100%- 96px);
+	}
+}
+#form-login-password{
+	#modlgn-passwd{
+		width: -webkit-calc(100%- 96px);
+		width: -moz-calc(100%- 96px);
+		width: -ms-calc(100%- 96px);
+		width: -o-calc(100%- 96px);
+		width: calc(100%- 96px);	
 	}
 }
 #grid-bottom{
