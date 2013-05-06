@@ -223,6 +223,9 @@ p.p-normal{
 p.p-base-font-size{
 	font-size: @baseFontSize;
 }
+.fontSizeLarge{
+	font-size: @fontSizeLarge;	
+}
 pre{
 	.border-radius(0 0 0 0);
 	background-color: @tableVintageBackgroundAccent !important;
@@ -1151,6 +1154,7 @@ div.img-peak-bottom{
 	}
 	.dropdown-menu {
 		.border-radius(0 0 0 0);
+		.box-shadow(none);
 		border: none;
 		padding-bottom: 0;
 		padding-right: 5px;
@@ -1249,6 +1253,7 @@ div.img-peak-bottom{
 			}
 		}
 		.dropdown-menu{
+			.box-shadow(none);
 			background-color: @color_one;
 			border: none;
 			left: 103%;
@@ -2167,6 +2172,9 @@ ol.linenums {
 .wylia-readmore{
 	color: #ccc;
 }
+a.wylia-readmore{
+	color: @linkColor;
+}
 // ______________________
 #above-content{
 	[class^="module"]:first-child{
@@ -2339,24 +2347,7 @@ ol.linenums {
 		}
 	}
 }
-#form-login-username{
-	#modlgn-username{
-		width: -webkit-calc(100%- 96px);
-		width: -moz-calc(100%- 96px);
-		width: -ms-calc(100%- 96px);
-		width: -o-calc(100%- 96px);
-		width: calc(100%- 96px);
-	}
-}
-#form-login-password{
-	#modlgn-passwd{
-		width: -webkit-calc(100%- 96px);
-		width: -moz-calc(100%- 96px);
-		width: -ms-calc(100%- 96px);
-		width: -o-calc(100%- 96px);
-		width: calc(100%- 96px);	
-	}
-}
+
 #grid-bottom{
 	border-top: 1px solid @featuredBackground;
 	margin-bottom: 0;
@@ -2383,8 +2374,10 @@ ol.linenums {
 	padding-right: 20px;
 }
 #grid-bottom3{
+	border-bottom: 1px solid @blockquoteColor;
 	color: @gridBottom3Color;
 	font-size: 12px;
+	margin-bottom: 10px;
 	padding-top: 20px;
 	small{
 		color: @gridBottom3Color;
@@ -2449,9 +2442,9 @@ ol.linenums {
 	}
 }
 #logo{
+	.ie7-inline-block();
 	.box-sizing(border-box);
 	display: inline-block;
-	.ie7-inline-block();
 	border-right: 1px solid @navtabsBgHover;
 	float: none;
 	padding: 17px 20px 11px;
@@ -2714,6 +2707,7 @@ ol.linenums {
 			}
 		}
 		.dropdown-menu{
+			.box-shadow(none);
 			li{
 				display: block;
 				a{
