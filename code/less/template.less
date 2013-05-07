@@ -2232,6 +2232,60 @@ ol.linenums {
 a.wylia-readmore{
 	color: @linkColor;
 }
+// _____Wylia Featured_________________
+.height1,.height2{
+	position: relative;
+	img{
+		height: 100%;
+		width: 100%;
+	}
+	.plus{
+		background-color: @linkColor;
+		color: @plusColor;
+		height: 26px;
+		text-align: center;
+		width: 26px;
+	}
+	.close{
+		.opacity(100);
+		background-color: @tableVintageBackground;
+		color: @blockquoteColor;
+		height: 26px;
+		text-align: center;
+		width: 26px;
+	}
+	.plus,.close{
+		bottom: 10px;
+		line-height: 24px;
+		position: absolute;
+		right: 2%;
+		text-shadow: none;
+	}
+	.content{
+		.box-sizing(border-box);
+		background-color: @blockquoteColor;
+		bottom: 10px;
+		color: @btnSecondaryColor;
+		left: 2%;
+		padding: 10px;
+		position: absolute;
+		width: 96%;
+		&.closed{
+			height: 0;
+			display: none;
+		}
+		&.open{
+			display: block;
+		}	
+	}
+}
+.height1{
+	height: (246px * 2) + 20;
+}
+.height2{
+	height: 246px;
+	margin-bottom: 20px;
+}
 // ______________________
 #above-content{
 	[class^="module"]:first-child{
