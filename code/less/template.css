@@ -1,18 +1,14 @@
-#form-login-username{
-	#modlgn-username{
-		width: -webkit-calc(100%- 96px);
-		width: -moz-calc(100%- 96px);
-		width: -ms-calc(100%- 96px);
-		width: -o-calc(100%- 96px);
-		width: calc(100%- 96px);
-	}
+#form-login-username #modlgn-username{
+	width: -webkit-calc(100%- 96px);
+	width: -moz-calc(100%- 96px);
+	width: -ms-calc(100%- 96px);
+	width: -o-calc(100%- 96px);
+	width: calc(100%- 96px);
 }
-#form-login-password{
-	#modlgn-passwd{
-		width: -webkit-calc(100%- 96px);
-		width: -moz-calc(100%- 96px);
-		width: -ms-calc(100%- 96px);
-		width: -o-calc(100%- 96px);
-		width: calc(100%- 96px);	
-	}
+#form-login-password #modlgn-passwd{
+	width: -webkit-calc(100%- 96px);
+	width: -moz-calc(100%- 96px);
+	width: -ms-calc(100%- 96px);
+	width: -o-calc(100%- 96px);
+	width: calc(100%- 96px);	
 }
