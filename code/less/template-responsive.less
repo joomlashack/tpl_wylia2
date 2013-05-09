@@ -299,6 +299,27 @@
 		}
 	}
 	.navbar-inner {
+		.nav li.dropdown{
+			>.dropdown-toggle .caret {
+				background-image: none;
+				border: none;
+				float: right;
+				font-family: FontAwesome;
+				height: 6px;
+				margin-top: 0;
+				width: 17px;
+				&::before{
+					color:@dropdownBackground;
+					content: "\f0da";
+					font-size: 20px;
+				}
+			}
+			&:hover{
+				>.dropdown-toggle .caret{
+					background-image: none;
+				}	
+			}
+		}
 		.nav li {
 			a,span.separator{
 				border-bottom: 1px solid @dropdownBackground;
