@@ -2364,14 +2364,14 @@ a.wylia-readmore{
 }
 .height2{
 	height: 246px;
-	margin-bottom: 20px;
+	margin-bottom: 12px;
 	overflow: hidden;
 	&:last-child{
 		margin-bottom: 0;
 	}
 }
 .height1{
-	height:  (246px * 2 ) + 20;
+	height:  (246px * 2 ) + 12;
 	overflow: hidden;
 }
 // ______________________
@@ -2448,12 +2448,42 @@ a.wylia-readmore{
 	margin-bottom: 0;
 	margin-left: -20px;
 	margin-right: -20px;
-	padding: 10px 10px 0;
 	.moduletable{
-		margin-bottom: 10px;
+		margin-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	.shackSliderslider{
 		margin-top: -10px;
+	}
+	> .span1,> .span2,> .span3,> .span4,> .span5,> .span6,
+	  .wyliafeatured >.span1,  .wyliafeatured >.span2,  .wyliafeatured >.span3,  .wyliafeatured >.span4,  .wyliafeatured >.span5,  .wyliafeatured >.span6{
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+	.span1,.span2,.span3,.span4,.span5,.span6{
+		margin-left: 1%;
+		&:last-child{
+			margin-right: 1%;
+		}
+		&:first-child{
+			margin-left: 1%;
+		}
+	}
+	.span12{
+		width: 98%;
+	}
+	.span6{
+		width: 48.5%;
+	}
+	.span4{
+		width: 32%;
+	}
+	.span3{
+		width: 23.75%;
+	}
+	.span2{
+		width: 15.5%;
 	}
 }
 #finder-search {
@@ -2493,7 +2523,7 @@ a.wylia-readmore{
 	input[type="text"],input[type="password"]{
 		border-color: @btnPrimaryColor;
 		background-color: @btnPrimaryColor;
-		color: @blockquoteColor;
+		color: #ddd;
 	}
 	a{
 		color:@navbarFooterLinkColor;
