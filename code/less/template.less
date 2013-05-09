@@ -742,6 +742,53 @@ div.img-peak-bottom{
 	#slider2Nav:empty{
 		margin: 0;
 	}
+	.slidermanButtonsCont .sliderPrev, .slidermanButtonsCont .sliderNext{
+		margin-top: 65%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.pagination{
+		.border-radius(8px 8px 0 0);
+		height: 34px;
+		margin-bottom: 0 !important;
+		margin-top: -34px !important;
+		position: relative;
+		z-index: 1;
+		ul{
+			.border-radius(8px 8px 0 0);
+			.box-shadow(none);
+			background-color: @navtabsBgHover;
+			height: 34px;
+			padding: 10px;
+			a{
+				.border-radius(8px) !important;
+				border: none;
+				height: 10px !important;
+				margin-right: 10px !important;
+				padding: 0;
+				text-indent: -9999px;
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+._article{
+	#slider2Nav, #sliderNav {
+		ul{
+			a{
+				background-color: @btnPrimaryBackground !important;
+				width: 10px !important;
+				background-image: none;
+			}
+			.active{
+				a{
+					background-color: @white !important;
+				}				
+			}
+		}
+	}
 }
 .label-info, .badge-info{
 	background-color: @navtabsBg;
@@ -2243,6 +2290,9 @@ ol.linenums {
 }
 .wylia-readmore{
 	color: #ccc;
+	.icon-chevron-right{
+		font-size: 10px;
+	}
 }
 a.wylia-readmore{
 	color: @linkColor;
@@ -2359,7 +2409,7 @@ a.wylia-readmore{
 	.icon-caret-right{
 		display: inline-block;
 		.ie7-inline-block();
-		height: 7px;
+		height: 8px;
 		vertical-align: middle;
 		width: 9px;
 		font-size: 10px;
@@ -2609,6 +2659,15 @@ a.wylia-readmore{
 		}
 		.search,.finder{
 			margin-top: 10px;
+		}
+		> .module{
+			margin-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			.moduletable{
+				padding-left: 0;
+				padding-right: 0;
+			}
 		}
 	}
 	&:last-child{
