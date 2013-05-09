@@ -2359,9 +2359,15 @@ a.wylia-readmore{
 	.icon-caret-right{
 		display: inline-block;
 		.ie7-inline-block();
-		height: 9px;
+		height: 7px;
 		vertical-align: middle;
-		width: 6px;
+		width: 9px;
+		font-size: 10px;
+		&::before{
+			content: '\f054';
+			color: @btnPrimaryBackground;
+
+		}
 	}
 }
 #featured{
