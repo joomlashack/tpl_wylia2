@@ -201,7 +201,7 @@ hr{
 		width: 90px;
 	}
 	&.wylia-hr-three{
-		border-bottom: 1px solid @featuredBackground;
+		border-bottom: 1px solid @borderColor;
 		border-top: none;
 		clear: both;
 		margin-bottom: 10px;
@@ -683,7 +683,7 @@ div.img-peak-bottom{
 		font-size: 20px;
 	}
 	> h1{
-		border-bottom: 1px solid @featuredBackground;
+		border-bottom: 1px solid @borderColor;
 		font-family: 'Abril Fatface';
 		font-size: 35px;
 		font-weight: normal;
@@ -698,7 +698,7 @@ div.img-peak-bottom{
 	> .btn-group{
 		margin-bottom: 30px;
 		.btn.dropdown-toggle{
-			background-color: @featuredBackground;
+			background-color: @borderColor;
 			border: none;
 			[class^="icon-"]:before, [class*=" icon-"]:before{
 				color:@linkColor;
@@ -706,13 +706,13 @@ div.img-peak-bottom{
 		}
 		&.open{
 			.btn.dropdown-toggle{
-				background-color: lighten(@featuredBackground,10%);
+				background-color: lighten(@borderColor,10%);
 				[class^="icon-"]:before, [class*=" icon-"]:before{
 					color:@color_one;
 				}
 			}	
 		}
-		+ p,+ h1,+ h2,+ h3,+ h4,+ h5,+ h6{
+		+ p,+ h1,+ h2,+ h3,+ h4,+ h5,+ h6,+ *{
 			clear: both;
 			margin-top: 0;
 		}
@@ -721,8 +721,8 @@ div.img-peak-bottom{
 		margin-top: 55%;
 	}
 	.pager{
-		margin-left: -30px;
-		margin-right: -30px;
+		margin-left: -20px;
+		margin-right: -20px;
 	}
 }
 ._article{
@@ -783,7 +783,7 @@ div.img-peak-bottom{
 			}
 			li:last-child{
 				a{
-					margin-right: 0;
+					margin-right: 0 !important;
 				}
 			}
 		}
@@ -819,7 +819,7 @@ div.img-peak-bottom{
 }
 [class^="latestnews"]{
 	li {
-		border-bottom: 1px dashed @featuredBackground;
+		border-bottom: 1px dashed @borderColor;
 		padding-bottom: 20px;
 		padding-top: 20px;
 		&:first-child{
@@ -904,7 +904,7 @@ div.img-peak-bottom{
 			color:@white;
 		}
 		&.wylia-new-quaternary::before{
-			background-color: @featuredBackground;
+			background-color: @borderColor;
 		}
 	}
 	&.wylia-hot{
@@ -933,11 +933,11 @@ div.img-peak-bottom{
 			color:@white;
 		}
 		&.wylia-hot-quaternary::before{
-			background-color: @featuredBackground;
+			background-color: @borderColor;
 		}
 	}
 	.wylia-featured{
-		background-color: @featuredBackground;
+		background-color: @borderColor;
 		padding:44px 10px 20px;
 		position: relative;
 		&::after{
@@ -956,7 +956,7 @@ div.img-peak-bottom{
 		}
 		&.wylia-featured-secondary{
 			background-color: @white;
-			border: 1px solid @featuredBackground;
+			border: 1px solid @borderColor;
 		}
 		&.wylia-featured-tertiary::after{
 			background-color: @color_one;
@@ -990,13 +990,13 @@ div.img-peak-bottom{
 .module_ms7,
 .moduletable_ms7,
 .moduletext_ms7{
-	border-left: 1px solid @featuredBackground;
-	border-right: 1px solid @featuredBackground;
+	border-left: 1px solid @borderColor;
+	border-right: 1px solid @borderColor;
 	padding-bottom: 10px;
 	padding-top: 10px;
 	
 	> h3{
-		border-bottom: 1px solid @featuredBackground;
+		border-bottom: 1px solid @borderColor;
 		margin: 10px -10px 20px;
 		padding: 0 10px 15px;
 	}
@@ -1020,7 +1020,7 @@ div.img-peak-bottom{
 .module_ms3,
 .moduletable_ms3,
 .moduletext_ms3{
-	background-color: @featuredBackground;
+	background-color: @borderColor;
 	margin-bottom: 10px;
 	padding-top: 10px !important;
 	padding-bottom:32px !important;
@@ -1050,7 +1050,7 @@ div.img-peak-bottom{
 .module_ms4,
 .moduletable_ms4,
 .moduletext_ms4{
-	border-right: 1px solid @featuredBackground;
+	border-right: 1px solid @borderColor;
 	padding-bottom:10px;
 	padding-top: 10px;
 	position: relative;
@@ -1079,8 +1079,8 @@ div.img-peak-bottom{
 	.moduletable_ms2,
 	.moduletext_ms2{
 		&::after{
-			border-left: 1px solid @featuredBackground;
-			border-right: 1px solid @featuredBackground;
+			border-left: 1px solid @borderColor;
+			border-right: 1px solid @borderColor;
 			top: 100%;
 			content: '';
 			height: 100%;
@@ -1094,8 +1094,8 @@ div.img-peak-bottom{
 	.moduletext_ms7{
 		position: relative;
 		&::after{
-			border-left: 1px solid @featuredBackground;
-			border-right: 1px solid @featuredBackground;
+			border-left: 1px solid @borderColor;
+			border-right: 1px solid @borderColor;
 			top: 100%;
 			content: '';
 			height: 100%;
@@ -1108,7 +1108,7 @@ div.img-peak-bottom{
 	.moduletable_ms4,
 	.moduletext_ms4{
 		&::after{
-			border-right: 1px solid @featuredBackground;
+			border-right: 1px solid @borderColor;
 			top: 100%;
 			content: '';
 			height: 100%;
@@ -1265,7 +1265,7 @@ div.img-peak-bottom{
 	    filter:none;
 	 .nav li.dropdown{
 		>.dropdown-toggle .caret{
-			background-image: url(../images/caret.jpg);
+			background-image: url(../images/caret-toolbar.jpg);
 			background-position: right top;
 			background-repeat: no-repeat;
 			border: none;
@@ -1620,7 +1620,7 @@ dl.nav-tabs{
 	p{
 		margin-bottom: 20px;
 		+ .readmore{
-			border-bottom: 1px solid @featuredBackground;
+			border-bottom: 1px solid @borderColor;
 			display: block;
 			margin-bottom: 20px;
 			margin-top: -20px;
@@ -1643,7 +1643,7 @@ dl.nav-tabs{
 	}
 }
 .pager{
-	border-top: 1px solid @featuredBackground;
+	border-top: 1px solid @borderColor;
 	padding-top: 20px;
 	padding-bottom: 10px;
 	li > a, li > span{
@@ -2301,7 +2301,7 @@ ol.linenums {
 }
 
 .wylia-price{
-	border: 1px solid @featuredBackground;
+	border: 1px solid @borderColor;
 	line-height: 25px;
 	min-height: 25px;
 	span.wylia-price{
@@ -2398,7 +2398,7 @@ a.wylia-readmore{
 			padding: 5px 10px 15px 10px;
 			text-align: center;
 			&::before{
-				border-bottom: 1px solid @featuredBackground;
+				border-bottom: 1px solid @borderColor;
 				content: '';
 				left: 0;
 				position: absolute;
@@ -2414,8 +2414,8 @@ a.wylia-readmore{
 	.moduletable{
 		border-bottom: 1px solid @borderColor;
 		margin-bottom: 10px;
-		margin-left: -30px;
-		margin-right: -30px;
+		margin-left: -20px;
+		margin-right: -20px;
 		padding-bottom: 10px;
 		padding-left: 30px;
 		padding-right: 30px;
@@ -2471,7 +2471,7 @@ a.wylia-readmore{
 	}
 }
 #featured{
-	background-color: @featuredBackground;
+	background-color: @borderColor;
 	border-bottom: 1px solid @featuredBorder;
 	margin-bottom: 0;
 	margin-left: -20px;
@@ -2618,7 +2618,7 @@ a.wylia-readmore{
 }
 
 #grid-bottom{
-	border-top: 1px solid @featuredBackground;
+	border-top: 1px solid @borderColor;
 	margin-bottom: 0;
 	margin-left: -20px;
 	margin-right: -20px;
@@ -2667,8 +2667,8 @@ a.wylia-readmore{
 	}
 }
 #grid-top{
-	border-bottom: 1px solid @featuredBackground;
-	border-top: 1px solid @featuredBackground;
+	border-bottom: 1px solid @borderColor;
+	border-top: 1px solid @borderColor;
 	margin-left: -20px;
 	margin-right: -20px;
 	padding-left: 20px;
@@ -2771,8 +2771,8 @@ a.wylia-readmore{
 			margin-top: 10px;
 		}
 		.moduletable_ms2,.moduletext_ms2,.module_ms2{
-			border-bottom: 1px solid @featuredBackground;
-			border-top: 1px solid @featuredBackground;
+			border-bottom: 1px solid @borderColor;
+			border-top: 1px solid @borderColor;
 		}
 		.moduletable{
 			padding-left: 0;
@@ -2781,7 +2781,7 @@ a.wylia-readmore{
 	}
 }
 #sidebar1{
-	border-right: 1px solid @featuredBackground;
+	border-right: 1px solid @borderColor;
 	position: relative;
 	&::after{
 		border-right: 1px solid @borderColor;
@@ -2847,7 +2847,7 @@ a.wylia-readmore{
 		top: 40%;
 		> ul {
 			.border-radius(0 0 0 0);
-			background-color: @featuredBackground;
+			background-color: @borderColor;
 			li{
 				display: block;
 				overflow: hidden;
