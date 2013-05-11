@@ -118,8 +118,10 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
                          </div>
                          <?php endif; ?>
 
+
                          <!-- main module (instead of content) -->
                          <w:module name="main" chrome="xhtml" />
+
                      </section>
                      <!-- sidebar2 -->
                      <aside id="sidebar2">
@@ -147,34 +149,7 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
             </div>
             
         </div>
-        <script type="text/javascript">
 
-            jQuery.noConflict();
-            jQuery(document).ready(function(){
-                var menuNavCollapse = jQuery('#menu .nav-collapse');
-                var toolbarNavCollapse = jQuery('#toolbar .nav-collapse');
-
-                function navPositionMobile() {
-                    var heightHeader = jQuery('#header').height();
-                    var heightToolbar = jQuery('#toolbar').height();
-                    menuNavCollapse.css('top',heightHeader);
-                    toolbarNavCollapse.css('top',heightToolbar);
-                }
-                function navPosition(){
-                    if (jQuery(window).width() <= 979){
-                        navPositionMobile();
-                    }else{
-                        menuNavCollapse.css('top','auto');
-                        toolbarNavCollapse.css('top','auto');
-                    }
-                }
-                navPosition();
-                jQuery(window).resize(function() {
-                    navPosition();
-                });
-            });
-
-        </script>
         <!-- footer -->
         <div class="wrapper-footer<?php echo $footerWrapperClass?>">
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
@@ -200,7 +175,8 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
             </footer>
         </div>
     </div>
-    
+
+    <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_wylia/js/wylia.js'></script>
 </body>
 </html>
     
