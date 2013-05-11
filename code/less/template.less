@@ -2313,23 +2313,17 @@ a.wylia-readmore{
 		text-align: center;
 		width: 26px;
 	}
-	.content{
-		.box-sizing(border-box);
-		background-color: @blockquoteColor;
-		bottom: 10px;
-		color: @btnSecondaryColor;
-		left: 2%;
-		padding: 10px;
-		position: absolute;
-		width: 96%;
-		&.closed{
-			height: 0;
-			display: none;
-		}
-		&.open{
-			display: block;
-		}	
-	}
+}
+.wylia-popover-content{
+	.box-sizing(border-box);
+	.transition(all .2s ease-in-out);
+	background-color: @blockquoteColor;
+	bottom: 10px;
+	color: @btnSecondaryColor;
+	left: 2%;
+	padding: 10px;
+	position: absolute;
+	width: 96%;
 }
 .close{
 	.opacity(100);
@@ -2345,6 +2339,17 @@ a.wylia-readmore{
 	position: absolute;
 	right: 2%;
 	text-shadow: none;
+	z-index: 2;
+	&:hover{
+		cursor: pointer;
+	}
+}
+.wyliafeatured{
+	.popover.fade{
+		min-width: 98% !important;
+		padding-left: 1% !important;
+		padding-right: 1% !important;
+	}
 }
 .height2{
 	height: 246px;
@@ -2486,6 +2491,9 @@ a.wylia-readmore{
 	.span2{
 		width: 15.5%;
 	}
+}
+.wyliafeatured .wylia-popover .wylia-content {
+	display: none;
 }
 #finder-search {
 	.word{
