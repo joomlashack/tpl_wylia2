@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_wylia</name>
-	<creationDate>March 2013</creationDate>
+	<creationDate>May 2013</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.0.0_beta</version>
+	<version>1.0.0_beta2</version>
     <description>TPL_JS_WYLIA_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -104,6 +104,10 @@
 					<option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
 				</field>
                 <!-- End of default Wright params -->
+				<field name="wylia_module_main" type="list" default="0" label="TPL_JS_WYLIA_MODULE_MAIN" description="TPL_JS_WYLIA_MODULE_MAIN_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>

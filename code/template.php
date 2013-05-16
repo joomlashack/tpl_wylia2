@@ -39,6 +39,8 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
         $sidebarClass = ' sb1';
 }
 
+$moduleMain = ($this->params->get('wylia_module_main','0') == '1' ? true : false);
+
 ?>
 <doctype>
 <html>
@@ -118,7 +120,12 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
                          </div>
                          <?php endif; ?>
                          <!-- component -->
-                         <w:content />
+
+                        <?php if ($moduleMain) : ?>
+                            <w:module type="none" name="main" chrome="xhtml" />
+                        <?php else : ?>
+                            <w:content />
+                        <?php endif; ?>
                      </section>
                      <!-- sidebar2 -->
                      <aside id="sidebar2">
