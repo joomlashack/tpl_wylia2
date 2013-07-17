@@ -1417,11 +1417,6 @@ div.img-peak-bottom{
 			}
 		}
 	}
-	.active{
-		> a, > span{
-			background-color: @navbarInverseLinkBackgroundHover;	
-		}
-	}
 	.nav li.dropdown{
 		>.dropdown-toggle .caret{
 			background-image: url(../../images/caret.jpg);
@@ -1444,6 +1439,11 @@ div.img-peak-bottom{
 		}
 	}
 
+}
+.navbar-inverse .nav li.dropdown.open:hover>.dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active:hover>.dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active:hover>.dropdown-toggle{
+	background-color: @navbarInverseLinkBackgroundHover;
 }
 .nav-tabs{
 	border-bottom: none;
