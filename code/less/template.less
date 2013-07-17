@@ -2919,10 +2919,6 @@ a.wylia-readmore{
 #top{
 	color:@navbarFooterLinkColor;
 	border-bottom: 1px solid @navtabsBgHover;
-	h1,h2,h3,h4,h5,h6{
-		color: @btnSecondaryColor;
-		font-weight: normal;
-	}
 	.module{
 		border-left: 1px solid @navtabsBgHover;
 		margin-bottom: 0;
@@ -2933,6 +2929,12 @@ a.wylia-readmore{
 		&.first{
 			border-left: none;
 		}
+	}
+}
+#header{
+	h1,h2,h3,h4,h5,h6{
+		color: @btnSecondaryColor;
+		font-weight: normal;
 	}
 	input{
 		background-color: @navtabsBgHover;
@@ -2950,7 +2952,7 @@ a.wylia-readmore{
 		&#mod-search-searchword{
 			width: auto;
 		}
-	}
+	}	
 }
 #menu{
 	display: inline-block;
