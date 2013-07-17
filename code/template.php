@@ -64,7 +64,7 @@ $moduleMain = ($this->params->get('wylia_module_main','0') == '1' ? true : false
                     </div>
                 </div>
             <?php endif; ?>
-            <?php if ($this->countModules('menu')) : ?>
+            <?php if ($this->countModules('menu') || $this->countModules('logo')) : ?>
 
                 <div class="wrapper-logo-menu <?php echo $gridMode; ?> ">
                     <w:logo name="menu" menuWrapClass="navbar-inverse" type="menu"/>
