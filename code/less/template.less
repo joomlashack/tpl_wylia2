@@ -2825,39 +2825,30 @@ a.wylia-readmore{
 	margin-bottom: 0 !important;
 	position: relative;
 	#sliderNav {
+		background-color: @borderColor;
 		margin-bottom: 0;
+		padding: 7px;
 		position: absolute;
 		right: 0;
 		top: 40%;
 		> ul {
+			padding: 0;
 			.border-radius(0 0 0 0);
-			background-color: @borderColor;
 			li{
 				display: block;
 				overflow: hidden;
 				padding: 5px;
 				a{
-					.border-radius(13px);
-					background-color: @linkColor !important;
-					display: block !important;
-					float: none;
-					height: 13px !important;
-					line-height: normal;
 					margin: 0 auto !important;
-					padding: 0 !important;
-					text-indent: -9999px;
-					width: 13px !important;
 					&.sliderPrev,&.sliderNext{
 						color: @white;
-						height: auto !important;
-						padding: 3px !important;
 						text-indent: 0;
-						width: auto !important;
 					}
 				}
 				&.active{
 					a{
 						background-color: @white !important;
+						color: @black !important;
 					}
 				}
 			}
@@ -2868,14 +2859,15 @@ a.wylia-readmore{
 			background-image: none !important;
 			display: block !important;
 			float: none;
+			font-size: 9px;
 			height: 13px !important;
 			line-height: normal;
-			margin: 0 auto !important;
+			margin: 10px auto !important;
 			padding: 0 !important;
-			text-indent: -9999px;
 			width: 13px !important;
 			&.active{
 				background-color: @white !important;
+				color: @black !important;
 			}
 		}
 	}
@@ -2883,16 +2875,19 @@ a.wylia-readmore{
 }
 .slidermanButtonsCont{
 	.sliderPrev,  .sliderNext{
+		background-position: 0 0;
+		height: 60px;
 		text-indent: -9999px;
 		width: 51px !important;
-		height: 60px;
 	} 
 	
 	.sliderPrev {
 		background-image: url(../../images/ss-prev.png) !important;
+		left: 31px;
 	}
 	.sliderNext{
 		background-image: url(../../images/ss-next.png) !important;
+		right: 31px;
 	}
 }
 #menu{
