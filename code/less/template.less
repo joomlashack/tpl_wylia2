@@ -2439,11 +2439,14 @@ a.wylia-readmore{
 	}
 	span{
 		font-style: italic;
+		&.divider{
+			vertical-align: top;
+		}
 	}
 	.icon-caret-right{
 		display: inline-block;
 		.ie7-inline-block();
-		height: 8px;
+		height: 9px;
 		vertical-align: middle;
 		width: 9px;
 		font-size: 10px;
@@ -2890,6 +2893,17 @@ a.wylia-readmore{
 		right: 31px;
 	}
 }
+#main{
+	.slidermanButtonsCont{
+		.sliderPrev {
+			left: 0;
+		}
+		.sliderNext{
+			right: 0;
+		}
+	}
+}
+// --------------------------------------------
 #menu{
 	float: none;
 	margin-bottom: 0;
