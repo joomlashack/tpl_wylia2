@@ -16,15 +16,15 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 <doctype>
 <html>
-<head>  
+<head>
     <w:head />
 </head>
-<body class="<?php if ($bodyclass != "") :?><?php echo $bodyclass?> <?php endif; ?><?php   echo $responsive . $fixedClass . $sidebarClass?>">
+<body class="<?php   echo $responsive . $fixedClass . $sidebarClass?>">
     <!-- header -->
     <header id="header">
         <div class="<?php echo $containerClass ?>">
             <?php if ($this->countModules('toolbar')) : ?>
-                <div class="wrapper-toolbar"> 
+                <div class="wrapper-toolbar">
                     <!-- toolbar -->
                     <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top <?php echo $footerWrapperClass?>" type="toolbar" name="toolbar" />
                 </div>
@@ -47,7 +47,7 @@ defined('_JEXEC') or die('Restricted access');
     </header>
     <div class="<?php echo $containerClass ?> wrapper-white">
         <div class="<?php echo $containerClass . $contentFixed?>">
-            <div class="container-fluid">       
+            <div class="container-fluid">
                  <!-- featured -->
                  <?php if ($this->countModules('featured')) : ?>
                  <div id="featured">
@@ -123,7 +123,7 @@ defined('_JEXEC') or die('Restricted access');
                  </div>
                  <?php endif; ?>
             </div>
-            
+
         </div>
 
         <!-- footer -->
@@ -155,4 +155,4 @@ defined('_JEXEC') or die('Restricted access');
     <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_wylia/js/wylia.js'></script>
 </body>
 </html>
-    
+
