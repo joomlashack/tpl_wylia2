@@ -8,7 +8,7 @@
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2013. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.1.0_beta2</version>
+	<version>1.0.0_beta6</version>
     <description>TPL_JS_WYLIA_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -26,7 +26,6 @@
 		<filename>functions.php</filename>
 		<filename>home.php</filename>
 		<filename>index.php</filename>
-		<filename>params.ini</filename>
 		<filename>template.php</filename>
 		<filename>templateDetails.xml</filename>
 		<filename>template_thumbnail.png</filename>
