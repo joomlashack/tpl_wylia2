@@ -155,12 +155,15 @@ dl.article-info dd{
 }
 h1{
 	font-size: 45px;
+	line-height: 45px;
 }
 h2{
 	font-size: 38px;
+	line-height: 38px;
 }
 h3{
 	font-size: 30px;
+	line-height: 30px;
 	cite{
 		color: @linkColor;
 		font-family: @serifFontFamily;
@@ -769,7 +772,7 @@ div.img-peak-bottom{
 	}
 }
 .label-info, .badge-info{
-	background-color: @navtabsBg;
+	background-color: @navtabsBg !important;
 	color: @color_one;
 }
 .label{
@@ -1626,8 +1629,9 @@ dl.nav-tabs{
 	padding-top: 20px;
 	padding-bottom: 10px;
 	li > a, li > span{
-		border: none;
 		.border-radius(0 0 0 0);
+		background-color: transparent;
+		border: none;
 		font-size: 18px;
 		font-weight: bold;
 	}
@@ -2433,6 +2437,13 @@ a.wylia-readmore{
 	padding-bottom: 4px;
 	padding-top: 4px;
 	padding-left: 10px;
+}
+.breadcrumb{
+	margin: 0;
+	padding: 0;
+	>li{
+		text-shadow:none;
+	}
 	a, span{
 		text-transform:lowercase;
 		vertical-align: middle;
@@ -2441,6 +2452,9 @@ a.wylia-readmore{
 		font-style: italic;
 		&.divider{
 			vertical-align: top;
+			&.hasTooltip{
+				vertical-align: middle;
+			}
 		}
 	}
 	.icon-caret-right{
@@ -2734,7 +2748,7 @@ a.wylia-readmore{
 				overflow: hidden;
 			}
 		}
-		.search,.finder{
+		.search{
 			margin-top: 10px;
 		}
 		> .module{
@@ -2934,7 +2948,6 @@ a.wylia-readmore{
 	}
 }
 #top{
-	color:@navbarFooterLinkColor;
 	border-bottom: 1px solid @navtabsBgHover;
 	.module{
 		border-left: 1px solid @navtabsBgHover;
@@ -2949,6 +2962,8 @@ a.wylia-readmore{
 	}
 }
 #header{
+	color:@navbarFooterLinkColor;
+
 	h1,h2,h3,h4,h5,h6{
 		color: @btnSecondaryColor;
 		font-weight: normal;
@@ -3179,9 +3194,6 @@ a.wylia-readmore{
 }
 // Joomla 3
 // ------------------------------
-.breadcrumb>li{
-	text-shadow:none;
-}
 .filters .filter-search.alert.alert-info{
 	background-color: transparent;
 	border: none;
@@ -3289,4 +3301,22 @@ div:first-child+.panel{
 }
 .nav-list>li>a, .nav-list .nav-header{
 	text-shadow: none;
+}
+.menu li span.separator{color:@linkColor;}
+.form-search {
+	input{
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+}
+#sidebar1 input, #sidebar2 input{
+	height: 32px;
+}
+.categories-list{
+	h3{
+		.icon-folder-close{
+			height: 24px;
+			width: auto;
+		}
+	}
 }
