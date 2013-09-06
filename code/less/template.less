@@ -1256,16 +1256,6 @@ div.img-peak-bottom{
 		a,span.separator{
 			text-shadow: none !important;
 		}
-		span.separator{
-			color: @navbarLinkColor;
-			&:hover{
-				color: @navbarLinkColorHover;
-				background-color: @navbarInverseLinkBackgroundHover;
-				background-image:none;
-				-ms-filter:none;
-				    filter:none;
-			}
-		}
 	}
 	.dropdown-menu {
 		.border-radius(0 0 0 0);
@@ -1282,7 +1272,7 @@ div.img-peak-bottom{
 		li{
 			border-bottom: 1px solid @color_one;
 			margin-top: -1px;
-			a{
+			a , > span{
 				padding-bottom: 5px;
 				padding-top: 5px;
 				position: relative;
@@ -1308,7 +1298,7 @@ div.img-peak-bottom{
 					}
 				}
 			}
-			a::after{
+			a::after,> span::after{
 				background-color: @dropdownBackground;
 				content: '';
 				height: 100%;
@@ -1324,20 +1314,17 @@ div.img-peak-bottom{
 			&.parent{
 				> a{
 					min-height: 19px;
-					span{
-						float: left;
-					}
 				}
 				.icon-caret-right{
 					color: @color_one;
 					display: block;
 					float: right;
 					font-size: 20px;
-					margin-right: -20px;
-					margin-top: -4px;
-					padding: 4px 10px 3px;
+					line-height: 28px;
+					margin-right: -25px;
+					min-height: 28px;
+					padding: 0 10px;
 					position: relative;
-					text-align: right;
 					width: 10px;
 					&::after{
 						border-bottom: 1px solid @color_one;
@@ -1409,7 +1396,7 @@ div.img-peak-bottom{
 		a,span.separator{
 			text-shadow: none;
 		}
-		span.separator{
+		> span.separator{
 			color: @navbarInverseLinkColor !important;
 			&:hover{
 				color: @navbarInverseLinkColorHover !important;
@@ -1435,7 +1422,7 @@ div.img-peak-bottom{
 			}
 		}
 	}
-	.nav > li:hover,.nav > li.active:hover {
+	.nav > li:hover{
 		> a, > span.separator{
 			color:@dropdownLinkColorHover;
 			background-color: @navbarInverseLinkBackgroundHover;
@@ -1499,7 +1486,7 @@ div.img-peak-bottom{
 			color: @navtabsColorHover !important;
 		}
 	}
-	dt h3 {
+	dt h3,dt p {
 		background-color: @white;
 		border-bottom: 2px solid @navtabsBgHover;
 		margin-right: 0 !important;
@@ -1527,7 +1514,8 @@ div.img-peak-bottom{
 			padding-right: 0;
 		}
 	}
-	dt.open h3 a{
+	dt.open h3 a,
+	dt.open p a{
 		background-color: @navtabsBgHover;
 		color: @navtabsColorHover !important;
 		border-color: @navtabsBgHover;
@@ -1535,9 +1523,7 @@ div.img-peak-bottom{
 	}
 	+ .current{
 		background-color: @grayLighter;
-		padding-left: 20px;
-		padding-right: 20px;
-		padding-top: 10px;
+		padding: 10px 20px;
 		.page-header{
 			border-bottom-color: @grayLighter - #222;
 		}
@@ -2439,6 +2425,7 @@ a.wylia-readmore{
 	padding-left: 10px;
 }
 .breadcrumb{
+	background-color: transparent;
 	margin: 0;
 	padding: 0;
 	>li{
@@ -2552,7 +2539,7 @@ a.wylia-readmore{
 	label[for="modlgn-username"],label[for="modlgn-passwd"]{
 		min-width: 70px;
 	}
-	.userdata +.nav.nav-list.well{
+	.userdata +.nav{
 		display: none;
 	}
 	input[name="Submit"].button.btn.btn-primary{
@@ -3019,11 +3006,22 @@ a.wylia-readmore{
 				display: block;
 				a{
 					display: block;
+					min-height: 28px;
+					line-height: 28px;
+					padding-bottom: 0;
+					padding-top: 0;
+					> span{
+						display: block;
+						float: left;
+						min-height: 28px;
+						padding-bottom: 0;
+						padding-top: 0;
+					}
 					&:hover{
+						background-color: transparent;
 						background-image:none;
 						-ms-filter:none;
 						    filter:none;
-						background-color: transparent;
 					}
 				}
 			}
@@ -3302,7 +3300,6 @@ div:first-child+.panel{
 .nav-list>li>a, .nav-list .nav-header{
 	text-shadow: none;
 }
-.menu li span.separator{color:@linkColor;}
 .form-search {
 	input{
 		margin-left: 5px;
@@ -3319,4 +3316,30 @@ div:first-child+.panel{
 			width: auto;
 		}
 	}
+}
+.archive{
+	margin-top: 10px;
+	.well{
+		&.filters{
+			background-color: transparent;
+			border: 0;
+		}
+	}
+}
+.nobullet{
+	list-style: none;
+}
+#login-form{
+	.btn{
+		.btn-primary;
+		background-color: @btnPrimaryBackground;
+	}
+}
+.contact{
+	dd{
+		margin-bottom: 10px;
+	}
+}
+.blog-featured,.remind,.reset ,.login,.finder{
+	padding-top: 10px;
 }
