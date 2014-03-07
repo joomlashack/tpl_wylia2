@@ -1440,7 +1440,7 @@ div.img-peak-bottom{
 .navbar-inverse .nav li.dropdown.open.active:hover>.dropdown-toggle{
 	background-color: @navbarInverseLinkBackgroundHover;
 }
-.nav-tabs{
+.nav.nav-tabs{
 	border-bottom: none;
 	margin-bottom: 0;
 
@@ -1459,23 +1459,61 @@ div.img-peak-bottom{
 			padding-left: 15px;
 			padding-right: 15px;
 			margin-right: 0;
-			&:hover{
+
+			.caret{
+				border-top-color: @navtabsColor;
+			}
+			[class^="icon-"], [class*=" icon-"]{
+				color: @navtabsColor;
+			}
+
+
+			&:hover,
+			&:focus{
 				border-color: @navtabsBgHover @navtabsBgHover @navtabsBgHover !important;
 				background-color: @navtabsBgHover !important;
 				color: @navtabsColorHover;
+
+				.caret{
+					border-top-color: @navtabsColorHover;
+				}
+				[class^="icon-"], [class*=" icon-"]{
+					color: @navtabsColorHover;
+				}
+
 			}
+
 		}
 	}
+	> li.active,
 	> .active {
 		> a{
 			background-color: @navtabsBgHover !important;
 			border-color: @navtabsBgHover !important;
 			color: @navtabsColorHover !important;
 			text-decoration: none;
-			&:hover{
+
+			.caret{
+				border-top-color: @navtabsColorHover;
+			}
+			[class^="icon-"], [class*=" icon-"]{
+				color: @navtabsColorHover;
+			}
+
+
+			&:hover,
+			&:focus,
+			&:active{
 				background-color: @navtabsBgHover;
 				border-color: @navtabsBgHover @navtabsBgHover @navtabsBgHover;
 				color: @navtabsColorHover;
+
+				.caret{
+					border-top-color: @navtabsColorHover;
+				}
+				[class^="icon-"], [class*=" icon-"]{
+					color: @navtabsColorHover;
+				}
 			}
 		}
 	}
@@ -1484,6 +1522,29 @@ div.img-peak-bottom{
 			background-color: @navtabsBgHover !important;
 			border-color: @navtabsBgHover !important;
 			color: @navtabsColorHover !important;
+
+			.caret{
+				border-top-color: @navtabsColor;
+			}
+			[class^="icon-"], [class*=" icon-"]{
+				color: @navtabsColor;
+			}
+
+
+			&:hover,
+			&:focus,
+			&:active{
+				background-color: @navtabsBgHover;
+				border-color: @navtabsBgHover @navtabsBgHover @navtabsBgHover;
+				color: @navtabsColorHover;
+
+				.caret{
+					border-top-color: @navtabsColor;
+				}
+				[class^="icon-"], [class*=" icon-"]{
+					color: @navtabsColor;
+				}
+			}
 		}
 	}
 	dt h3,dt p {
@@ -3345,4 +3406,136 @@ div:first-child+.panel{
 }
 .input-append .add-on, .input-prepend .add-on{
 	color:@textColor;
+}
+
+.dropdown-menu{
+	>.active>a{
+		background-image: none;
+		filter: none;
+		&:hover,
+		&:focus{
+			background-image: none;
+			filter: none;
+		}
+	}
+}
+
+// System menus Wright 3.1.3.14
+
+
+.module{
+	.nav, .nav.nav-stacked, .nav.nav-pills, .nav.nav-list{
+
+		li.dropdown .dropdown-menu li{
+
+			>a{
+				color: @textColor;
+
+				.caret{
+					border-top-color: @textColor;
+				}
+
+				[class^="icon-"], [class*=" icon-"]{
+					color: @textColor;
+				}
+
+				&:hover,
+				&:focus{
+					background-color: @linkColor;
+					color: @white;
+
+					.caret{
+						border-top-color: @white;
+					}
+
+					[class^="icon-"], [class*=" icon-"]{
+						color: @white;
+					}
+
+				}
+			}
+			&.active{
+				>a{
+					background-color: @linkColor;
+					color: @white;
+
+					.caret{
+						border-top-color: @white;
+					}
+
+					[class^="icon-"], [class*=" icon-"]{
+						color: @white;
+					}
+
+					&:active,
+					&:hover,
+					&:focus{
+						background-color: @linkColor;
+						color: @white;
+
+						.caret{
+							border-top-color: @white;
+						}
+
+						[class^="icon-"], [class*=" icon-"]{
+							color: @white;
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+
+	.nav.nav-tabs{
+		> li {
+			> a{
+	            .caret{
+	                border-top-color: @navtabsColor;
+	            }
+	            [class^="icon-"], [class*=" icon-"]{
+	                color: @navtabsColor;
+	            }
+
+	            &:hover,
+	            &:focus{
+	                color: @navtabsColorHover;
+
+	                .caret{
+	                    border-top-color: @navtabsColorHover;
+	                }
+	                [class^="icon-"], [class*=" icon-"]{
+	                    color: @navtabsColorHover;
+	                }
+
+	            }
+			}
+			&.active{
+				> a{
+					color: @navtabsColorHover;
+
+	                .caret{
+	                    border-top-color: @navtabsColorHover;
+	                }
+	                [class^="icon-"], [class*=" icon-"]{
+	                    color: @navtabsColorHover;
+	                }
+
+	                &:hover,
+	                &:focus,
+	                &:active{
+						color: @navtabsColorHover;
+
+		                .caret{
+		                    border-top-color: @navtabsColorHover;
+		                }
+		                [class^="icon-"], [class*=" icon-"]{
+		                    color: @navtabsColorHover;
+		                }
+	                }
+				}
+			}
+		}
+	}
 }
