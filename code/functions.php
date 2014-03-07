@@ -26,6 +26,8 @@ $responsive = ' responsive';
 if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
+
+$sidebarClass= '';
 if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
     $sidebarClass= ' sb1 sb2';
 }elseif ($this->countModules('sidebar2')) {
