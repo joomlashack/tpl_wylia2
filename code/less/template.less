@@ -1223,27 +1223,13 @@ div.img-peak-bottom{
 		}
 	}
 }
-.navbar-inner{
+.navbar{
 	.border-radius(0 0 0 0);
 	.box-shadow(none);
 	background-image:none;
 	-ms-filter:none;
 	    filter:none;
-	 .nav li.dropdown{
-		>.dropdown-toggle .caret{
-			background-image: url(../images/caret-toolbar.jpg);
-			background-position: right top;
-			background-repeat: no-repeat;
-			border: none;
-			height: 6px;
-			width: 17px;
-		}
-		&:hover{
-			>.dropdown-toggle .caret{
-				background-image: url(../images/caret-hover.jpg);
-			}
-		}
-	}
+
 	.btn-navbar{
 		.box-shadow(none);
 		background-image:none;
@@ -1252,163 +1238,161 @@ div.img-peak-bottom{
 		background-color: @btnNavbar;
 		min-height: 100%;
 	}
-	li{
-		a,span.separator{
-			text-shadow: none !important;
-		}
-	}
-	.dropdown-menu {
-		.border-radius(0 0 0 0);
-		.box-shadow(none);
-		border: none;
-		padding-bottom: 0;
-		padding-right: 5px;
-		padding-top: 0;
-		left: 10px;
-		&::before,&::after{
-			border: none !important;
-		}
 
-		li{
-			border-bottom: 1px solid @color_one;
-			margin-top: -1px;
-			a , > span{
-				padding-bottom: 5px;
-				padding-top: 5px;
-				position: relative;
-				&:hover{
-					background-image:none;
-					-ms-filter:none;
-					    filter:none;
-					background-color: transparent;
+	.nav {
+		> li{
+			&.dropdown{
+				> a .caret{
+					background-image: url(../images/caret-toolbar.jpg);
+					background-position: right top;
+					background-repeat: no-repeat;
+					border: none;
+					height: 6px;
+					width: 17px;
 				}
-			}
-			&:first-child{
-				margin-top: 0;
-			}
-			&:last-child{
-				border-bottom: none;
-				&.parent{
-					.icon-caret-right{
-						&::after{
-							border: none;
-							content: none;
-							width: 0;
+				&:hover{
+					> a .caret{
+						background-image: url(../images/caret-hover.jpg);
+					}
+				}
+				.dropdown-menu {
+					.box-shadow(none);
+					.box-sizing(border-box);
+					border: none;
+					left: 10px;
+					&:before,&:after{
+						display: none;
+					}
+					> li {
+						padding-right: 10px;
+					}
+					li{
+						&.parent{
+							a{
+								.caret{
+									border: 0;
+									border-bottom: 1px solid transparent;
+									height: 100%;
+									right: -10px;
+									line-height: 29px;
+									margin: 0;
+									position: absolute;
+									text-align: right;
+									top: 0;
+									width: 15px;
+									padding-right: 5px;
+									&:after{
+										content: "\f0da";
+										font-family: FontAwesome;
+										font-size: 20px;
+										margin-top: 8px;
+										width: 10px;
+									}
+								}
+							}
+							&:hover{
+								a .caret{
+									background-color: @color_one;
+									border: 0;
+									border-bottom: 1px solid @color_one;
+								}
+							}
 						}
-					}
-				}
-			}
-			a::after,> span::after{
-				background-color: @dropdownBackground;
-				content: '';
-				height: 100%;
-				position: absolute;
-				right: 100%;
-				top: 0;
-				width: 10px;
-			}
-			&:hover > a::after, &.active > a::after{
-				background-image: url(../images/bg-link-hover.png);
-				background-color: transparent;
-			}
-			&.parent{
-				> a{
-					min-height: 19px;
-				}
-				.icon-caret-right{
-					color: @color_one;
-					display: block;
-					float: right;
-					font-size: 20px;
-					line-height: 28px;
-					margin-right: -25px;
-					min-height: 28px;
-					padding: 0 10px;
-					position: relative;
-					width: 10px;
-					&::after{
-						border-bottom: 1px solid @color_one;
-						bottom: -1px;
-						content: "";
-						height: 0;
-						left: 0;
-						position: absolute;
-						width: 100%;
-					}
-				}
-				&:hover{
-					.icon-caret-right{
-						background-color: @color_one;
-						color: @dropdownLinkColorHover;
-					}
-				}
-			}
-			span.separator{
-				color: @dropdownLinkColor;
-				&:hover{
-					color: @dropdownLinkColorHover;
-					background-color: transparent;
-					background-image:none;
-					-ms-filter:none;
-					    filter:none;
-				}
-			}
-		}
-		.dropdown-menu{
-			.box-shadow(none);
-			background-color: @color_one;
-			border: none;
-			left: 103%;
-			margin-top: 0;
-			li{
-				border-bottom-color: @dropdownBackground;
-				&.parent{
-					.icon-caret-right{
-						color: @dropdownBackground;
-					}
-					&:hover{
-						.icon-caret-right{
+
+						a {
+							border-bottom: 1px solid @color_one;
+							padding: 5px 7px;
+							position: relative;
+
+							&:hover{
+								background-image:none;
+								-ms-filter:none;
+								    filter:none;
+							}
+
+							&:after{
+								background-color: @dropdownBackground;
+								border-bottom: 1px solid @dropdownBackground;
+								content: '';
+								height: 100%;
+								position: absolute;
+								right: 100%;
+								top: 0;
+								width: 10px;
+							}
+						}
+						&:last-child{
+							a{
+								border-bottom: 0;
+								&:after{
+									border-bottom: 0;
+								}
+							}
+						}
+						&:hover > a:after, &.active > a:after{
+							background-image: url(../images/bg-link-hover.png);
+							background-color: transparent;
+						}
+						&.parent{
+							> a{
+								min-height: 19px;
+							}
+						}
+
+						.sub-menu{
+							.box-shadow(none);
 							background-color: @color_one;
-							color: @dropdownLinkColorHover;
+							border: none;
+
+							&:before,&:after{
+								display: none;
+							}
+
+							li{
+								padding-left: 7px;
+								padding-right: 7px;
+								a{
+									border-bottom-color: @dropdownBackground;
+								}
+								a:after{
+									display: none;
+								}
+							}
 						}
 					}
 				}
-				a::after{
-					content: none;
-					height: 0;
-					width: 0;
-				}
+			}
+			a{
+				text-shadow: none !important;
 			}
 		}
 	}
-		.nav > li:hover,.nav > li.active:hover {
-		> a, > span.separator{
-			color:@dropdownLinkColorHover;
+	.nav > li:hover,.nav > li.active:hover {
+		> a{
 			background-color: @navbarInverseLinkBackgroundHover;
+			color:@dropdownLinkColorHover;
+
+			.caret{
+				border-top-color:@dropdownLinkColorHover;
+			}
+
+			[class^="icon-"], [class*=" icon-"]{
+				color:@dropdownLinkColorHover;
+			}
 		}
 	}
 }
 .navbar-inverse {
 	.nav > .active > a, .navbar-inverse .nav > .active > a:hover, .navbar-inverse .nav > .active > a:focus{
-	.box-shadow(none);
+		.box-shadow(none);
 	}
-	li{
-		a,span.separator{
+	.nav li{
+		a{
 			text-shadow: none;
 		}
-		> span.separator{
-			color: @navbarInverseLinkColor !important;
-			&:hover{
-				color: @navbarInverseLinkColorHover !important;
-				background-color: @navbarInverseLinkBackgroundHover;
-				background-image:none;
-				-ms-filter:none;
-				    filter:none;
-			}
-		}
 	}
-	.nav li.dropdown{
-		>.dropdown-toggle .caret{
+	.nav > li.dropdown{
+		> a .caret{
 			background-image: url(../images/caret.jpg);
 			background-position: right top;
 			background-repeat: no-repeat;
@@ -1417,13 +1401,13 @@ div.img-peak-bottom{
 			width: 17px;
 		}
 		&:hover{
-			>.dropdown-toggle .caret{
+			> a .caret{
 				background-image: url(../images/caret-hover.jpg);
 			}
 		}
 	}
 	.nav > li:hover{
-		> a, > span.separator{
+		> a{
 			color:@dropdownLinkColorHover;
 			background-color: @navbarInverseLinkBackgroundHover;
 		}
@@ -1445,7 +1429,7 @@ div.img-peak-bottom{
 	margin-bottom: 0;
 
 	> li {
-		background-color: @white;
+		background-color: transparent;
 		border-bottom: 2px solid @navtabsBgHover;
 		margin-right: 0 !important;
 		margin-top: 0;
@@ -2626,7 +2610,7 @@ a.wylia-readmore{
 		    li{
 		    	margin-left: 10px;
 		    }
-		    li a, li .separator{
+		    li a{
 		    		color:@navbarFooterLinkColor;
 		    		font-size: 12px;
 		    		padding: 0 15px 0 5px;
@@ -2993,6 +2977,9 @@ a.wylia-readmore{
 		.transition(all 0.25s ease-in-out);
 		background-color: @ms5linkColor;
 		color: @color_one;
+		[class^="icon-"], [class*=" icon-"]{
+			color: @color_one;
+		}
 	}
 }
 #top{
@@ -3079,7 +3066,6 @@ a.wylia-readmore{
 						padding-top: 0;
 					}
 					&:hover{
-						background-color: transparent;
 						background-image:none;
 						-ms-filter:none;
 						    filter:none;
@@ -3091,7 +3077,6 @@ a.wylia-readmore{
 					background-image:none;
 					-ms-filter:none;
 					    filter:none;
-					background-color: transparent;
 				}
 			}
 		}
@@ -3409,19 +3394,65 @@ div:first-child+.panel{
 }
 
 .dropdown-menu{
+	.border-radius(0);
+	padding: 0;
+	> li {
+		> a{
+			&:hover,
+			&:focus{
+				background-color: @dropdownLinkBackgroundHover;
+				background-image: none;
+				filter: none;
+			}
+		}
+	}
 	>.active>a{
+		background-color: @dropdownLinkBackgroundActive;
 		background-image: none;
 		filter: none;
 		&:hover,
 		&:focus{
+			background-color: @dropdownLinkBackgroundActive;
 			background-image: none;
 			filter: none;
+		}
+	}
+
+	li.dropdown{
+		.sub-menu{
+			> li {
+				> a{
+					&:hover,
+					&:focus{
+						background-color: @color_one;
+					}
+				}
+			}
+			>.active>a{
+				background-color: @color_one;
+				&:hover,
+				&:focus{
+					background-color: @color_one;
+				}
+			}
 		}
 	}
 }
 
 // System menus Wright 3.1.3.14
 
+.nav,
+.navbar-inner,
+.nav .navbar-inner,
+.navbar .nav,
+.navbar .nav .navbar-inner {
+	li.dropdown .dropdown-menu {
+		.border-radius(0);
+		li .sub-menu{
+			margin-top: 0;
+		}
+	}
+}
 
 .module{
 	.nav, .nav.nav-stacked, .nav.nav-pills, .nav.nav-list{
@@ -3441,7 +3472,7 @@ div:first-child+.panel{
 
 				&:hover,
 				&:focus{
-					background-color: @linkColor;
+					background-color: @dropdownLinkBackgroundHover;
 					color: @white;
 
 					.caret{
@@ -3456,7 +3487,7 @@ div:first-child+.panel{
 			}
 			&.active{
 				>a{
-					background-color: @linkColor;
+					background-color: @dropdownLinkBackgroundHover;
 					color: @white;
 
 					.caret{
@@ -3470,7 +3501,7 @@ div:first-child+.panel{
 					&:active,
 					&:hover,
 					&:focus{
-						background-color: @linkColor;
+						background-color: @dropdownLinkBackgroundHover;
 						color: @white;
 
 						.caret{
@@ -3534,6 +3565,18 @@ div:first-child+.panel{
 		                    color: @navtabsColorHover;
 		                }
 	                }
+				}
+			}
+		}
+	}
+	.nav.nav-pills,
+	.nav.nav-list{
+		> li{
+			&.active{
+				> a{
+					&:hover, &:focus{
+						background-color: @linkColor;
+					}
 				}
 			}
 		}

@@ -299,3 +299,36 @@ legend{
 .wylia-logo-footer{
 	background-image: url(../images/totalblack/logo-footer.png);
 }
+.module{
+	.nav, .nav.nav-stacked, .nav.nav-pills, .nav.nav-list{
+		li{
+			> a{
+				&:hover, &:focus{
+					background-color: @linkColor;
+				}
+			}
+			&.active{
+
+			}
+		}
+		li.dropdown .dropdown-menu li{
+			>a{
+				&:hover,
+				&:focus{
+					background-color: darken(@dropdownLinkBackgroundHover, 5%);
+				}
+			}
+			&.active{
+				>a{
+					background-color: darken(@dropdownLinkBackgroundHover, 5%);
+
+					&:active,
+					&:hover,
+					&:focus{
+						background-color: darken(@dropdownLinkBackgroundHover, 5%);
+					}
+				}
+			}
+		}
+	}
+}
