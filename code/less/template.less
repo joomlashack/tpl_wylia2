@@ -715,9 +715,6 @@ div.img-peak-bottom{
 			color: @btnPrimaryBackground;
 		}
 	}
-	.shackSliderslider2{
-		margin-bottom: 0;
-	}
 	#slider2Nav:empty{
 		margin: 0;
 	}
@@ -725,50 +722,6 @@ div.img-peak-bottom{
 		margin-top: 65%;
 		margin-left: 0;
 		margin-right: 0;
-	}
-	.pagination{
-		.border-radius(8px 8px 0 0);
-		height: 34px;
-		margin-bottom: 0 !important;
-		margin-top: -34px !important;
-		position: relative;
-		z-index: 1;
-		ul{
-			.border-radius(8px 8px 0 0);
-			.box-shadow(none);
-			background-color: @navtabsBgHover;
-			height: 34px;
-			padding: 10px;
-			a{
-				.border-radius(8px) !important;
-				border: none;
-				height: 10px !important;
-				margin-right: 10px !important;
-				padding: 0;
-				text-indent: -9999px;
-			}
-			li:last-child{
-				a{
-					margin-right: 0 !important;
-				}
-			}
-		}
-	}
-}
-._article{
-	#slider2Nav, #sliderNav {
-		ul{
-			a{
-				background-color: @btnPrimaryBackground !important;
-				width: 10px !important;
-				background-image: none;
-			}
-			.active{
-				a{
-					background-color: @white !important;
-				}
-			}
-		}
 	}
 }
 .label-info, .badge-info{
@@ -1126,7 +1079,7 @@ div.img-peak-bottom{
 		margin-right: -20px;
 		width: auto;
 	}
-	a{
+	a:not(.btn){
 		color:@ms5linkColor;
 	}
 	div.lifestream ul.stream{
@@ -2860,66 +2813,113 @@ a.wylia-readmore{
 		}
 	}
 }
-#slider{
-	.slidermanDescriptionText{
-		color:@btnSecondaryColor;
-		.slideTitle{
-			.box-sizing(border-box);
-			background-color: fadeout(@btnPrimaryColor,20%);
-			display: table;
-			padding: 20px;
-			text-align: center;
-			width: auto !important;
+
+div{
+	.slideTitle{
+		border-top: 2px solid @btnPrimaryBackground;
+		background-color: @navtabsBgHover;
+		color: @gridBottom3Color;
+		font-family: @serifFontFamily;
+		font-size: 14px;
+		padding: 20px;
+		small{
+			color: @gridBottom3Color;
+		}
+		cite{
+			color: @color_two;
+		}
+		h1,h2,h3,h4,h5,h6{
+			color: @btnPrimaryBackground;
+			font-family: @serifFontFamily;
+		}
+		a:not(.btn){
+			color: @btnPrimaryBackground;
 		}
 	}
 }
-.shackSliderslider {
+
+.shackSliderslider{
 	margin-bottom: 0 !important;
-	position: relative;
+
 	#sliderNav {
-		background-color: @borderColor;
 		margin-bottom: 0;
-		padding: 7px;
-		position: absolute;
-		right: 0;
-		top: 40%;
-		> ul {
-			padding: 0;
-			.border-radius(0 0 0 0);
-			li{
-				display: block;
-				overflow: hidden;
-				padding: 5px;
+	}
+
+	#slider2Nav:empty{
+		margin: 0;
+	}
+	.slidermanButtonsCont .sliderPrev, .slidermanButtonsCont .sliderNext{
+		margin-top: 65%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.pagination{
+		.border-radius(8px 8px 0 0);
+		margin-bottom: 0 !important;
+		ul{
+			li{height: 10px;}
+
+			a{
+				border: none;
+				padding: 0;
+			}
+			li:last-child{
 				a{
-					margin: 0 auto !important;
-					&.sliderPrev,&.sliderNext{
-						color: @white;
-						text-indent: 0;
-					}
-				}
-				&.active{
-					a{
-						background-color: @white !important;
-						color: @black !important;
-					}
+					margin-right: 0 !important;
 				}
 			}
 		}
+	}
+
+	#slider2Nav, #sliderNav {
+		.border-radius(8px 8px 0 0);
+		background-color: @navtabsBgHover;
+		display: table;
+		height: 32px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: -32px;
+		padding-left: 6px;
+		padding: 10px 10px 10px 16px ;
+		position: relative;
+		z-index: 1;
+
 		a{
-			.border-radius(13px);
-			background-color: @linkColor !important;
-			background-image: none !important;
-			display: block !important;
-			float: none;
-			font-size: 9px;
-			height: 13px !important;
-			line-height: normal;
-			margin: 10px auto !important;
-			padding: 0 !important;
-			width: 13px !important;
+			.border-radius(8px) ;
+			.box-sizing(border-box);
+			background-color: @btnPrimaryBackground !important;
+			background-image: none;
+			height: 10px !important;
+			margin-bottom: 0;
+			margin-right: 10px !important;
+			margin-top: 0;
+			width: 10px !important;
+
 			&.active{
 				background-color: @white !important;
-				color: @black !important;
+			}
+			&.sliderPrev,
+			&.sliderNext{
+				background-color: transparent !important;
+				height: 21px !important;
+				padding-top: 0;
+				background-position-y: -6px;
+				-ms-background-position-y: -6px;
+			}
+			&.sliderNext{
+				margin-left: 4px;
+			}
+		}
+		> a{
+			&:last-child{
+				margin-right: 0 !important;
+			}
+		}
+		ul{
+			.active{
+				a{
+					background-color: @white !important;
+				}
 			}
 		}
 	}
