@@ -2490,7 +2490,7 @@ a.wylia-readmore{
 	}
 	.span12{
 		width: 98%;
-		&.shackSliderslider{
+		&.shackSliderslider , &.slidermanDescriptionCont{
 			width: 100%;
 		}
 	}
@@ -2857,7 +2857,11 @@ div{
 		.border-radius(8px 8px 0 0);
 		margin-bottom: 0 !important;
 		ul{
-			li{height: 10px;}
+			li{
+				display: inline-block;
+				height: 10px;
+				vertical-align: top;
+			}
 
 			a{
 				border: none;
@@ -2875,10 +2879,9 @@ div{
 		.border-radius(8px 8px 0 0);
 		background-color: @navtabsBgHover;
 		display: table;
-		height: 32px;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: -32px;
+		margin-top: -38px;
 		padding-left: 6px;
 		padding: 10px 10px 10px 16px ;
 		position: relative;
@@ -2893,6 +2896,7 @@ div{
 			margin-bottom: 0;
 			margin-right: 10px !important;
 			margin-top: 0;
+			vertical-align: top;
 			width: 10px !important;
 
 			&.active{
@@ -2901,7 +2905,6 @@ div{
 			&.sliderPrev,
 			&.sliderNext{
 				background-color: transparent !important;
-				height: 21px !important;
 				padding-top: 0;
 				background-position-y: -6px;
 				-ms-background-position-y: -6px;
