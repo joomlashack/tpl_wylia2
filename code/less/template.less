@@ -1,19 +1,27 @@
 
-.clearfix(){
-  *zoom: 1;
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-    line-height: 0;
-  }
-  &:after {
-    clear: both;
-  }
-}
 .removegradient(){
 	background-image: none;
 	filter:none;
+}
+.rm-margin-children{
+	> *:first-child{
+		margin-top: 0;
+		> *:first-child{
+			margin-top: 0;
+			> *:first-child{
+				margin-top: 0;
+			}
+		}
+	}
+	> *:last-child{
+		margin-bottom: 0;
+		> *:last-child{
+			margin-bottom: 0;
+			> *:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 // // Wylia Template
 // // ---------------------------
@@ -2985,20 +2993,6 @@ div{
 		}
 	}
 }
-#top{
-	border-bottom: 1px solid @navtabsBgHover;
-	.module{
-		border-left: 1px solid @navtabsBgHover;
-		margin-bottom: 0;
-		padding-top: 10px;
-		> form{
-			margin-bottom: 0;
-		}
-		&.first{
-			border-left: none;
-		}
-	}
-}
 #header{
 	color:@navbarFooterLinkColor;
 
@@ -3021,6 +3015,32 @@ div{
 		}
 		&#mod-search-searchword{
 			width: auto;
+		}
+	}
+	#top{
+		border-bottom: 1px solid @navtabsBgHover;
+		padding-top: 0;
+		.module{
+			border-left: 1px solid @navtabsBgHover;
+			margin-bottom: 0;
+			padding-bottom: 10px;
+			padding-top: 10px;
+			.rm-margin-children();
+
+			&.first{
+				border-left: none;
+			}
+		}
+		.search {
+			* {
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+		}
+		h1,h2,h3,h4,h5,h6{
+			&.pull-right, &.pull-left{
+				margin-bottom: 0;
+			}
 		}
 	}
 }
