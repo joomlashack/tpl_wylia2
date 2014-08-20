@@ -3267,8 +3267,14 @@ div{
 	margin-right: 5px;
 	padding: 0;
 }
-.readmore .btn .icon-chevron-right{
-	display:none;
+.readmore {
+	.btn .icon-chevron-right{
+		display:none;
+	}
+	+ *{
+		clear: both;
+		margin-top: 10px;
+	}
 }
 .cat-children {
 	.page-header.item-title{
