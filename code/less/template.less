@@ -268,7 +268,6 @@ input[type="number"], input[type="email"], input[type="url"],
 input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
 	.border-radius(0 0 0 0);
 	.box-shadow(none);
-	border-width: 2px;
 	color: @btnBackground;
 	&::-webkit-input-placeholder {
 	    color:    @btnBackground;
@@ -352,7 +351,8 @@ p.p-featured:first-letter{
 	color: @white;
 	text-shadow:none;
 	text-transform: uppercase;
-	&:hover{
+	&:hover,
+	&:focus{
 		color: @grayLight;
 	}
 }
@@ -361,20 +361,23 @@ p.p-featured:first-letter{
 }
 .btn-info{
 	border-color: darken(@blue ,10%);
-	&:hover{
+	&:hover,
+	&:focus{
 		color: @white;
 	}
 }
 .btn-danger{
 	border-color: darken(@btnDangerBackground ,15%);
-	&:hover{
+	&:hover,
+	&:focus{
 		color: @white;
 	}
 }
 .btn-inverse{
 	border-color: darken(@color_one ,10%);
 	color: @grayLight;
-	&:hover{
+	&:hover,
+	&:focus{
 		color: @white;
 	}
 }
@@ -385,19 +388,22 @@ p.p-featured:first-letter{
 .btn-primary{
 	color:@btnPrimaryColor;
 	border-color: @btnPrimaryBorder;
-	&:hover{
+	&:hover,
+	&:focus{
 		color: darken(@btnPrimaryBorder ,20%);;
 	}
 }
 .btn-success{
 	border-color: darken(@green ,10%);
-	&:hover{
+	&:hover,
+	&:focus{
 		color: @white;
 	}
 }
 .btn-warning{
 	border-color: darken(@orange ,10%);
-	&:hover{
+	&:hover,
+	&:focus{
 		color: @white;
 	}
 }
@@ -636,9 +642,6 @@ div.img-peak-bottom{
 }
 .img-intro-left, .img-fulltext-left,.img-intro-right, .img-fulltext-right{
 	max-width: 100%;
-}
-.input-append .add-on, .input-prepend .add-on{
-	border-width: 2px;
 }
 .item-page{
 	.clearfix();
@@ -3182,81 +3185,23 @@ div{
 	background-color: #dff0d8;
 	border: 1px solid #d6e9c6;
 }
-/* Sidenav for Docs
-/**************************************************************************************************/
-
-.bs-docs-sidenav {
-  width: 228px;
-  margin: 30px 0 0;
-  padding: 0;
-  background-color: @white;
-}
-.bs-docs-sidenav > li > a {
-  display: block;
-  width: 190px \9;
-  margin: 0;
-  font-size: 16px;
-  padding: 14px 14px;
-  border-top: 1px solid @pageHeaderBorder;
-}
-.bs-docs-sidenav {
-	> li:first-child a{
-		border-top: none;
-	}
-}
-
-.bs-docs-sidenav > .active > a {
-  position: relative;
-  z-index: 2;
-  border: 0;
-  color:@navtabsBgHover;
-  &:before{
-  	border-top: 20px solid transparent;
-	border-bottom: 20px solid transparent;
-	border-left: 20px solid @navtabsBgHover;
-	content: '';
-	height: 0;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 0;
-  }
-}
-// Chevrons
-.bs-docs-sidenav .icon-chevron-right {
-   display: none !important;
-}
-.bs-docs-sidenav > li > a:hover {
-  background-color: @white;
-  color: @navtabsBgHover;
-}
-
-.bs-docs-sidenav.affix {
-  top: 60px;
-}
-.bs-docs-sidenav.affix-bottom {
-  position: absolute;
-  top: auto;
-  bottom: 10px;
-}
 // ---------------------------
 .current section {
   padding-top: 30px;
 }
-.bs-docs-example {
-	position: relative;
-	padding: 39px 40px 14px;
-	margin: 10px 0;
-	background-color: @white;
-	border: 1px solid @grayLighter - #222;
-	&:after {
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding: 0 5px;
-		font-size: 12px;
-		background-color:@grayLighter - #111;
-		content: "EXAMPLE";
+div{
+	.bs-docs-example {
+		border: 1px solid @grayLighter - #222;
+		margin: 10px 0;
+		padding: 39px 40px 14px;
+		&:after {
+			background-color:@grayLighter - #111;
+			content: "EXAMPLE";
+			font-weight: normal;
+			left: 0;
+			padding: 0 5px;
+			top: 0;
+		}
 	}
 }
 
@@ -3460,8 +3405,14 @@ div:first-child+.panel{
 .blog-featured,.remind,.reset ,.login,.finder{
 	padding-top: 10px;
 }
-.input-append .add-on, .input-prepend .add-on{
-	color:@textColor;
+.input-append,
+.input-prepend {
+	.add-on{
+		color:@textColor;
+	}
+	.btn{
+		border-width: 1px;
+	}
 }
 
 .dropdown-menu{
