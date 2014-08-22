@@ -1302,7 +1302,21 @@ div.img-peak-bottom{
 								min-height: 19px;
 							}
 						}
-
+						&.divider,
+						&.nav-header{
+							margin: 0;
+							position: relative;
+							&:after{
+								background-color: @dropdownBackground;
+								border-bottom: 1px solid @dropdownBackground;
+								content: '';
+								height: 100%;
+								position: absolute;
+								right: 100%;
+								top: 0;
+								width: 10px;
+							}
+						}
 						.sub-menu{
 							.box-shadow(none);
 							background-color: @color_one;
