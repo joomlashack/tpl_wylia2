@@ -3232,16 +3232,20 @@ div{
 }
 div{
 	.bs-docs-example {
+		.border-radius(0);
 		border: 1px solid @grayLighter - #222;
 		margin: 10px 0;
 		padding: 39px 40px 14px;
 		&:after {
+			.border-radius(0);
 			background-color:@grayLighter - #111;
-			content: "EXAMPLE";
 			font-weight: normal;
-			left: 0;
 			padding: 0 5px;
-			top: 0;
+			color: @textColor;
+			text-transform: uppercase;
+		}
+		+ .prettyprint{
+			margin-top: 0;
 		}
 	}
 }
