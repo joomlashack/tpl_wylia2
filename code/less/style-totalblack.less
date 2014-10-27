@@ -301,31 +301,21 @@ legend{
 }
 .module{
 	.nav, .nav.nav-stacked, .nav.nav-pills, .nav.nav-list{
-		li{
-			> a{
-				&:hover, &:focus{
-					background-color: @linkColor;
-				}
-			}
-			&.active{
-
-			}
-		}
 		li.dropdown .dropdown-menu li{
 			>a{
 				&:hover,
 				&:focus{
-					background-color: darken(@dropdownLinkBackgroundHover, 5%);
+					background-color: darken(@dropdownLinkBackgroundHover, 14%);
 				}
 			}
 			&.active{
 				>a{
-					background-color: darken(@dropdownLinkBackgroundHover, 5%);
+					background-color: darken(@dropdownLinkBackgroundHover, 14%);
 
 					&:active,
 					&:hover,
 					&:focus{
-						background-color: darken(@dropdownLinkBackgroundHover, 5%);
+						background-color: darken(@dropdownLinkBackgroundHover, 14%);
 					}
 				}
 			}
