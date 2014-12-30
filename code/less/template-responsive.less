@@ -20,14 +20,6 @@
 		}
 	}
 	.fixed{
-		&.sb1{
-			#sidebar1:first-child{
-				+  #main{
-						// padding-left: 1.284103%;
-						// padding-right: 1.284103%;
-				}
-			}
-		}
 		&.sb2{
 			#sidebar2:first-child{
 				+  #main{
@@ -37,7 +29,7 @@
 			}
 		}
 		#main:first-child{
-			#above-content [class^="module"]:first-child>h3::before{
+			#above-content [class^="module"]:first-child>h3:before{
 				.box-sizing(content-box);
 				margin-left: -3.564102564102564%;
 				margin-right: -3.564102564102564%;
@@ -46,13 +38,13 @@
 			}
 		}
 		&.sb2{
-			#main:first-child #above-content [class^="module"]:first-child>h3::before{
+			#main:first-child #above-content [class^="module"]:first-child>h3:before{
 				padding-right: 30px;
 				margin-right: -30px;
 			}
 		}
 		&.sb1{
-			#main:first-child #above-content [class^="module"]:first-child>h3::before{
+			#main:first-child #above-content [class^="module"]:first-child>h3:before{
 				padding-right: 30px;
 				margin-right: -30px;
 			}
@@ -72,57 +64,57 @@
 			}
 		}
 	}
-		&.sb1{
-			#sidebar1:first-child{
-				+  #main{
-					// padding-left: 1.284103%;
-					// padding-right: 1.284103%;
-				}
-			}
-		}
-		&.sb2{
-			#sidebar2:first-child{
-				+  #main{
-					padding-left: 1.284103%;
-					padding-right: 1.284103%;
-				}
-			}
-		}
-		#main:first-child{
-			#above-content [class^="module"]:first-child>h3::before{
-				.box-sizing(content-box);
-				margin-left: -3.564102564102564%;
-				margin-right: -3.564102564102564%;
-				padding-left: 3.564102564102564%;
-				padding-right: 3.564102564102564%;
-			}
-		}
-		&.sb2{
-			#main:first-child #above-content [class^="module"]:first-child>h3::before{
-				padding-right: 30px;
-				margin-right: -30px;
-			}
-		}
-		&.sb1{
-			#main:first-child #above-content [class^="module"]:first-child>h3::before{
-				padding-right: 30px;
-				margin-right: -30px;
-			}
-		}
-		&.sb1.sb2{
-			#sidebar1:first-child{
-				+ #main{
-					padding-left: 2.53877%;
-					padding-right: 2.53877%;
-				}
-			}
-			#sidebar2:first-child{
-				+ #main{
-					padding-left: 2.53877%;
-					padding-right: 2.53877%;
-				}
-			}
-		}
+		// &.sb1{
+		// 	#sidebar1:first-child{
+		// 		+  #main{
+		// 			// padding-left: 1.284103%;
+		// 			// padding-right: 1.284103%;
+		// 		}
+		// 	}
+		// }
+		// &.sb2{
+		// 	#sidebar2:first-child{
+		// 		+  #main{
+		// 			padding-left: 1.284103%;
+		// 			padding-right: 1.284103%;
+		// 		}
+		// 	}
+		// }
+		// #main:first-child{
+		// 	#above-content [class^="module"]:first-child>h3:before{
+		// 		.box-sizing(content-box);
+		// 		margin-left: -3.564102564102564%;
+		// 		margin-right: -3.564102564102564%;
+		// 		padding-left: 3.564102564102564%;
+		// 		padding-right: 3.564102564102564%;
+		// 	}
+		// }
+		// &.sb2{
+		// 	#main:first-child #above-content [class^="module"]:first-child>h3:before{
+		// 		padding-right: 30px;
+		// 		margin-right: -30px;
+		// 	}
+		// }
+		// &.sb1{
+		// 	#main:first-child #above-content [class^="module"]:first-child>h3:before{
+		// 		padding-right: 30px;
+		// 		margin-right: -30px;
+		// 	}
+		// }
+		// &.sb1.sb2{
+		// 	#sidebar1:first-child{
+		// 		+ #main{
+		// 			padding-left: 2.53877%;
+		// 			padding-right: 2.53877%;
+		// 		}
+		// 	}
+		// 	#sidebar2:first-child{
+		// 		+ #main{
+		// 			padding-left: 2.53877%;
+		// 			padding-right: 2.53877%;
+		// 		}
+		// 	}
+		// }
 
 }
 
@@ -251,7 +243,7 @@
 				> li {
 					position: relative;
 
-					&::after{
+					&:after{
 						background-color: @btnNavbar;
 						content: '';
 						height: 103%;
@@ -261,12 +253,12 @@
 						width: 10px;
 					}
 					&:last-child{
-						&::after{
+						&:after{
 							height: 100%;
 						}
 					}
 					&:hover {
-						&::after{
+						&:after{
 							background-image: url(../images/bg-navbarlink-hover.png);
 							background-color: transparent;
 							background-position: 0 -5px;
@@ -274,7 +266,7 @@
 						}
 					}
 					&.active {
-						&::after{
+						&:after{
 							background-image: url(../images/bg-navbarlink-hover.png);
 							background-color: transparent;
 							background-position: 0 -5px;
@@ -315,7 +307,7 @@
 				}
 				.dropdown-menu{
 					.dropdown-menu{
-						&::after{
+						&:after{
 							background-color:@blockquoteColor;
 						}
 					}
@@ -355,7 +347,7 @@
 				height: 6px;
 				margin-top: 0;
 				width: 17px;
-				&::before{
+				&:before{
 					color:@dropdownBackground;
 					content: "\f0da";
 					font-size: 20px;
@@ -401,7 +393,7 @@
 				&.active > a{
 					color: @dropdownLinkColorActive;
 				}
-				&:hover>a::after, &.active>a::after{
+				&:hover>a:after, &.active>a:after{
 					background-position: left center;
 				}
 				&.parent{
@@ -413,7 +405,7 @@
 						margin-top: 0;
 						padding: 0;
 						width: 100%;
-						&::after{
+						&:after{
 							border-bottom: none;
 							font-size: 20px;
 						}
@@ -426,7 +418,7 @@
 				}
 			}
 			.dropdown-menu{
-				&::after{
+				&:after{
 					background-color: @dropdownBackground;
 					content: '';
 					display: block;
@@ -449,7 +441,7 @@
 				height: 6px;
 				margin-top: 0;
 				width: 17px;
-				&::before{
+				&:before{
 					color:@dropdownBackground;
 					content: "\f0da";
 					font-size: 20px;
@@ -468,7 +460,7 @@
 			> li:hover > a , > .active > a{
 				color: @dropdownLinkColorHover;
 				.caret{
-					&::before{
+					&:before{
 						color: @dropdownLinkColorHover !important;
 						content: "\f0d7" !important;
 					}
@@ -477,7 +469,7 @@
 		}
 		.dropdown-menu > li:hover > a,.dropdown-menu > .active > a{
 			color: @dropdownLinkColorHover;
-			> .icon-caret-right::before{
+			> .icon-caret-right:before{
 				content: "\f0d7";
 				color: @dropdownLinkColorHover !important;
 			}
@@ -702,11 +694,6 @@
 	#sidebar2,#sidebar1{
 		border: 0;
 		padding: 0 !important;
-		&:after{
-			height: 0;
-			width: 0;
-			border: 0;
-		}
 	}
 	#main{
 		margin-left: -20px !important;
@@ -728,7 +715,7 @@
 		border-left: none;
 		border-right: none;
 		margin-bottom: 10px;
-		&::after{
+		&:after{
 			display: none;
 		}
 		h3{
@@ -803,7 +790,7 @@
 				margin-right: -20px;
 				padding-left: 20px;
 				padding-right: 20px;
-				&::before{
+				&:before{
 					border-bottom: none;
 					content: none;
 					display: none;
