@@ -522,12 +522,11 @@ p.p-featured:first-letter{
 	#sidebar1:first-child{
 		padding-right: 20px;
 		+ #main{
-				.box-sizing(content-box);
-				margin-left: 0;
-				padding-left: 2.127659574468085%%;
-				padding-right: 0;
-			}
-
+			.box-sizing(content-box);
+			margin-left: 0;
+			padding-left: 2.127659574468085%%;
+			padding-right: 0;
+		}
 	}
 }
 .form-search .input-append .search-query,
@@ -2817,7 +2816,6 @@ a.wylia-readmore{
 	margin-left: -20px;
 	margin-bottom: 0;
 	margin-right: -20px;
-	overflow: hidden;
 	padding-left: 20px;
 	padding-right: 20px;
 
@@ -2873,14 +2871,7 @@ a.wylia-readmore{
 #sidebar1{
 	border-right: 1px solid @borderColor;
 	position: relative;
-	&:after{
-		border-right: 1px solid @borderColor;
-		content: '';
-		height: 2360%;
-		left: 0;
-		position: absolute;
-		width: 100%;
-	}
+
 	[class^="module"]:first-child{
 		> h3{
 			border-bottom: 1px solid @borderColor;
@@ -2895,14 +2886,7 @@ a.wylia-readmore{
 #sidebar2{
 	border-left: 1px solid @borderColor;
 	position: relative;
-	&:after{
-		border-left: 1px solid @borderColor;
-		content: '';
-		height: 2360%;
-		position: absolute;
-		right: 0;
-		width: 100%;
-	}
+
 	[class^="module"]:first-child{
 		> h3{
 			border-bottom: 1px solid @borderColor;
