@@ -149,6 +149,20 @@ defined('_JEXEC') or die('Restricted access');
         </div>
 
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_wylia/js/wylia.js'></script>
+
+        <?php
+            $browser = JBrowser::getInstance();
+
+            if ($browser->getBrowser() == 'msie')
+            {
+                $major = $browser->getMajor();
+
+                if ((int)$major <= 9) {
+                    echo "<script type='text/javascript' src='" . JURI::root() .  "templates/" . $this->document->template . "/js/fallback.js'></script>";
+                }
+
+            }
+        ?>
     </body>
 </html>
 
