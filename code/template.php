@@ -44,82 +44,80 @@ defined('_JEXEC') or die('Restricted access');
         </header>
         <div class="<?php echo $containerClass ?> background-white z1 absolute absolute-top absolute-left absolute-right"></div>
         <div class="<?php echo $containerClass ?> z2 relative">
-            <div class="container-fluid">
-                <?php if ($this->countModules('featured')) : ?>
-                <!-- featured -->
-                <div id="featured">
-                    <w:module type="none" name="featured" chrome="xhtml" />
-                </div>
-                <?php endif; ?>
-                <?php if ($this->countModules('grid-top')) : ?>
-                <!-- grid-top -->
-                <div id="grid-top">
-                    <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
-                </div>
-                <?php endif; ?>
-                <?php if ($this->countModules('grid-top2')) : ?>
-                <!-- grid-top2 -->
-                <div id="grid-top2">
-                    <w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
-                </div>
-                <?php endif; ?>
-                <?php if ($this->countModules('grid-top3')) : ?>
-                <!-- grid-top3 -->
-                <div id="grid-top3">
-                    <w:module type="row-fluid" name="grid-top3" chrome="wrightflexgrid" />
-                </div>
-                <?php endif; ?>
-                <?php if ($this->countModules('breadcrumbs')) : ?>
-                <!-- breadcrumbs -->
-                <div id="breadcrumbs">
-                    <w:module type="single" name="breadcrumbs" chrome="none" />
-                </div>
-                <?php endif; ?>
-                <div id="main-content" class="row-fluid">
-                    <!-- sidebar1 -->
-                    <aside id="sidebar1">
-                        <w:module name="sidebar1" chrome="xhtml" />
-                    </aside>
-                    <!-- main -->
-                    <section id="main">
-                        <?php if ($this->countModules('above-content')) : ?>
-                        <!-- above-content -->
-                        <div id="above-content">
-                            <w:module type="none" name="above-content" chrome="xhtml" />
-                        </div>
-                        <?php endif; ?>
-
-                        <?php if ($moduleMain) : ?>
-                        <w:module type="none" name="main" chrome="xhtml" />
-                        <?php else : ?>
-                        <!-- component -->
-                        <w:content />
-                        <?php endif; ?>
-                    </section>
-                    <!-- sidebar2 -->
-                    <aside id="sidebar2">
-                        <w:module name="sidebar2" chrome="xhtml" />
-                    </aside>
-                </div>
-                <?php if ($this->countModules('below-content')) : ?>
-                <!-- below-content -->
-                <div id="below-content">
-                    <w:module type="none" name="below-content" chrome="xhtml" />
-                </div>
-                <?php endif; ?>
-                <?php if ($this->countModules('grid-bottom')) : ?>
-                <!-- grid-bottom -->
-                <div id="grid-bottom" >
-                    <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
-                </div>
-                <?php endif; ?>
-                <?php if ($this->countModules('grid-bottom2')) : ?>
-                <!-- grid-bottom2 -->
-                <div id="grid-bottom2" >
-                    <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
-                </div>
-                <?php endif; ?>
+            <?php if ($this->countModules('featured')) : ?>
+            <!-- featured -->
+            <div id="featured">
+                <w:module type="none" name="featured" chrome="xhtml" />
             </div>
+            <?php endif; ?>
+            <?php if ($this->countModules('grid-top')) : ?>
+            <!-- grid-top -->
+            <div id="grid-top">
+                <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
+            </div>
+            <?php endif; ?>
+            <?php if ($this->countModules('grid-top2')) : ?>
+            <!-- grid-top2 -->
+            <div id="grid-top2">
+                <w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
+            </div>
+            <?php endif; ?>
+            <?php if ($this->countModules('grid-top3')) : ?>
+            <!-- grid-top3 -->
+            <div id="grid-top3">
+                <w:module type="row-fluid" name="grid-top3" chrome="wrightflexgrid" />
+            </div>
+            <?php endif; ?>
+            <?php if ($this->countModules('breadcrumbs')) : ?>
+            <!-- breadcrumbs -->
+            <div id="breadcrumbs">
+                <w:module type="single" name="breadcrumbs" chrome="none" />
+            </div>
+            <?php endif; ?>
+            <div id="main-content" class="row-fluid">
+                <!-- sidebar1 -->
+                <aside id="sidebar1">
+                    <w:module name="sidebar1" chrome="xhtml" />
+                </aside>
+                <!-- main -->
+                <section id="main">
+                    <?php if ($this->countModules('above-content')) : ?>
+                    <!-- above-content -->
+                    <div id="above-content">
+                        <w:module type="none" name="above-content" chrome="xhtml" />
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if ($moduleMain) : ?>
+                    <w:module type="none" name="main" chrome="xhtml" />
+                    <?php else : ?>
+                    <!-- component -->
+                    <w:content />
+                    <?php endif; ?>
+                </section>
+                <!-- sidebar2 -->
+                <aside id="sidebar2">
+                    <w:module name="sidebar2" chrome="xhtml" />
+                </aside>
+            </div>
+            <?php if ($this->countModules('below-content')) : ?>
+            <!-- below-content -->
+            <div id="below-content">
+                <w:module type="none" name="below-content" chrome="xhtml" />
+            </div>
+            <?php endif; ?>
+            <?php if ($this->countModules('grid-bottom')) : ?>
+            <!-- grid-bottom -->
+            <div id="grid-bottom" >
+                <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
+            </div>
+            <?php endif; ?>
+            <?php if ($this->countModules('grid-bottom2')) : ?>
+            <!-- grid-bottom2 -->
+            <div id="grid-bottom2" >
+                <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
+            </div>
+            <?php endif; ?>
         </div>
         <!-- footer -->
         <div class="wrapper-footer<?php echo $footerWrapperClass?>">
