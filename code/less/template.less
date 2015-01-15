@@ -463,12 +463,11 @@ p.p-featured:first-letter{
 }
 .fixed{
 	background-image: url('../images/bg-fixed.jpg');
-	.content-fixed{
-		background-color: @white;
-	}
+
 	#footer.sticky{
 		width: auto;
 	}
+
 	#header{
 		background-color: transparent;
 	}
@@ -2310,15 +2309,50 @@ ol.linenums {
 .thumbnail{
 	background-color: @white;
 }
-.wrapper-white{
+
+.background-white {
 	background-color: @white;
-	padding-left: 0;
-	padding-right: 0;
-	> .container-fluid{
-		padding-left: 0;
-		padding-right: 0;
-	}
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+.absolute {
+	position: absolute;
+}
+
+.absolute-top {
+	top: 0;
+}
+
+.absolute-bottom {
+	bottom: 0;
+}
+
+.absolute-left {
+	left: 0;
+}
+
+.absolute-right {
+	right: 0;
+}
+
+.relative {
+	position: relative;
+}
+
+.z1 {
+	z-index: 1;
+}
+
+.z2 {
+	z-index: 2;
+}
+
+.z3 {
+	z-index: 3;
+}
+
 .wrapper-menu{
 	margin-top: 10px;
 }
