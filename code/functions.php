@@ -20,7 +20,6 @@ if ($gridMode == 'row-fluid') {
     $containerClass = 'container-fluid';
 }else{
     $fixedClass = ' fixed';
-    $contentFixed = ' content-fixed';
     $footerWrapperClass = ' container';
 }
 
