@@ -43,7 +43,7 @@ defined('_JEXEC') or die('Restricted access');
            </div>
         </header>
         <div class="<?php echo $containerClass ?> background-white z1 absolute absolute-top absolute-left absolute-right"></div>
-        <div class="<?php echo $containerClass ?> z2 relative">
+        <div class="<?php echo $containerClass ?> z2 relative padding-sides">
             <?php if ($this->countModules('featured')) : ?>
             <!-- featured -->
             <div id="featured">
