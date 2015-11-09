@@ -3228,7 +3228,6 @@ div:first-child+.panel{
 						display: none;
 					}
 					li{
-						margin-top: -1px;
 						border-bottom: 1px solid @navbarInverseBackground;
 
 						&.parent{
@@ -3264,7 +3263,6 @@ div:first-child+.panel{
 						}
 
 						a {
-							border-bottom: 1px solid @color_one;
 							padding: 5px 7px;
 							position: relative;
 
@@ -3288,8 +3286,9 @@ div:first-child+.panel{
 							}
 						}
 						&:last-child{
+							border-bottom: 0;
+
 							a{
-								border-bottom: 0;
 								&:before{
 									border-bottom: 0;
 								}
