@@ -3231,7 +3231,7 @@ div:first-child+.panel{
 						border-bottom: 1px solid @navbarInverseBackground;
 
 						&.parent{
-							a{
+							a {
 								.caret{
 									border: 0;
 									border-bottom: 1px solid transparent;
@@ -3244,13 +3244,20 @@ div:first-child+.panel{
 									top: 0;
 									width: 27px;
 
-									&:after{
-										content: "\f0da";
-										font-family: FontAwesome;
-										font-size: 20px;
-										margin-top: 8px;
-										width: 10px;
-									}
+								}
+
+								&:after {
+									content: "\f0da";
+									border: 0;
+									font-family: FontAwesome;
+									font-size: 20px;
+									height: auto;
+									margin-top: 8px;
+									margin: 0;
+									position: absolute;
+									right: 0;
+									top: 0;
+									width: 15px;
 								}
 							}
 							&:hover{
@@ -3263,7 +3270,6 @@ div:first-child+.panel{
 						}
 
 						a {
-							padding: 5px 7px;
 							position: relative;
 
 							&:hover{
@@ -3285,6 +3291,7 @@ div:first-child+.panel{
 								width: 10px;
 							}
 						}
+
 						&:last-child{
 							border-bottom: 0;
 
@@ -3294,16 +3301,19 @@ div:first-child+.panel{
 								}
 							}
 						}
+
 						&:hover > a:before,
 						&.active > a:before{
 							background-image: url(../images/bg-link-hover.png);
 							background-color: transparent;
 						}
+
 						&.parent{
 							> a{
 								min-height: 19px;
 							}
 						}
+
 						&.divider,
 						&.nav-header{
 							margin: 0;
@@ -3319,6 +3329,7 @@ div:first-child+.panel{
 								width: 10px;
 							}
 						}
+
 						.dropdown-menu {
 							.box-shadow(none);
 							background-color: @color_one;
@@ -3344,7 +3355,29 @@ div:first-child+.panel{
 					.dropdown-submenu {
 						> a {
 							&:after {
+								background-color: @dropdownBackground;
 								margin-right: 0;
+
+							}
+						}
+					}
+
+					.dropdown-menu {
+						> li {
+							> a {
+								&:hover, &:focus {
+									background-color: transparent;
+								}
+							}
+
+							&.active {
+								> a {
+									background-color: transparent;
+
+									&:hover, &:focus {
+										background-color: transparent;
+									}
+								}
 							}
 						}
 					}
@@ -3366,6 +3399,18 @@ div:first-child+.panel{
 		}
 	}
 }
+
+.dropdown-submenu>.dropdown-menu {
+	.border-radius(0);
+}
+
+.dropdown-menu  {
+	>li>a {
+		padding: 0 25px 0  15px;
+	}
+}
+
+
 .navbar-inverse {
 	.nav > .active > a,
 	.navbar-inverse .nav > .active > a:hover,
