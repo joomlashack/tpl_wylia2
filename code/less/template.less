@@ -2798,8 +2798,15 @@ div:first-child+.panel{
 .dropdown-menu{
 	.border-radius(0);
 	padding: 0;
+
 	> li {
 		> a{
+			display: block;
+			min-height: 28px;
+			line-height: 28px;
+			padding-bottom: 0;
+			padding-top: 0;
+
 			&:hover,
 			&:focus{
 				background-color: @dropdownLinkBackgroundHover;
@@ -3257,14 +3264,23 @@ div:first-child+.panel{
 									position: absolute;
 									right: 0;
 									top: 0;
-									width: 15px;
+									width: 20px;
+									text-align: center;
+									color: @navbarInverseBackground;
 								}
 							}
 							&:hover{
-								a .caret{
-									background-color: @color_one;
-									border: 0;
-									border-bottom: 1px solid @color_one;
+								> a  {
+									.caret{
+										background-color: @color_one;
+										border: 0;
+										border-bottom: 1px solid @color_one;
+									}
+
+									&:after {
+										background-color: @color_one;
+										color: @dropdownLinkColorHover;
+									}
 								}
 							}
 						}
@@ -3298,6 +3314,17 @@ div:first-child+.panel{
 							a{
 								&:before{
 									border-bottom: 0;
+								}
+							}
+						}
+
+						&.active {
+							&:hover {
+								> a {
+									&:after {
+										background-color: @color_one;
+										color: @dropdownLinkColorHover;
+									}
 								}
 							}
 						}
@@ -3339,15 +3366,33 @@ div:first-child+.panel{
 								display: none;
 							}
 
-							li{
-								padding-left: 7px;
-								padding-right: 7px;
-								a{
+							li {
+								a {
 									border-bottom-color: @dropdownBackground;
+
+									&:after {
+										color: @dropdownLinkColor;
+									}
+
+									&:before {
+										display: none;
+									}
 								}
 
-								a:before{
-									display: none;
+								&:hover {
+									> a {
+										&:after {
+											color: @dropdownLinkColorActive;
+										}
+									}
+								}
+
+								&.active {
+									> a {
+										&:after {
+											color: @dropdownLinkColorActive;
+										}
+									}
 								}
 							}
 						}
@@ -3472,12 +3517,12 @@ div:first-child+.panel{
 		float: none;
 		text-align: left;
 
-		li{
+		> li{
 			display: inline-block;
 			.ie7-inline-block();
 			float: none;
 
-			a{
+			> a{
 				.ie7-inline-block();
 				display: inline-block;
 				float: none;
@@ -3492,27 +3537,11 @@ div:first-child+.panel{
 			}
 		}
 
-		.dropdown-menu{
+		.dropdown-menu {
 			.box-shadow(none);
 
-			li{
+			li {
 				display: block;
-
-				a{
-					display: block;
-					min-height: 28px;
-					line-height: 28px;
-					padding-bottom: 0;
-					padding-top: 0;
-
-					> span{
-						display: block;
-						float: left;
-						min-height: 28px;
-						padding-bottom: 0;
-						padding-top: 0;
-					}
-				}
 			}
 		}
 	}
