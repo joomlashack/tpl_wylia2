@@ -206,9 +206,11 @@
 		float: left;
 		width: auto;
 	}
-	.wrapper-toolbar{
+	.wrapper-toolbar,
+	.wrapper-logo-menu {
 		position: relative;
 	}
+
 	#toolbar,#menu{
 		vertical-align: top;
 		margin-left: 0;
@@ -241,6 +243,8 @@
 				margin-left: 10px;
 				background-color: @btnNavbar;
 				> li {
+					border-left: 0;
+					padding-right: 10px;
 					position: relative;
 
 					&:after{
@@ -262,7 +266,10 @@
 							background-image: url(../images/bg-navbarlink-hover.png);
 							background-color: transparent;
 							background-position: 0 -5px;
-							background-repeat: no-repeat;
+						}
+
+						> a {
+							background-color: transparent;
 						}
 					}
 					&.active {
@@ -272,10 +279,21 @@
 							background-position: 0 -5px;
 							background-repeat: no-repeat;
 						}
+
+						> a {
+							background-color: transparent;
+						}
+
+						&:hover {
+							> a {
+								background-color: transparent;
+							}
+						}
 					}
+
 					&.parent {
 						border: 0;
-						padding: 0;
+
 						> .dropdown-menu{
 							position: relative;
 							margin: 0 0 0 -10px;
@@ -304,7 +322,14 @@
 							}
 						}
 					}
+
+					> a {
+						&:hover, &:focus {
+							background-color: transparent;
+						}
+					}
 				}
+
 				.dropdown-menu{
 					.dropdown-menu{
 						&:after{
@@ -371,9 +396,6 @@
 			&.parent{
 				border-bottom: 1px solid @dropdownBackground;
 				padding-bottom: 2px;
-			}
-			&:hover a{
-				background-color: transparent !important;
 			}
 		}
 
@@ -459,12 +481,6 @@
 		.nav{
 			> li:hover > a , > .active > a{
 				color: @dropdownLinkColorHover;
-				.caret{
-					&:before{
-						color: @dropdownLinkColorHover !important;
-						content: "\f0d7" !important;
-					}
-				}
 			}
 		}
 		.dropdown-menu > li:hover > a,.dropdown-menu > .active > a{
@@ -479,7 +495,9 @@
 		margin-bottom: 0;
 	}
 	.nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a{
+		.border-radius(0);
 		font-weight: normal;
+
 		&.action{
 			.border-radius(0 0 0 0);
 			color: @color_five;
@@ -531,7 +549,6 @@
 			}
 		}
 	}
-
 
 	#top{
 		#mod-search-searchword{
