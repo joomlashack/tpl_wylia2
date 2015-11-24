@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
         <w:head />
     </head>
     <body class="<?php   echo $responsive . $fixedClass . $sidebarClass?>">
-        <header id="header" class="z4 relative">
+        <header id="header" class="relative">
             <div class="<?php echo $containerClass ?>">
                 <?php if ($this->countModules('toolbar')) : ?>
                 <div class="wrapper-toolbar">
