@@ -47,7 +47,7 @@ defined('_JEXEC') or die('Restricted access');
             <?php if ($this->countModules('featured')) : ?>
             <!-- featured -->
             <div id="featured">
-                <w:module type="none" name="featured" chrome="xhtml" />
+                <w:module type="none" name="featured" />
             </div>
             <?php endif; ?>
             <?php if ($this->countModules('grid-top')) : ?>
@@ -77,19 +77,19 @@ defined('_JEXEC') or die('Restricted access');
             <div id="main-content" class="row-fluid">
                 <!-- sidebar1 -->
                 <aside id="sidebar1">
-                    <w:module name="sidebar1" chrome="xhtml" />
+                    <w:module name="sidebar1" />
                 </aside>
                 <!-- main -->
                 <section id="main">
                     <?php if ($this->countModules('above-content')) : ?>
                     <!-- above-content -->
                     <div id="above-content">
-                        <w:module type="none" name="above-content" chrome="xhtml" />
+                        <w:module type="none" name="above-content" />
                     </div>
                     <?php endif; ?>
 
                     <?php if ($moduleMain) : ?>
-                    <w:module type="none" name="main" chrome="xhtml" />
+                    <w:module type="none" name="main" />
                     <?php else : ?>
                     <!-- component -->
                     <w:content />
@@ -97,13 +97,13 @@ defined('_JEXEC') or die('Restricted access');
                 </section>
                 <!-- sidebar2 -->
                 <aside id="sidebar2">
-                    <w:module name="sidebar2" chrome="xhtml" />
+                    <w:module name="sidebar2" />
                 </aside>
             </div>
             <?php if ($this->countModules('below-content')) : ?>
             <!-- below-content -->
             <div id="below-content">
-                <w:module type="none" name="below-content" chrome="xhtml" />
+                <w:module type="none" name="below-content" />
             </div>
             <?php endif; ?>
             <?php if ($this->countModules('grid-bottom')) : ?>
@@ -144,6 +144,7 @@ defined('_JEXEC') or die('Restricted access');
             </footer>
         </div>
 
+        <w:module type="none" name="debug" chrome="none" />
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_wylia/js/wylia.js'></script>
         <?php
             $browser = JBrowser::getInstance();
