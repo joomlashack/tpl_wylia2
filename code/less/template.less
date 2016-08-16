@@ -2281,9 +2281,11 @@ a.wylia-readmore{
 
 #sidebar1,#sidebar2{
 	overflow: visible;
+
 	img{
 		max-width: 100%;
 	}
+
 	.module{
 		padding-left: 0;
 		padding-right: 0;
@@ -2297,14 +2299,17 @@ a.wylia-readmore{
 			border-bottom: 1px solid @borderColor;
 			border-top: 1px solid @borderColor;
 		}
+	}
 
+	[class*="moduletable"] {
+		margin-bottom: 20px;
 	}
 }
 #sidebar1{
 	border-right: 1px solid @borderColor;
 	position: relative;
 
-	[class^="module"]:first-child{
+	.moduletable:first-child{
 		> h3{
 			border-bottom: 1px solid @borderColor;
 			font-size: 24px;
@@ -2319,7 +2324,7 @@ a.wylia-readmore{
 	border-left: 1px solid @borderColor;
 	position: relative;
 
-	[class^="module"]:first-child{
+	.moduletable:first-child{
 		> h3{
 			border-bottom: 1px solid @borderColor;
 			font-size: 24px;
