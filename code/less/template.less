@@ -2692,39 +2692,26 @@ div{
 #myTab li {
 	margin-bottom: 0;
 }
-#slide-contact .accordion-group{
+
+.accordion-group{
 	border-bottom-width:0;
 	margin-bottom: 0;
-	-webkit-border-radius: 0 0 0 0;
-	-moz-border-radius: 0 0 0 0;
-	border-radius: 0 0 0 0;
-	background-color: @tableBorder;
 	border-color: @wellBackground;
+
 	&:last-child{
 		border-bottom-color: @wellBackground;
 	}
 }
-#slide-contact .accordion-group:first-child{
-	-webkit-border-radius: 5px 5px 0 0;
-	-moz-border-radius: 5px 5px 0 0;
-	border-radius: 5px 5px 0 0;
+
+.accordion-group:first-child{
+	.border-radius(0);
 }
-#slide-contact .accordion-group:last-child{
-	-webkit-border-radius: 0 0 5px 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	border-radius: 0 0 5px 5px;
+
+.accordion-group:last-child{
+	.border-radius(0);
 	border-bottom-width: 1px;
 }
-#advancedSearch {
-	hr{
-		display: none;
-	}
-	.advanced-search-tip{
-		background-color: @wellBackground;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-}
+
 .list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid{
 	border-bottom-color: @tableBorder
 }
@@ -2958,6 +2945,7 @@ div:first-child+.panel{
 		&.active {
 			> a {
 				background-color: @navtabsBgHover;
+				border-color: @navtabsBgHover;
 				color: @navtabsColorHover;
 
 				&:hover, &:focus{
@@ -3031,6 +3019,19 @@ div:first-child+.panel{
 			}
 		}
 	}
+
+	&.nav-stacked {
+		> li {
+			&:last-child {
+				border: 0;
+			}
+
+			> a {
+				border: 0;
+				border-radius: 0 !important;
+			}
+		}
+	}
 }
 
 .nav-tabs .tabs {
@@ -3060,9 +3061,13 @@ div:first-child+.panel{
 
 .tab-content{
 	background-color: @grayLighter;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 20px;
+	margin-top: -20px;
+	padding: 20px;
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
 	.page-header{
 		border-bottom-color: @grayLighter - #222;
 	}
@@ -3240,7 +3245,7 @@ div:first-child+.panel{
 						border-bottom: 1px solid @navbarInverseBackground;
 
 						&.parent{
-							a {
+							> a {
 								.caret{
 									border: 0;
 									border-bottom: 1px solid transparent;
