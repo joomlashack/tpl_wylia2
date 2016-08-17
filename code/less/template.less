@@ -356,6 +356,11 @@ p.p-featured:first-letter{
 		}
 	}
 }
+
+.page-header {
+	border-bottom-color: @pageHeaderBorder;
+}
+
 .btn{
 	.border-radius(0 0 0 0);
 	.box-shadow(none);
@@ -2317,7 +2322,7 @@ a.wylia-readmore{
 			font-size: 24px;
 			margin-left: -30px;
 			margin-right: -30px;
-			padding: 5px 20px 15px;
+			padding: 4px 20px 15px;
 			text-align: center;
 		}
 	}
@@ -2332,7 +2337,7 @@ a.wylia-readmore{
 			font-size: 24px;
 			margin-right: -30px;
 			margin-left: -30px;
-			padding: 5px 20px 15px;
+			padding: 4px 20px 15px;
 			text-align: center;
 		}
 	}
@@ -2406,11 +2411,12 @@ div{
 		position: relative;
 		z-index: 1;
 
-		a{
+		a:link {
 			.border-radius(8px) ;
 			.box-sizing(border-box);
 			background-color: @btnPrimaryBackground !important;
 			background-image: none;
+			font-size: 0;
 			height: 10px !important;
 			margin-bottom: 0;
 			margin-right: 10px !important;
