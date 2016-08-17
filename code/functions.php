@@ -3,12 +3,15 @@
  * @package     Wylia
  * @subpackage  Functions
  *
- * @copyright   Copyright (C) 2005 - 2013 Joomlashack. Meritage Assets.  All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2015 Joomlashack. Meritage Assets.
+ *              All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 // Restrict Access to within Joomla
 defined('_JEXEC') or die('Restricted access');
+
+JLoader::import('joomla.environment.browser');
 
 // get the bootstrap row mode ( row / row-fluid )
 $gridMode = $this->params->get('bs_rowmode','row-fluid');
@@ -17,7 +20,6 @@ if ($gridMode == 'row-fluid') {
     $containerClass = 'container-fluid';
 }else{
     $fixedClass = ' fixed';
-    $contentFixed = ' content-fixed';
     $footerWrapperClass = ' container';
 }
 
