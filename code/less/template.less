@@ -370,9 +370,18 @@ p.p-featured:first-letter{
 	color: @white;
 	text-shadow:none;
 	text-transform: uppercase;
+
+	.caret {
+		border-top-color: @white;
+	}
+
 	&:hover,
 	&:focus{
 		color: @grayLight;
+
+		.caret {
+			border-top-color: @grayLight;
+		}
 	}
 }
 .btn.disabled, .btn[disabled]{
@@ -679,18 +688,31 @@ div.img-peak-bottom{
 	}
 	> .btn-group{
 		margin-bottom: 30px;
-		.btn.dropdown-toggle{
+
+		.btn.dropdown-toggle {
 			background-color: @borderColor;
 			border: none;
-			[class^="icon-"]:before, [class*=" icon-"]:before{
+
+			[class^="icon-"]:before,
+			[class*=" icon-"]:before{
 				color:@linkColor;
 			}
+
+			.caret {
+				border-top-color: @linkColor;
+			}
 		}
+
 		&.open{
 			.btn.dropdown-toggle{
 				background-color: lighten(@borderColor,10%);
+
 				[class^="icon-"]:before, [class*=" icon-"]:before{
-					color:@color_one;
+					color: @color_one;
+				}
+
+				.caret {
+					border-top-color: @color_one;
 				}
 			}
 		}
@@ -1892,6 +1914,7 @@ a.wylia-readmore{
 	bottom: 10px;
 	color: @btnSecondaryColor;
 	left: 2%;
+	overflow: hidden;
 	padding: 10px;
 	position: absolute;
 	width: 96%;
