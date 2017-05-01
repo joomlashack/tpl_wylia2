@@ -605,6 +605,7 @@ div.img-peak-right{
 	&:before{
 		background-image: url('../images/img-peak-right.png');
 		background-repeat: no-repeat;
+		background-size: auto 88px;
 		content: '';
 		height: 100%;
 		position: absolute;
@@ -634,6 +635,7 @@ div.img-peak-bottom{
 	&:before{
 		background-image: url('../images/img-peak-bottom.png');
 		background-repeat: no-repeat;
+		background-size: 88px auto;
 		bottom: 0;
 		content: '';
 		height: 17px;
@@ -3261,22 +3263,13 @@ div:first-child+.panel{
 	.nav {
 		> li{
 
-			&.dropdown{
+			&.dropdown {
 				z-index: 1003;
 
-				> a .caret{
-					background-image: url(../images/caret-toolbar.jpg);
-					background-position: right top;
-					background-repeat: no-repeat;
-					border: none;
-					height: 6px;
-					width: 17px;
+				> a .caret {
+					margin-left: 5px;
 				}
-				&:hover{
-					> a .caret{
-						background-image: url(../images/caret-hover.jpg);
-					}
-				}
+
 				> .dropdown-menu {
 					background-color: transparent;
 
@@ -3395,6 +3388,7 @@ div:first-child+.panel{
 							background-image: url(../images/bg-link-hover.png);
 							background-color: transparent;
 							background-position: center center;
+							background-size: 10px auto;
 						}
 
 						&.parent{
@@ -3529,19 +3523,10 @@ div:first-child+.panel{
 			text-shadow: none;
 		}
 	}
-	.nav > li.dropdown{
-		> a .caret{
-			background-image: url(../images/caret.jpg);
-			background-position: right top;
-			background-repeat: no-repeat;
-			border: none;
-			height: 6px;
-			width: 17px;
-		}
-		&:hover{
-			> a .caret{
-				background-image: url(../images/caret-hover.jpg);
-			}
+	.nav > li.dropdown {
+
+		> a .caret {
+			margin-left: 5px;
 		}
 	}
 	.nav > li:hover{
