@@ -3312,13 +3312,14 @@ div:first-child+.panel{
 									border: 0;
 									font-family: FontAwesome;
 									font-size: 20px;
-									height: auto;
+									height: 34px;
+									line-height: 34px;
 									margin-top: 8px;
 									margin: 0;
 									position: absolute;
 									right: 0;
 									top: 0;
-									width: 20px;
+									width: 25px;
 									text-align: center;
 									color: @navbarInverseBackground;
 								}
@@ -3505,9 +3506,10 @@ div:first-child+.panel{
 	.border-radius(0);
 }
 
-.dropdown-menu  {
-	>li>a {
-		padding: 0 25px 0  15px;
+.dropdown-menu {
+
+	> li > a {
+		padding: 3px 25px 3px 15px;
 	}
 }
 
@@ -3534,7 +3536,7 @@ div:first-child+.panel{
 				content: "\f107";
 				font-family: FontAwesome;
 				font-size: 15px;
-				top: 4px;
+				top: 8px;
 				position: absolute;
 			}
 		}
@@ -3562,6 +3564,10 @@ div:first-child+.panel{
 	display: inline-block;
 	.ie7-inline-block();
 
+	.navbar {
+		margin-bottom: 0;
+	}
+
 	.navbar-inner{
 		padding-left: 0;
 		padding-right: 0;
@@ -3583,10 +3589,10 @@ div:first-child+.panel{
 				.ie7-inline-block();
 				display: inline-block;
 				float: none;
-				padding-bottom: 4px;
-				padding-top: 4px;
-				text-transform: lowercase;
+				padding-bottom: 8px;
+				padding-top: 8px;
 				text-shadow: none;
+				font-size: 16px;
 
 				> span {
 					margin-right: 3px;
