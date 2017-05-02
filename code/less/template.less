@@ -3308,7 +3308,7 @@ div:first-child+.panel{
 								}
 
 								&:after {
-									content: "\f0da";
+									content: "\f105";
 									border: 0;
 									font-family: FontAwesome;
 									font-size: 20px;
@@ -3511,7 +3511,7 @@ div:first-child+.panel{
 	}
 }
 
-
+//.navbar-inverse .nav > li.dropdown > .dropdown-toggle .caret
 .navbar-inverse {
 	.nav > .active > a,
 	.navbar-inverse .nav > .active > a:hover,
@@ -3527,6 +3527,16 @@ div:first-child+.panel{
 
 		> a .caret {
 			margin-left: 5px;
+			margin-right: 7px;
+			border: none;
+
+			&:before {
+				content: "\f107";
+				font-family: FontAwesome;
+				font-size: 15px;
+				top: 4px;
+				position: absolute;
+			}
 		}
 	}
 	.nav > li:hover{
