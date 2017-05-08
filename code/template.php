@@ -88,13 +88,14 @@ defined('_JEXEC') or die('Restricted access');
                         <w:module type="none" name="above-content" />
                     </div>
                     <?php endif; ?>
-
-                    <?php if ($moduleMain) : ?>
-                    <w:module type="none" name="main" />
-                    <?php else : ?>
-                    <!-- component -->
-                    <w:content />
-                    <?php endif; ?>
+                    <div id="component-area">
+                        <?php if ($moduleMain) : ?>
+                            <w:module type="none" name="main" />
+                        <?php else : ?>
+                            <!-- component -->
+                            <w:content />
+                        <?php endif; ?>
+                    </div>
                 </section>
                 <!-- sidebar2 -->
                 <aside id="sidebar2">
