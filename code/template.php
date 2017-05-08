@@ -21,7 +21,7 @@ defined('_JEXEC') or die('Restricted access');
         <w:head />
     </head>
     <body class="<?php   echo $responsive . $fixedClass . $sidebarClass?>">
-        <header id="header" class="relative">
+        <header id="header" class="relative spacing-bottom">
             <div class="<?php echo $containerClass ?>">
                 <?php if ($this->countModules('toolbar')) : ?>
                 <div class="wrapper-toolbar">
@@ -42,14 +42,15 @@ defined('_JEXEC') or die('Restricted access');
                 <?php endif; ?>
            </div>
         </header>
-        <div class="<?php echo $containerClass ?> background-white z1 absolute absolute-top absolute-left absolute-right"></div>
-        <div class="<?php echo $containerClass ?> z2 relative padding-sides">
+        <div class="<?php echo $containerClass ?> background-white spacing-bottom">
             <?php if ($this->countModules('featured')) : ?>
             <!-- featured -->
             <div id="featured">
                 <w:module type="none" name="featured" />
             </div>
             <?php endif; ?>
+        </div>
+        <div class="<?php echo $containerClass ?> background-white">
             <?php if ($this->countModules('grid-top')) : ?>
             <!-- grid-top -->
             <div id="grid-top">
