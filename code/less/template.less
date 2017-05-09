@@ -1,3 +1,6 @@
+body {
+	background: #ddd;
+}
 
 .removegradient(){
 	background-image: none;
@@ -458,7 +461,6 @@ p.p-featured:first-letter{
 	}
 }
 .fixed{
-	background-image: url('../images/bg-fixed.jpg');
 
 	#footer.sticky{
 		width: auto;
@@ -767,8 +769,8 @@ div.img-peak-bottom{
 
 	li {
 		border-bottom: 1px dashed @borderColor;
-		padding-bottom: 20px;
-		padding-top: 20px;
+		padding-bottom: 10px;
+		padding-top: 10px;
 		&:first-child{
 			padding-top: 0;
 		}
@@ -778,17 +780,10 @@ div.img-peak-bottom{
 		a{
 			font-size: 16px;
 			font-weight: bold;
-			.icon-file {
-				&:before{
-					background-image: url(../images/arrow-latest-news.png);
-					background-position: center center;
-					background-repeat: no-repeat;
-					content:'';
-					height: 9px;
-					width: 19px;
-				}
-			}
-			&:hover{
+
+			&:hover,
+			&:focus,
+			&:active {
 				background-color: transparent;
 			}
 		}
@@ -1170,7 +1165,7 @@ div.img-peak-bottom{
 .page-header{
 	&.title-full{
 		padding: 0;
-		margin: 0;
+		margin: 0 0 20px 0;
 
 		> h1,
 		> h2,
@@ -1178,7 +1173,8 @@ div.img-peak-bottom{
 		> h4,
 		> h5,
 		> h6 {
-			margin-bottom: 20px;
+			margin-bottom: 15px;
+			margin-top: 0;
 		}
 	}
 }
@@ -1945,8 +1941,7 @@ a.wylia-readmore{
 		}
 	}
 	.page-header.title-full{
-		padding-bottom: 0;
-		margin: 0 -30px;
+
 		h1,h2,h3,h4,h5,h6{
 			margin: 16px 0;
 		}
@@ -2123,12 +2118,7 @@ a.wylia-readmore{
 	}
 }
 
-#grid-top,
-#grid-top2,
-#grid-top3,
-#grid-bottom,
-#grid-bottom2,
-#component-area {
+.inner-padding {
 	padding: 20px;
 }
 
