@@ -63,7 +63,7 @@ jQuery(function() {
         }
     })
 
-    jQuery('.page-header h1, .module h2').each(function(){
+    jQuery('.page-header h1, .page-header h2, .module h1, .module h2, .module h3, .module h4, .module h5, .module h6').each(function(){
         var text = jQuery(this).text().split(' ');
         var n = 1;
         var t = 'span';

@@ -1,3 +1,12 @@
+.heading() {
+	font-family: @sansFontFamily;
+
+	span {
+		font-family: @serifFontFamily;
+	}
+}
+
+//
 
 .fixed{
 	background-image: url(../images/naturalstyle/bg.jpg);
@@ -18,14 +27,12 @@
 		}
 	}
 	h3{
-		font-family: 'Oswald';
 		font-weight: bold;
 		color:@navtabsBgHover;
 	}
 }
 .page-header{
 	> h1,> h2,> h3,> h4,> h5,> h6{
-		font-family: 'Oswald';
 		font-weight: bold;
 	}
 }
@@ -77,7 +84,6 @@
 #top {
 	h1,h2,h3,h4,h5,h6{
 		color:@white;
-		font-family: 'Oswald';
 		font-weight: bold;
 	}
 	input[type="image"]{
@@ -167,17 +173,6 @@ a[data-icon="icon-yt"]{
 		background-image: url(../images/naturalstyle/icon-gplus-secondary.png);
 	}
 }
-
-#grid-bottom3{
-	color: @white;
-	small{
-		color: @white;
-	}
-	strong{
-		color: @white;
-		font-family: 'Oswald';
-	}
-}
 #footer{
 	color: @white;
 	[class^="module"],[class*="module"]{
@@ -186,11 +181,6 @@ a[data-icon="icon-yt"]{
 		color:@white;
 	}
 }
-}
-.hero-unit{
-	h1,h2,h3,h4,h5,h6{
-		font-family: 'Abril Fatface';
-	}
 }
 .prettyprint {
 	background-color: #C8F4D3!important;

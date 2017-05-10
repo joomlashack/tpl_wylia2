@@ -134,6 +134,14 @@ defined('_JEXEC') or die('Restricted access');
                     </div>
                 </div>
             <?php endif; ?>
+            <?php if ($this->countModules('grid-bottom3')) : ?>
+                <!-- grid-bottom3 -->
+                <div id="grid-bottom3" >
+                    <div class="inner-padding background-white spacing-bottom">
+                        <w:module type="row-fluid" name="grid-bottom3" chrome="wrightflexgrid" />
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
         <!-- footer -->
         <div class="wrapper-footer<?php echo $footerWrapperClass?>">
@@ -141,12 +149,6 @@ defined('_JEXEC') or die('Restricted access');
                 <hr class="hr-footer">
                 <div class="<?php echo $containerClass ?>">
                 <div class="container-fluid">
-                    <?php if ($this->countModules('grid-bottom3')) : ?>
-                    <!-- grid-bottom3 -->
-                    <div id="grid-bottom3" >
-                        <w:module type="row-fluid" name="grid-bottom3" chrome="wrightflexgrid" />
-                    </div>
-                    <?php endif; ?>
                     <?php if ($this->countModules('bottom-menu')) : ?>
                     <!-- bottom-menu -->
                     <w:nav containerClass="contaniner-fluid" rowClass="row-fluid" name="bottom-menu" />

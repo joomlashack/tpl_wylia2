@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto+Slab:400,700');
 
 .heading() {
-	font-family: @serifFontFamily;
 	font-weight: bold;
 	padding: 0;
 	margin: 0 0 20px 0;
@@ -12,7 +11,6 @@
 		font-style: italic;
 		text-transform: lowercase;
 		color: @linkColor;
-		font-family: @sansFontFamily;
 	}
 }
 
@@ -463,12 +461,15 @@ p.p-featured:first-letter{
 		background-color: transparent;
 	}
 }
-#nav-toolbar {
+#toolbar {
 
-	ul.menu {
-		float: none;
-		display: table;
-		margin: 0 auto;
+	form {
+		margin-bottom: 0;
+
+		input#mod-search-searchword {
+			padding-top: 9px;
+			padding-bottom: 9px;
+		}
 	}
 }
 #header{
@@ -2082,34 +2083,7 @@ a.wylia-readmore{
 
 }
 #grid-bottom3{
-	border-bottom: 1px solid @blockquoteColor;
-	color: @gridBottom3Color;
-	font-size: 12px;
 
-	small{
-		color: @gridBottom3Color;
-	}
-	.module,
-	.moduletable,
-	.moduletext	,{
-		border-right: 1px solid @blockquoteColor;
-		padding: 0 10px 10px 0;
-		h3{
-			font-size: 16px;
-		}
-		&.last{
-			border-right: none;
-			padding-right: 0;
-		}
-		&.first.last{
-			border: none;
-		}
-		.userdata{
-			label{
-				display: inline-block;
-			}
-		}
-	}
 }
 #grid-top2{
 
@@ -2413,8 +2387,8 @@ div{
 		.module{
 			border-left: 1px solid @navtabsBgHover;
 			margin-bottom: 0;
-			padding-bottom: 10px;
-			padding-top: 10px;
+			padding-bottom: 20px;
+			padding-top: 20px;
 			.rm-margin-children();
 
 			&.first{

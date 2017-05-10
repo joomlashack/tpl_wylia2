@@ -1,3 +1,12 @@
+.heading() {
+	font-family: @sansFontFamily;
+
+	span {
+		font-family: @serifFontFamily;
+	}
+}
+
+//
 
 .fixed{
 	background-image: url(../images/neonstyle/bg.jpg);
@@ -18,14 +27,12 @@
 		}
 	}
 	h3{
-		font-family: 'Oswald';
 		font-weight: bold;
 		color: @navtabsBgHover,
 	}
 }
 .page-header{
 	> h1,> h2,> h3,> h4,> h5,> h6{
-		font-family: 'Oswald';
 		font-weight: bold;
 		color: @navtabsBgHover,
 	}
@@ -74,7 +81,6 @@
 #top {
 	h1,h2,h3,h4,h5,h6{
 		color:@white;
-		font-family: 'Oswald';
 		font-weight: bold;
 	}
 	input[type="image"]{
@@ -150,26 +156,10 @@ a[data-icon="icon-yt"]{
 #grid-bottom+#grid-bottom2,#footer{
 	border-top-color: @navbarLinkColor;
 }
-
-#grid-bottom3{
-	color: @white;
-	small{
-		color: @white;
-	}
-	strong{
-		color: @white;
-		font-family: 'Oswald';
-	}
-}
 #footer{
 	color: @white;
 	[class^="module"] h3, [class*="module"] h3{
 		color: @white;
-	}
-}
-.hero-unit{
-	h1,h2,h3,h4,h5,h6{
-		font-family: 'Abril Fatface';
 	}
 }
 .prettyprint {
