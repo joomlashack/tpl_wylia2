@@ -1782,6 +1782,7 @@ ol.linenums {
 
 .thumbnail{
 	background-color: @white;
+	.border-radius(0);
 }
 
 // ----------------------------------------------------------------------------------
@@ -1954,72 +1955,7 @@ a.wylia-readmore{
 }
 // ______________________
 #above-content{
-	[class^="module"]:first-child{
-		> h3{
-			font-size: 24px;
-			margin-bottom: 25px;
-			padding: 5px 10px 15px 10px;
-			text-align: center;
-			&:before{
-				border-bottom: 1px solid @borderColor;
-				content: '';
-				left: 0;
-				position: absolute;
-				top: 50px;
-				width: 100%;
-			}
-		}
-	}
-	.page-header.title-full{
 
-		h1,h2,h3,h4,h5,h6{
-			margin: 16px 0;
-		}
-	}
-	.moduletable{
-		border-bottom: 1px solid @borderColor;
-		margin-bottom: 10px;
-		padding-bottom: 10px;
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	.moduletable_ms1,
-	.moduletable_ms2,
-	.moduletable_ms4,
-	.moduletable_ms6,
-	.moduletable_ms7{
-		padding-left: 30px;
-		padding-right: 30px;
-		padding-top: 0;
-	}
-	.moduletable_ms2,
-	.moduletable_ms7{
-		border-left: 0;
-		border-right: 0;
-		> h3 {
-			margin: 13.333333333333334px 0;
-		}
-	}
-	.moduletable_ms4{
-		> h3 {
-			margin: 13.333333333333334px 0;
-		}
-	}
-	.moduletable_ms5{
-		padding-left: 30px;
-		padding-right: 30px;
-		> h3 {
-			&:before {
-				display: none;
-				content: none;
-			}
-		}
-		&:first-child {
-			> h3 {
-				padding-bottom: 0;
-			}
-		}
-	}
 }
 .rm-border-bottom{
 	border-bottom: none !important;
@@ -2032,8 +1968,7 @@ a.wylia-readmore{
 	}
 }
 #below-content{
-	padding-left: 20px;
-	padding-right: 20px;
+
 	[class^="module"]:first-child{
 		> h3{
 			font-size: 24px;
@@ -2154,16 +2089,6 @@ a.wylia-readmore{
 
 #grid-bottom{
 
-	.page-header{
-		margin-bottom: 0;
-		margin-top: 0;
-		h3{
-			margin-top: 0;
-		}
-	}
-	+ #grid-bottom2{
-		border-top: 4px solid @btnPrimaryBackground;
-	}
 }
 #grid-bottom2{
 
@@ -3698,5 +3623,14 @@ div:first-child+.panel{
 		&:after{
 			border-right-color: @color_one;
 		}
+	}
+}
+
+// Hikashop
+
+.hikashop_product_stock {
+
+	table {
+		margin: 0 auto;
 	}
 }
