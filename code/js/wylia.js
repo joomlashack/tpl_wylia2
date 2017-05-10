@@ -63,4 +63,14 @@ jQuery(function() {
         }
     })
 
+    jQuery('.page-header h1, .module h2').each(function(){
+        var text = jQuery(this).text().split(' ');
+        var n = 1;
+        var t = 'span';
+        if(n>=text.length){
+            return;
+        }
+        text[n] = '<'+t+'>'+text[n]+' </'+t+'>';
+        jQuery(this).html( text.join(' ') );
+    });
 });

@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto+Slab:400,700');
 
+.heading() {
+	font-family: @serifFontFamily;
+	font-weight: bold;
+	padding: 0;
+	margin: 0 0 20px 0;
+	text-transform: uppercase;
+
+	span {
+		font-weight: normal;
+		font-style: italic;
+		text-transform: lowercase;
+		color: @linkColor;
+		font-family: @sansFontFamily;
+	}
+}
+
 body {
 	background: #ddd;
 }
@@ -831,12 +847,8 @@ div.img-peak-bottom{
 	> h4,
 	> h5,
 	> h6 {
-		font-family: @serifFontFamily;
-		font-weight: bold;
-		padding: 0 0 15px 0;
-		margin: 0 0 20px 0;
-		border-bottom: 1px dashed #ddd;
-		text-transform: uppercase;
+
+		.heading();
 	}
 
 	&.wylia-new{
@@ -1179,12 +1191,8 @@ div.img-peak-bottom{
 	h4,
 	h5,
 	h6 {
-		font-family: @serifFontFamily;
-		font-weight: bold;
-		padding: 0 0 12px 0;
-		margin: 0 0 20px 0;
-		border-bottom: 1px dashed #ddd;
-		text-transform: uppercase;
+
+		.heading();
 	}
 }
 
