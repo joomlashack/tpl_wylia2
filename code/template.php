@@ -84,39 +84,37 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
             <?php endif; ?>
             <div id="main-content" class="row-fluid">
-                <div class="inner-padding background-white spacing-bottom">
-                    <!-- sidebar1 -->
-                    <aside id="sidebar1">
-                        <w:module name="sidebar1" />
-                    </aside>
-                    <!-- main -->
-                    <section id="main">
-                        <?php if ($this->countModules('above-content')) : ?>
-                            <!-- above-content -->
-                            <div id="above-content">
-                                <w:module type="none" name="above-content" />
-                            </div>
-                        <?php endif; ?>
-                        <div id="component-area">
-                            <?php if ($moduleMain) : ?>
-                                <w:module type="none" name="main" />
-                            <?php else : ?>
-                                <!-- component -->
-                                <w:content />
-                            <?php endif; ?>
+                <!-- sidebar1 -->
+                <aside id="sidebar1">
+                    <w:module name="sidebar1" chrome="wrightxhtml" />
+                </aside>
+                <!-- main -->
+                <section id="main">
+                    <?php if ($this->countModules('above-content')) : ?>
+                        <!-- above-content -->
+                        <div id="above-content">
+                            <w:module type="none" name="above-content" />
                         </div>
-                        <?php if ($this->countModules('below-content')) : ?>
-                            <!-- below-content -->
-                            <div id="below-content">
-                                <w:module type="none" name="below-content" />
-                            </div>
+                    <?php endif; ?>
+                    <div id="component-area">
+                        <?php if ($moduleMain) : ?>
+                            <w:module type="none" name="main" />
+                        <?php else : ?>
+                            <!-- component -->
+                            <w:content />
                         <?php endif; ?>
-                    </section>
-                    <!-- sidebar2 -->
-                    <aside id="sidebar2">
-                        <w:module name="sidebar2" />
-                    </aside>
-                </div>
+                    </div>
+                    <?php if ($this->countModules('below-content')) : ?>
+                        <!-- below-content -->
+                        <div id="below-content">
+                            <w:module type="none" name="below-content" />
+                        </div>
+                    <?php endif; ?>
+                </section>
+                <!-- sidebar2 -->
+                <aside id="sidebar2">
+                    <w:module name="sidebar2" chrome="wrightxhtml" />
+                </aside>
             </div>
             <?php if ($this->countModules('grid-bottom')) : ?>
                 <!-- grid-bottom -->
