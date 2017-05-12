@@ -335,13 +335,17 @@ p.p-featured:first-letter{
 		}
 	}
 }
+
 .button,
-.btn{
-	display: inline-block;
+.btn:not(.btn-large):not(.btn-small) {
 	padding: 4px 12px;
-	margin-bottom: 0;
 	font-size: @baseFontSize;
 	line-height: @baseFontSize + 6;
+}
+.button,
+.btn {
+	display: inline-block;
+	margin-bottom: 0;
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
@@ -354,7 +358,6 @@ p.p-featured:first-letter{
 	.transition(color .25s ease-in-out);
 	color: @white;
 	text-shadow:none;
-	text-transform: uppercase;
 
 	.caret {
 		border-top-color: @white;
@@ -944,209 +947,35 @@ div.img-peak-bottom{
 		}
 	}
 }
-.module_ms1,
-.moduletable_ms1,
-.moduletext_ms1{
+.module {
 
-	> h3{
-		margin-bottom: 36px;
-	}
-	p:first-of-type:first-letter{
-		font-weight: bold;
-		font-size: 20px;
-	}
-}
-.module_ms2,
-.moduletable_ms2,
-.moduletext_ms2,
-.module_ms7,
-.moduletable_ms7,
-.moduletext_ms7{
+	&_ms1 {
+		border: 2px dashed @linkColor;
+		padding: 20px;
+		color: @linkColor;
 
-	> h1,
-	> h2,
-	> h3,
-	> h4,
-	> h5,
-	> h6 {
-		border-bottom: 1px solid @borderColor;
-		margin: 0 0 20px 0;
-		padding: 0 0 20px 0;
-	}
-	p:first-of-type:first-letter{
-		font-weight: bold;
-		font-size: 20px;
-	}
-	&.first.last{
-		padding-left: 0;
-		padding-right: 0;
-		border-left: none;
-		border-right: none;
-		> h3{
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-	}
-}
-.module_ms3,
-.moduletable_ms3,
-.moduletext_ms3{
-	background-color: @borderColor;
-	margin-bottom: 10px;
-	padding-top: 10px !important;
-	padding-bottom:32px !important;
-	position: relative;
-	color:@color_one;
+		> h1,
+		> h2,
+		> h3,
+		> h4,
+		> h5,
+		> h6 {
+			color: @linkColor;
 
-	> h3{
-		margin-bottom: 36px;
-		margin-top: 0;
-	}
-	p:first-of-type:first-letter{
-		font-weight: bold;
-		font-size: 20px;
-	}
-
-	&:after{
-		bottom: 0;
-		content: '';
-		height: 0;
-		position: absolute;
-		right: 0;
-		width: 0;
-		border-top: 32px solid @linkColor;
-		border-right: 32px solid @white;
-	}
-}
-.module_ms4,
-.moduletable_ms4,
-.moduletext_ms4{
-	border-right: 1px solid @borderColor;
-	padding-bottom:10px;
-	padding-top: 10px;
-	position: relative;
-
-	> h3{
-		margin-bottom: 36px;
-		margin-top: 20px;
-	}
-	p:first-of-type:first-letter{
-		font-size: 20px;
-		font-weight: bold;
-	}
-	&.last, &:last-child{
-		border-right: none;
-	}
-}
-.no-responsive{
-	._article .slideTitle{
-
-	}
-}
-.module_ms5,
-.moduletable_ms5,
-.moduletext_ms5{
-	background-color: @color_one;
-	color: @btnSecondaryColor;
-	padding-bottom: 20px;
-	padding-top: 20px;
-	position: relative;
-	text-align: center;
- 	small{
- 		color: @color_five;
- 	}
-	&:after{
-		border-bottom: 1px solid @navtabsBgHover;
-		bottom: 10px;
-		content: '';
-		height: 0;
-		left: 0;
-		position: absolute;
-		width: 100%;
-	}
-	&:before{
-		border-top: 1px solid @navtabsBgHover;
-		content: '';
-		height: 0;
-		left: 0;
-		position: absolute;
-		top: 10px;
-		width: 100%;
-	}
-	&.first.last{
-		.box-sizing(content-box);
-		float: none;
-		width: auto;
-	}
-	a:not(.btn){
-		color:@ms5linkColor;
-	}
-	div.lifestream ul.stream{
-		filter:none;
-		    filter:none;
-		background-color: transparent;
-		background-image:none;
-		border: none;
-		color: @btnSecondaryColor;
-		padding: 0;
-		li{
-			margin-bottom: 0;
-			background-image:none;
-			-ms-filter:none;
-			    filter:none;
-			background-color: transparent;
-			border: none;
-			.icon{
-				background-image: url(../images/ls-icon-twitter.png);
-				background-repeat: no-repeat;
-				display: block;
-				float: none;
-				height: 30px;
-				margin: 0 auto 10px;
-				width: 30px;
-				img{
-					display: none;
-				}
-			}
-			small{
-				text-align: center;
-			}
-		}
-	}
-	.lifestream {
-		.tab-content{
-			background-color: @white;
-			ul.stream{
-				color:@color_one;
+			span {
+				color: @textColor;
 			}
 		}
 
-	}
-	.jsbootstrap a{
-		color:@ms5linkColor;
+		a:not(.btn):not(.button) {
+			text-decoration: underline;
+		}
 	}
 
-}
-
-.module_ms6,
-.moduletable_ms6,
-.moduletext_ms6{
-	text-align: center;
-	hr{
-		margin-bottom: 30px;
-		margin-top: 30px;
-	}
-	.newsflash_ms6{
-		padding-bottom: 20px;
-		padding-top: 20px;
-	}
-}
-.module_ms7,
-.moduletable_ms7,
-.moduletext_ms7{
-	> h3{
-		text-align: center;
-	}
+	/*p:first-of-type:first-letter {
+		font-weight: bold;
+		font-size: 20px;
+	}*/
 }
 
 [class^="newsflash"]{
@@ -1782,6 +1611,29 @@ ol.linenums {
 
 .background-white {
 	background-color: @white;
+}
+
+.background-main {
+	background-color: @linkColor;
+	color: @white;
+
+	.btn-primary {
+		border: 2px dashed @white;
+
+		&:hover,
+		&:focus,
+		&:active {
+			border: 2px dashed @white;
+		}
+	}
+
+	.module {
+
+		&_ms1 {
+			border-color: @white;
+			color: @white;
+		}
+	}
 }
 
 .spacing-bottom {
@@ -3608,6 +3460,11 @@ div:first-child+.panel{
 			border-right-color: @color_one;
 		}
 	}
+}
+
+.footer1,
+.footer2 {
+	text-align: center;
 }
 
 // Hikashop

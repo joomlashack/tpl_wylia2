@@ -70,7 +70,7 @@ defined('_JEXEC') or die('Restricted access');
             <?php if ($this->countModules('grid-top3')) : ?>
                 <!-- grid-top3 -->
                 <div id="grid-top3">
-                    <div class="inner-padding background-white spacing-bottom">
+                    <div class="inner-padding background-main spacing-bottom">
                         <w:module type="row-fluid" name="grid-top3" chrome="wrightflexgrid" />
                     </div>
                 </div>
@@ -144,18 +144,17 @@ defined('_JEXEC') or die('Restricted access');
         <!-- footer -->
         <div class="wrapper-footer<?php echo $footerWrapperClass?>">
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky z3 relative" <?php else : ?>class="z3 relative"<?php endif;?>>
-                <hr class="hr-footer">
-                <div class="<?php echo $containerClass ?>">
-                <div class="container-fluid">
-                    <?php if ($this->countModules('bottom-menu')) : ?>
-                    <!-- bottom-menu -->
-                    <w:nav containerClass="contaniner-fluid" rowClass="row-fluid" name="bottom-menu" />
-                    <?php endif; ?>
-                    <?php if ($this->countModules('footer')) : ?>
-                    <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
-                    <?php endif; ?>
-                    <w:footer />
-                </div>
+                <div class="inner-padding">
+                    <div class="<?php echo $containerClass ?>">
+                        <?php if ($this->countModules('bottom-menu')) : ?>
+                        <!-- bottom-menu -->
+                        <w:nav containerClass="contaniner-fluid" rowClass="row-fluid" name="bottom-menu" />
+                        <?php endif; ?>
+                        <?php if ($this->countModules('footer')) : ?>
+                        <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
+                        <?php endif; ?>
+                        <w:footer />
+                    </div>
                 </div>
             </footer>
         </div>
