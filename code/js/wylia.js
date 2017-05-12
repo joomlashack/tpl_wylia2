@@ -29,40 +29,6 @@ jQuery(function() {
         footerWidth();
     });
 
-
-    /*jQuery('.wylia-popover').each(function() {
-        var wContent = jQuery(this).children('.wylia-content').html();
-
-        if (wContent) {
-            jQuery(this).append('<div class="wylia-plus">+</div>');
-            jQuery(this).parent().append('<div class="wylia-popover-content">' + wContent + '</div>');
-            var wContentHeight = jQuery(this).parent().children('.wylia-popover-content').height() + 20;
-
-            jQuery(this).parent().children('.wylia-popover-content').css({
-                'height' : 0,
-                'padding' : 0
-            });
-
-            jQuery(this).click(function() {
-                if (jQuery(this).parent().children('.wylia-popover-content').height() != 0) {
-                    jQuery(this).children('.wylia-plus').html('+');
-                    jQuery(this).parent().children('.wylia-popover-content').css({
-                        'height' : 0,
-                        'padding' : 0
-                    });
-                }
-                else {
-                    jQuery(this).children('.wylia-plus').html('-');
-                    jQuery(this).parent().children('.wylia-popover-content').css({
-                        'height' : wContentHeight,
-                        'padding' : 10
-                    });
-
-                }
-            });
-        }
-    })*/
-
     // Standout the second word for headings
     jQuery('.page-header h1, .page-header h2, .module h1, .module h2, .module h3, .module h4, .module h5, .module h6').each(function(){
         var text = jQuery(this).text().split(' ');
