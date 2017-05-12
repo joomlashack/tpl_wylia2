@@ -30,7 +30,7 @@ jQuery(function() {
     });
 
 
-    jQuery('.wylia-popover').each(function() {
+    /*jQuery('.wylia-popover').each(function() {
         var wContent = jQuery(this).children('.wylia-content').html();
 
         if (wContent) {
@@ -61,8 +61,9 @@ jQuery(function() {
                 }
             });
         }
-    })
+    })*/
 
+    // Standout the second word for headings
     jQuery('.page-header h1, .page-header h2, .module h1, .module h2, .module h3, .module h4, .module h5, .module h6').each(function(){
         var text = jQuery(this).text().split(' ');
         var n = 1;
