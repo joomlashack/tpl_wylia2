@@ -58,6 +58,7 @@
 		<position>toolbar</position>
 		<position>top2</position>
 		<position>top</position>
+        <position>extra</position>
 	</positions>
 
 	<config>
