@@ -168,7 +168,7 @@ defined('_JEXEC') or die('Restricted access');
         </div>
 
         <w:module type="none" name="debug" chrome="none" />
-        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_wylia2/js/wylia.js'></script>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_wylia2/js/wylia2.js'></script>
         <?php
             $browser = JBrowser::getInstance();
 
