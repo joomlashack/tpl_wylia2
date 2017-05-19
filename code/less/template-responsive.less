@@ -14,6 +14,132 @@
 			max-width: 70%;
 		}
 	}
+
+	#toolbar,#menu{
+		vertical-align: top;
+		margin-left: 0;
+		.navbar{
+			margin-bottom: 0;
+		}
+		.btn-navbar{
+			.box-sizing(border-box);
+			border-right: 1px solid @blockquoteColor;
+			border-bottom: none;
+			border-top: none;
+			margin: 0;
+			min-height: 80px;
+			width: 80px;
+			padding:30px 20px 20px;
+			.icon-bar{
+				margin-bottom: 7px;
+				width: 100%;
+			}
+		}
+		.nav-collapse{
+			.box-sizing(border-box);
+			left: 0;
+			padding-left: 10px;
+			padding-right: 10px;
+			position: absolute;
+			width: 100%;
+			z-index: 90;
+			.nav {
+				margin-left: 10px;
+				background-color: @btnNavbar;
+				> li {
+					border-left: 0;
+					padding-right: 10px;
+					position: relative;
+
+					&:after{
+						background-color: @btnNavbar;
+						content: '';
+						height: 103%;
+						position: absolute;
+						right: 100%;
+						top: 0;
+						width: 10px;
+					}
+					&:last-child{
+						&:after{
+							height: 100%;
+						}
+					}
+					&.active,
+					&:hover,
+					&:focus,
+					&:active {
+
+						&:after {
+							background-image: url(../images/bg-navbarlink-hover.png);
+							background-color: transparent;
+							background-position: 0 -5px;
+							background-repeat: no-repeat;
+						}
+
+						> a {
+							background-color: transparent;
+						}
+					}
+
+					&.parent {
+						border: 0;
+
+						> .dropdown-menu{
+							position: relative;
+							margin: 0 0 0 -10px;
+							border-left: 10px solid @btnNavbar;
+							&:after {
+								display: block;
+								content: '';
+								background-color: transparent;
+								height: 3px;
+								border: 0;
+								width: 100%;
+								top: auto;
+								border-bottom: 1px solid @navbarInverseLinkBackgroundHover;
+								bottom: -2px;
+								position: absolute;
+								left: 0;
+							}
+						}
+
+						&:last-child {
+							> .dropdown-menu{
+								&:after {
+									content: none;
+									display: none;
+								}
+							}
+						}
+					}
+
+					> a {
+						&:hover, &:focus {
+							background-color: transparent;
+						}
+					}
+				}
+
+				.dropdown-menu{
+					.dropdown-menu{
+						&:after{
+							background-color:@blockquoteColor;
+						}
+					}
+				}
+			}
+		}
+		.nav {
+			display: block;
+			li{
+				display: block;
+				a, span.separator{
+					display: block;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -24,8 +150,18 @@
 
 	.wyliafeatured {
 
-		[class*="span"]{
+		[class*="span"] {
 			width: 100% !important;
+			margin-bottom: 20px;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
 		}
 	}
 
