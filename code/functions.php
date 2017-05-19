@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Wylia
+ * @package     Wylia 2
  * @subpackage  Functions
  *
  * @copyright   Copyright (C) 2005 - 2015 Joomlashack. Meritage Assets.
