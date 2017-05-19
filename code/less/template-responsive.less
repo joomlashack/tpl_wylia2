@@ -2,11 +2,90 @@
 
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 980px) {
 
+	#logo {
+
+	}
+
+	#toolbar,
+	#menu {
+
+		.nav {
+			display: inline-block;
+			float: none;
+			text-align: left;
+
+			> li {
+				display: inline-block;
+				float: none;
+
+				&.dropdown {
+
+					> .dropdown-menu {
+						margin-left: 10px;
+
+						> li {
+
+							&.active,
+							&:hover {
+
+								> a  {
+
+									&:before {
+										background-image: url(../images/bg-link-hover.png);
+										background-color: transparent;
+										background-position: center center;
+										background-size: 10px auto;
+									}
+								}
+							}
+
+							&.divider,
+							&.nav-header {
+								margin: 0;
+								position: relative;
+
+								&:after {
+									background-color: @dropdownBackground;
+									border-bottom: 1px solid @dropdownBackground;
+									content: '';
+									height: 100%;
+									position: absolute;
+									right: 100%;
+									top: 0;
+									width: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#menu_primary {
+		padding: 26px 0;
+	}
 }
 
 @media (max-width: 979px) {
+
+	#nav-toolbar {
+
+		> [class*="search"] {
+			float: none !important;
+			margin-bottom: 20px;
+		}
+	}
+
+	.height2{
+		height: 150px;
+	}
+
+	.height1{
+		height:  (150px * 2 );
+	}
 
 	#top {
 
@@ -15,128 +94,108 @@
 		}
 	}
 
-	#toolbar,#menu{
-		vertical-align: top;
-		margin-left: 0;
-		.navbar{
-			margin-bottom: 0;
-		}
-		.btn-navbar{
-			.box-sizing(border-box);
-			border-right: 1px solid @blockquoteColor;
-			border-bottom: none;
-			border-top: none;
-			margin: 0;
-			min-height: 80px;
-			width: 80px;
-			padding:30px 20px 20px;
-			.icon-bar{
-				margin-bottom: 7px;
-				width: 100%;
-			}
-		}
-		.nav-collapse{
-			.box-sizing(border-box);
-			left: 0;
-			padding-left: 10px;
-			padding-right: 10px;
-			position: absolute;
-			width: 100%;
-			z-index: 90;
-			.nav {
-				margin-left: 10px;
-				background-color: @btnNavbar;
-				> li {
-					border-left: 0;
-					padding-right: 10px;
-					position: relative;
+	#toolbar,
+	#menu {
 
-					&:after{
-						background-color: @btnNavbar;
-						content: '';
-						height: 103%;
-						position: absolute;
-						right: 100%;
-						top: 0;
-						width: 10px;
-					}
-					&:last-child{
-						&:after{
-							height: 100%;
-						}
-					}
-					&.active,
+		.collapse {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.nav {
+			text-align: left;
+
+			li {
+
+				&.active > a {
+					color: @navbarLinkColorHover;
+				}
+
+				a {
+					display: block;
+					background: darken(@navtabsBgHover, 3%);
+					color: @navbarLinkColor;
+
 					&:hover,
 					&:focus,
 					&:active {
-
-						&:after {
-							background-image: url(../images/bg-navbarlink-hover.png);
-							background-color: transparent;
-							background-position: 0 -5px;
-							background-repeat: no-repeat;
-						}
-
-						> a {
-							background-color: transparent;
-						}
+						color: @navbarLinkColorHover;
 					}
+				}
 
-					&.parent {
-						border: 0;
+				&.dropdown {
 
-						> .dropdown-menu{
-							position: relative;
-							margin: 0 0 0 -10px;
-							border-left: 10px solid @btnNavbar;
-							&:after {
-								display: block;
-								content: '';
-								background-color: transparent;
-								height: 3px;
-								border: 0;
-								width: 100%;
-								top: auto;
-								border-bottom: 1px solid @navbarInverseLinkBackgroundHover;
-								bottom: -2px;
-								position: absolute;
-								left: 0;
+					> .dropdown-menu {
+						margin: 2px 0;
+
+						li {
+
+							a {
+								background: @navtabsBgHover;
+								padding-left: 30px;
+								font-weight: normal;
+								margin-bottom: 0 !important;
+
+								&:before {
+									width: 0;
+								}
 							}
-						}
 
-						&:last-child {
-							> .dropdown-menu{
-								&:after {
-									content: none;
-									display: none;
+							&.parent > a:after {
+								display: none;
+							}
+
+							.dropdown-menu {
+
+								li {
+
+									a {
+										padding-left: 50px;
+									}
 								}
 							}
 						}
 					}
 
-					> a {
-						&:hover, &:focus {
-							background-color: transparent;
-						}
-					}
-				}
-
-				.dropdown-menu{
-					.dropdown-menu{
-						&:after{
-							background-color:@blockquoteColor;
-						}
+					> a .caret {
+						display: none;
 					}
 				}
 			}
 		}
-		.nav {
-			display: block;
-			li{
-				display: block;
-				a, span.separator{
-					display: block;
-				}
+
+		.navbar-inner {
+
+
+			.btn-navbar {
+				background: @linkColor;
+				padding: 7px 12px;
+			}
+		}
+	}
+
+	#menu {
+
+		.navbar-inner {
+			margin: 0 20px;
+
+			.btn-navbar {
+				margin: 20px 0 10px 0;
+			}
+		}
+	}
+
+	#toolbar {
+
+		.navbar-inner {
+			padding: 10px 20px 0;
+
+			.btn-navbar {
+				margin: 0;
+			}
+
+			.in.collapse {
+				padding-top: 10px;
 			}
 		}
 	}
@@ -147,6 +206,28 @@
 }
 
 @media (max-width: 767px) {
+
+	#top {
+
+		[class*="module"] {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	#logo {
+		text-align: center;
+	}
+
+	#menu {
+
+		.navbar-inner {
+
+			.btn-navbar {
+				margin: 0 0 10px 0;
+			}
+		}
+	}
 
 	.wyliafeatured {
 

@@ -1985,15 +1985,11 @@ a.wylia-readmore{
 		padding-right: 0;
 	}
 }
+#logo {
 
-#logo{
-	.ie7-inline-block();
-	.box-sizing(border-box);
-	display: inline-block;
-	border-right: 1px solid @navtabsBgHover;
-	float: none;
-	padding: 17px 20px;
-	vertical-align: middle;
+	img {
+		padding: 17px 20px;
+	}
 }
 #main-content{
 	.flexbox-content();
@@ -2896,7 +2892,6 @@ div:first-child+.panel{
 // ----------------------------------------------------------------------------------
 
 #menu {
-	float: none;
 	margin-bottom: 0;
 
 	.navbar-inner{
@@ -2944,10 +2939,10 @@ div:first-child+.panel{
 	}
 
 	.nav {
+
 		> li{
 
 			&.dropdown {
-				z-index: 1003;
 
 				> a .caret {
 					margin-left: 5px;
@@ -2957,8 +2952,8 @@ div:first-child+.panel{
 					background-color: transparent;
 
 					> li {
-						margin-left: 10px;
-		 				>a {
+
+		 				> a {
 							background-color: @dropdownBackground;
 						}
 					}
@@ -2968,10 +2963,12 @@ div:first-child+.panel{
 					.box-sizing(border-box);
 					border: none;
 
-					&:before,&:after{
+					&:before,
+					&:after{
 						display: none;
 					}
-					li{
+
+					li {
 						border-bottom: 1px solid @navbarInverseBackground;
 
 						&.parent{
@@ -3007,9 +3004,12 @@ div:first-child+.panel{
 									color: @navbarInverseBackground;
 								}
 							}
-							&:hover{
+
+							&:hover {
+
 								> a  {
-									.caret{
+
+									.caret {
 										background-color: @color_one;
 										border: 0;
 										border-bottom: 1px solid @color_one;
@@ -3026,13 +3026,13 @@ div:first-child+.panel{
 						a {
 							position: relative;
 
-							&:hover{
+							&:hover {
 								background-image:none;
 								-ms-filter:none;
 								    filter:none;
 							}
 
-							&:before{
+							&:before {
 								background-color: @dropdownBackground;
 								border: 0;
 								border-bottom: 1px solid @dropdownBackground;
@@ -3067,33 +3067,9 @@ div:first-child+.panel{
 							}
 						}
 
-						&:hover > a:before,
-						&.active > a:before{
-							background-image: url(../images/bg-link-hover.png);
-							background-color: transparent;
-							background-position: center center;
-							background-size: 10px auto;
-						}
-
 						&.parent{
 							> a{
 								min-height: 19px;
-							}
-						}
-
-						&.divider,
-						&.nav-header{
-							margin: 0;
-							position: relative;
-							&:after{
-								background-color: @dropdownBackground;
-								border-bottom: 1px solid @dropdownBackground;
-								content: '';
-								height: 100%;
-								position: absolute;
-								right: 100%;
-								top: 0;
-								width: 10px;
 							}
 						}
 
@@ -3275,18 +3251,11 @@ div:first-child+.panel{
 		text-align: right;
 	}
 
-	.nav{
-		display: inline-block;
-		.ie7-inline-block();
-		float: none;
-		text-align: left;
+	.nav {
 
-		> li{
-			display: inline-block;
-			.ie7-inline-block();
-			float: none;
+		> li {
 
-			> a{
+			> a {
 				.ie7-inline-block();
 				display: inline-block;
 				float: none;
