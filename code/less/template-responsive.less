@@ -94,6 +94,7 @@
 		}
 	}
 
+	#bottom-menu,
 	#toolbar,
 	#menu {
 
@@ -166,11 +167,24 @@
 
 		.navbar-inner {
 
-
 			.btn-navbar {
 				background: @linkColor;
 				padding: 7px 12px;
 			}
+		}
+	}
+
+	#bottom-menu {
+
+		.navbar-inner {
+			background: transparent;
+			border: none;
+			padding: 0;
+		}
+
+		.btn-navbar {
+			margin-right: 0;
+			margin-top: 0;
 		}
 	}
 
@@ -215,6 +229,52 @@
 }
 
 @media (max-width: 767px) {
+
+	.nav-tabs {
+
+		.active {
+
+			> a {
+				border: none;
+
+				&:hover,
+				&:focus,
+				&:active {
+					border: none;
+				}
+			}
+		}
+
+		> li {
+
+			&:first-child,
+			&:last-child {
+
+				> a {
+					.border-radius(0);
+					border-bottom: none;
+					border-top: none;
+				}
+			}
+
+			> a {
+				border: none;
+			}
+		}
+	}
+
+	.contact {
+
+		.dl-horizontal {
+
+			dt {
+				float: left;
+				clear: left;
+				width: 31px;
+				text-align: center;
+			}
+		}
+	}
 
 	#top {
 

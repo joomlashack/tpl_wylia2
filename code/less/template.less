@@ -2292,12 +2292,31 @@ div{
 }
 .contact {
 	margin-bottom: 20px;
-	.thumbnail.pull-right{
-		float: none;
-		display: table;
-		margin-left: 140px;
+
+	.thumbnail {
+		background: @white;
+	}
+
+	.dl-horizontal {
+
+		&.contact-position dd {
+			margin-left: 0;
+			font-size: 1.5em;
+		}
+
+		dt {
+			text-align: center;
+			width: 31px;
+		}
+
+		dd {
+			margin-left: 40px;
+			margin-bottom: 2px;
+			line-height: 22.5px;
+		}
 	}
 }
+
 #myTab li {
 	margin-bottom: 0;
 }
@@ -2551,14 +2570,18 @@ form {
 		}
 
 		&.active {
+
 			> a {
 				background-color: @navtabsBgHover;
 				border-color: @navtabsBgHover;
 				color: @navtabsColorHover;
 
-				&:hover, &:focus{
+				&:hover,
+				&:focus,
+				&:active {
 					background-color: @navtabsBgHover;
 					color: @navtabsColorHover;
+					border-color: @navtabsBgHover;
 				}
 			}
 
@@ -3209,7 +3232,7 @@ form {
 }
 
 //-----------------------------------------------------------------------------------
-
+// .transition(all 0.25s ease-in-out);
 #footer{
 	background-image:none;
 	background-color: @color_one;
@@ -3217,90 +3240,6 @@ form {
 	    filter:none;
 	color:@gridBottom3Color;
 	.box-sizing(border-box);
-
-	.nav {
-		li >a.action{
-			.transition(all 0.25s ease-in-out);
-			background-color: @ms5linkColor;
-			color: @color_one;
-		}
-	}
-	.wylia-hr-three{
-		border-bottom-color: @blockquoteColor;
-	}
-	label[for="modlgn-username"],label[for="modlgn-passwd"]{
-		min-width: 70px;
-	}
-	.userdata +.nav{
-		display: none;
-	}
-	input[name="Submit"].button.btn.btn-primary{
-		clear: both;
-		display: block;
-	}
-	input[type="text"],input[type="password"]{
-		border-color: @navtabsBgHover;
-		background-color: @navtabsBgHover;
-		color: @borderColor;
-	}
-	a{
-		color:@navbarFooterLinkColor;
-	}
-	.navbar-inner{
-		.box-shadow(none);
-		background-image:none;
-		background-color: transparent;
-		border: none;
-		padding: 0;
-		-ms-filter:none;
-		    filter:none;
-		    li{
-		    	margin-left: 10px;
-		    }
-		    li a{
-		    		color:@navbarFooterLinkColor;
-		    		font-size: 12px;
-		    		padding: 0 15px 0 5px;
-		    		text-shadow: none;
-		    		&:hover{
-		    			background-color: transparent;
-	    				color: @gridBottom3Color;
-		    		}
-		    }
-		    li:first-child{
-		    		list-style: none;
-		    		margin-left: 0;
-		    		a{
-		    			padding-left: 0;
-		    		}
-		    }
-		    .nav{
-				list-style-type: disc;
-		    		> .active a{
-	    		    		background-color: transparent;
-	    				color: @gridBottom3Color;
-		    		}
-		    	}
-	}
-	.navbar .btn-navbar{
-		.border-radius(0 0 0 0);
-		.box-shadow(none);
-		background-image:none;
-		-ms-filter:none;
-		    filter:none;
-		background-color: rgba(0,0,0,.3);
-		border: none;
-		.icon-bar{
-			background-color: @btnSecondaryColor;
-		}
-	}
-	.module_ms3,
-	.moduletable_ms3,
-	.moduletext_ms3{
-		&:after{
-			border-right-color: @color_one;
-		}
-	}
 }
 
 .footer1,
