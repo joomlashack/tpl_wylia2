@@ -152,8 +152,8 @@ defined('_JEXEC') or die('Restricted access');
         <!-- footer -->
         <div class="wrapper-footer<?php echo $footerWrapperClass?>">
             <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky z3 relative" <?php else : ?>class="z3 relative"<?php endif;?>>
-                <div class="inner-padding">
-                    <div class="<?php echo $containerClass ?>">
+                <div class="<?php echo $containerClass ?>">
+                    <div class="inner-padding">
                         <?php if ($this->countModules('bottom-menu')) : ?>
                         <!-- bottom-menu -->
                         <w:nav containerClass="contaniner-fluid" rowClass="row-fluid" name="bottom-menu" />

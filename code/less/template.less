@@ -317,6 +317,10 @@ p.p-featured:first-letter{
 	font-size: 20px;
 	font-weight: bold;
 }
+.well {
+	.box-shadow(none);
+	padding: 30px;
+}
 .alert, .well{
 	.border-radius(0 0 0 0);
 }
@@ -446,10 +450,6 @@ p.p-featured:first-letter{
 	}
 }
 .fixed{
-
-	#footer.sticky{
-		width: auto;
-	}
 
 	#header{
 		background-color: transparent;
@@ -2369,6 +2369,15 @@ div:first-child+.panel{
 .nobullet{
 	list-style: none;
 }
+form {
+
+	.control-group {
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
 #login-form{
 	.btn{
 		.btn-primary;
@@ -2509,20 +2518,23 @@ div:first-child+.panel{
 	border: 0;
 
 	> li {
-		border-bottom: 2px solid @navtabsBgHover;
+		border-bottom: 2px solid @linkColorHover;
 
 		> a {
+
 			.border-radius(0);
-			background-color: @navtabsBg;
+			background-color: @linkColor;
 			border: 1px solid transparent;
-			color: @navtabsColor;
+			color: @white;
 			padding: 8px 15px;
 
 
-			&:hover, &:focus{
-				background-color: @navtabsBgHover;
-				border-color: @navtabsBgHover;
-                color: @navtabsColorHover;
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: @linkColorHover;
+				border-color: @linkColorHover;
+                color: @white;
 			}
 		}
 
@@ -3204,6 +3216,8 @@ div:first-child+.panel{
 	-ms-filter:none;
 	    filter:none;
 	color:@gridBottom3Color;
+	.box-sizing(border-box);
+
 	.nav {
 		li >a.action{
 			.transition(all 0.25s ease-in-out);
