@@ -1013,13 +1013,9 @@ ol.linenums {
 
 .table{
 	.border-radius(0 0 0 0);
-	background-color: @pageHeaderBorder;
-	color:@color_one;
+
 	thead{
 		th{
-			background-image: url('../images/th-border.jpg');
-			background-position: left bottom;
-			background-repeat: repeat-x;
 			background-color:@navtabsBgHover;
 			color: @white;
 			font-weight: normal;
@@ -1032,497 +1028,6 @@ ol.linenums {
 	th,td{
 		font-size: 16px;
 		padding: 20px;
-	}
-}
-.table-bordered caption + thead tr:first-child th:last-child,
-.table-bordered caption + tbody tr:first-child td:last-child,
-.table-bordered colgroup + thead tr:first-child th:last-child,
-.table-bordered colgroup + tbody tr:first-child td:last-child{
-	border-top-right-radius:0;
-}
-.table-bordered caption + thead tr:first-child th:first-child,
-.table-bordered caption + tbody tr:first-child td:first-child,
-.table-bordered colgroup + thead tr:first-child th:first-child,
-.table-bordered colgroup + tbody tr:first-child td:first-child{
-	border-top-left-radius:0;
-}
-.table-bordered thead:last-child tr:last-child > th:first-child,
-.table-bordered tbody:last-child tr:last-child > td:first-child,
-.table-bordered tbody:last-child tr:last-child > th:first-child,
-.table-bordered tfoot:last-child tr:last-child > td:first-child,
-.table-bordered tfoot:last-child tr:last-child > th:first-child{
-	border-bottom-left-radius:0;
-}
-.table-bordered thead:last-child tr:last-child > th:last-child,
-.table-bordered tbody:last-child tr:last-child > td:last-child,
-.table-bordered tbody:last-child tr:last-child > th:last-child,
-.table-bordered tfoot:last-child tr:last-child > td:last-child,
-.table-bordered tfoot:last-child tr:last-child > th:last-child{
-	border-bottom-right-radius:0;
-}
-.table-bordered thead:first-child tr:first-child > th:first-child,
-.table-bordered tbody:first-child tr:first-child > td:first-child,
-.table-bordered tbody:first-child tr:first-child > th:first-child{
-	border-top-left-radius:0;
-}
-.table-bordered thead:first-child tr:first-child > th:last-child,
-.table-bordered tbody:first-child tr:first-child > td:last-child,
-.table-bordered tbody:first-child tr:first-child > th:last-child{
-	border-top-right-radius:0;
-}
-.table.vintage{
-	background-color: transparent;
-	thead{
-		th{
-			background-image: url('../images/th-border-vintage.jpg');
-			background-color: @tableVintageBackground;
-			color: @color_one;
-			font-weight: bold;
-		}
-	}
-	tbody{
-		> tr {
-			&:first-child{
-				td{
-					border-top-color: @navtabsBg;
-				}
-			}
-		}
-	}
-}
-.table.vintage.table-bordered {
-	.border-radius(4px 4px 4px 4px);
-	th{
-		border-left-color: @grayLighter;
-		&:first-child{
-			border-left-color: @tableBorder;
-		}
-	}
-}
-.table-bordered.vintage thead:first-child tr:first-child > th:first-child,
-.table-bordered.vintage tbody:first-child tr:first-child > td:first-child,
-.table-bordered.vintage tbody:first-child tr:first-child > th:first-child{
-	border-top-left-radius:4px;
-}
-.table-bordered.vintage thead:first-child tr:first-child > th:last-child,
-.table-bordered.vintage tbody:first-child tr:first-child > td:last-child,
-.table-bordered.vintage tbody:first-child tr:first-child > th:last-child{
-	border-top-right-radius:4px;
-}
-.table-bordered.vintage thead:last-child tr:last-child > th:first-child,
-.table-bordered.vintage tbody:last-child tr:last-child > td:first-child,
-.table-bordered.vintage tbody:last-child tr:last-child > th:first-child,
-.table-bordered.vintage tfoot:last-child tr:last-child > td:first-child,
-.table-bordered.vintage tfoot:last-child tr:last-child > th:first-child{
-	border-bottom-left-radius:4px;
-}
-.table-bordered.vintage thead:last-child tr:last-child > th:last-child,
-.table-bordered.vintage tbody:last-child tr:last-child > td:last-child,
-.table-bordered.vintage tbody:last-child tr:last-child > th:last-child,
-.table-bordered.vintage tfoot:last-child tr:last-child > td:last-child,
-.table-bordered.vintage tfoot:last-child tr:last-child > th:last-child{
-	border-bottom-right-radius:4px;
-}
-.table-striped.vintage tbody > tr:nth-child(2n) > td,
-.table-striped.vintage tbody > tr:nth-child(2n) > th{
-	background-color: @tableVintageBackgroundAccent;
-}
-.table-striped.vintage tbody > tr:nth-child(2n+1) > td,
-.table-striped.vintage tbody > tr:nth-child(2n+1) > th{
-	background-color: transparent;
-}
-.table-hover.vintage{
-	tbody > tr:nth-child(2n):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-	tbody > tr:nth-child(2n+1):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-}
-// ____________________
-.table.teen{
-	background-color: transparent;
-	thead{
-		th{
-			background-image: url('../images/th-border-teen.jpg');
-			background-color: @tableTeenTheadBackground;
-			color: @color_one;
-			font-weight: bold;
-		}
-	}
-	tbody{
-		> tr {
-			&:first-child{
-				td{
-					border-top-color: @tableTeenTheadBackground;
-				}
-			}
-		}
-	}
-}
-.table.teen.table-bordered {
-	.border-radius(4px 4px 4px 4px);
-	th{
-		border-left-color: @grayLighter;
-		&:first-child{
-			border-left-color: @tableBorder;
-		}
-	}
-}
-.table-bordered.teen thead:first-child tr:first-child > th:first-child,
-.table-bordered.teen tbody:first-child tr:first-child > td:first-child,
-.table-bordered.teen tbody:first-child tr:first-child > th:first-child{
-	border-top-left-radius:4px;
-}
-.table-bordered.teen thead:first-child tr:first-child > th:last-child,
-.table-bordered.teen tbody:first-child tr:first-child > td:last-child,
-.table-bordered.teen tbody:first-child tr:first-child > th:last-child{
-	border-top-right-radius:4px;
-}
-.table-bordered.teen thead:last-child tr:last-child > th:first-child,
-.table-bordered.teen tbody:last-child tr:last-child > td:first-child,
-.table-bordered.teen tbody:last-child tr:last-child > th:first-child,
-.table-bordered.teen tfoot:last-child tr:last-child > td:first-child,
-.table-bordered.teen tfoot:last-child tr:last-child > th:first-child{
-	border-bottom-left-radius:4px;
-}
-.table-bordered.teen thead:last-child tr:last-child > th:last-child,
-.table-bordered.teen tbody:last-child tr:last-child > td:last-child,
-.table-bordered.teen tbody:last-child tr:last-child > th:last-child,
-.table-bordered.teen tfoot:last-child tr:last-child > td:last-child,
-.table-bordered.teen tfoot:last-child tr:last-child > th:last-child{
-	border-bottom-right-radius:4px;
-}
-.table-striped.teen tbody > tr:nth-child(2n) > td,
-.table-striped.teen tbody > tr:nth-child(2n) > th{
-	background-color: @tableTeenBackgroundAccent;
-}
-.table-striped.teen tbody > tr:nth-child(2n+1) > td,
-.table-striped.teen tbody > tr:nth-child(2n+1) > th{
-	background-color: transparent;
-}
-.table-hover.teen{
-	tbody > tr:nth-child(2n):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-	tbody > tr:nth-child(2n+1):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-}
-// ______________________
-.table.total-black{
-	background-color: transparent;
-	thead{
-		th{
-			background-image: url('../images/th-border-total-black.jpg');
-			background-color: @tableTotalBlackTheadBackground;
-			color: @white;
-			font-weight: bold;
-		}
-	}
-	tbody{
-		> tr {
-			&:first-child{
-				td{
-					border-top-color: @tableTotalBlackTheadBackground;
-				}
-			}
-		}
-	}
-}
-.table.total-black.table-bordered {
-	.border-radius(4px 4px 4px 4px);
-	th{
-		border-left-color: @grayLighter;
-		&:first-child{
-			border-left-color: @tableBorder;
-		}
-	}
-}
-.table-bordered.total-black thead:first-child tr:first-child > th:first-child,
-.table-bordered.total-black tbody:first-child tr:first-child > td:first-child,
-.table-bordered.total-black tbody:first-child tr:first-child > th:first-child{
-	border-top-left-radius:4px;
-}
-.table-bordered.total-black thead:first-child tr:first-child > th:last-child,
-.table-bordered.total-black tbody:first-child tr:first-child > td:last-child,
-.table-bordered.total-black tbody:first-child tr:first-child > th:last-child{
-	border-top-right-radius:4px;
-}
-.table-bordered.total-black thead:last-child tr:last-child > th:first-child,
-.table-bordered.total-black tbody:last-child tr:last-child > td:first-child,
-.table-bordered.total-black tbody:last-child tr:last-child > th:first-child,
-.table-bordered.total-black tfoot:last-child tr:last-child > td:first-child,
-.table-bordered.total-black tfoot:last-child tr:last-child > th:first-child{
-	border-bottom-left-radius:4px;
-}
-.table-bordered.total-black thead:last-child tr:last-child > th:last-child,
-.table-bordered.total-black tbody:last-child tr:last-child > td:last-child,
-.table-bordered.total-black tbody:last-child tr:last-child > th:last-child,
-.table-bordered.total-black tfoot:last-child tr:last-child > td:last-child,
-.table-bordered.total-black tfoot:last-child tr:last-child > th:last-child{
-	border-bottom-right-radius:4px;
-}
-.table-striped.total-black tbody > tr:nth-child(2n) > td,
-.table-striped.total-black tbody > tr:nth-child(2n) > th{
-	background-color: @tableTotalBlackBackgroundAccent;
-}
-.table-striped.total-black tbody > tr:nth-child(2n+1) > td,
-.table-striped.total-black tbody > tr:nth-child(2n+1) > th{
-	background-color: transparent;
-}
-.table-hover.total-black{
-	tbody > tr:nth-child(2n):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-	tbody > tr:nth-child(2n+1):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-}
-// ______________________
-.table.pop{
-	background-color: transparent;
-	thead{
-		th{
-			background-image: url('../images/th-border-pop.jpg');
-			background-color: @tablePopTheadBackground;
-			color: @color_one;
-			font-family: 'Lato';
-			font-weight: bold;
-		}
-	}
-	tbody{
-		> tr {
-			&:first-child{
-				td{
-					border-top-color: @tablePopTheadBackground;
-				}
-			}
-			td{
-				font-family: 'Lato';
-			}
-		}
-	}
-}
-.table.pop.table-bordered {
-	.border-radius(4px 4px 4px 4px);
-	th{
-		border-left-color: @grayLighter;
-		&:first-child{
-			border-left-color: @tableBorder;
-		}
-	}
-}
-.table-bordered.pop thead:first-child tr:first-child > th:first-child,
-.table-bordered.pop tbody:first-child tr:first-child > td:first-child,
-.table-bordered.pop tbody:first-child tr:first-child > th:first-child{
-	border-top-left-radius:4px;
-}
-.table-bordered.pop thead:first-child tr:first-child > th:last-child,
-.table-bordered.pop tbody:first-child tr:first-child > td:last-child,
-.table-bordered.pop tbody:first-child tr:first-child > th:last-child{
-	border-top-right-radius:4px;
-}
-.table-bordered.pop thead:last-child tr:last-child > th:first-child,
-.table-bordered.pop tbody:last-child tr:last-child > td:first-child,
-.table-bordered.pop tbody:last-child tr:last-child > th:first-child,
-.table-bordered.pop tfoot:last-child tr:last-child > td:first-child,
-.table-bordered.pop tfoot:last-child tr:last-child > th:first-child{
-	border-bottom-left-radius:4px;
-}
-.table-bordered.pop thead:last-child tr:last-child > th:last-child,
-.table-bordered.pop tbody:last-child tr:last-child > td:last-child,
-.table-bordered.pop tbody:last-child tr:last-child > th:last-child,
-.table-bordered.pop tfoot:last-child tr:last-child > td:last-child,
-.table-bordered.pop tfoot:last-child tr:last-child > th:last-child{
-	border-bottom-right-radius:4px;
-}
-.table-striped.pop tbody > tr:nth-child(2n) > td,
-.table-striped.pop tbody > tr:nth-child(2n) > th{
-	background-color: @tablePopBackgroundAccent;
-}
-.table-striped.pop tbody > tr:nth-child(2n+1) > td,
-.table-striped.pop tbody > tr:nth-child(2n+1) > th{
-	background-color: transparent;
-}
-.table-hover.pop{
-	tbody > tr:nth-child(2n):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-	tbody > tr:nth-child(2n+1):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-}
-// ______________________
-.table.neon{
-	background-color: transparent;
-	thead{
-		th{
-			background-image: url('../images/th-border-neon.jpg');
-			background-color: @tableNeonTheadBackground;
-			color: @color_one;
-			font-family: 'Lato';
-			font-weight: bold;
-		}
-	}
-	tbody{
-		> tr {
-			&:first-child{
-				td{
-					border-top-color: @tableNeonTheadBackground;
-				}
-			}
-			td{
-				font-family: 'Lato';
-			}
-		}
-	}
-}
-.table.neon.table-bordered {
-	.border-radius(4px 4px 4px 4px);
-	th{
-		border-left-color: @grayLighter;
-		&:first-child{
-			border-left-color: @tableBorder;
-		}
-	}
-}
-.table-bordered.neon thead:first-child tr:first-child > th:first-child,
-.table-bordered.neon tbody:first-child tr:first-child > td:first-child,
-.table-bordered.neon tbody:first-child tr:first-child > th:first-child{
-	border-top-left-radius:4px;
-}
-.table-bordered.neon thead:first-child tr:first-child > th:last-child,
-.table-bordered.neon tbody:first-child tr:first-child > td:last-child,
-.table-bordered.neon tbody:first-child tr:first-child > th:last-child{
-	border-top-right-radius:4px;
-}
-.table-bordered.neon thead:last-child tr:last-child > th:first-child,
-.table-bordered.neon tbody:last-child tr:last-child > td:first-child,
-.table-bordered.neon tbody:last-child tr:last-child > th:first-child,
-.table-bordered.neon tfoot:last-child tr:last-child > td:first-child,
-.table-bordered.neon tfoot:last-child tr:last-child > th:first-child{
-	border-bottom-left-radius:4px;
-}
-.table-bordered.neon thead:last-child tr:last-child > th:last-child,
-.table-bordered.neon tbody:last-child tr:last-child > td:last-child,
-.table-bordered.neon tbody:last-child tr:last-child > th:last-child,
-.table-bordered.neon tfoot:last-child tr:last-child > td:last-child,
-.table-bordered.neon tfoot:last-child tr:last-child > th:last-child{
-	border-bottom-right-radius:4px;
-}
-.table-striped.neon tbody > tr:nth-child(2n) > td,
-.table-striped.neon tbody > tr:nth-child(2n) > th{
-	background-color: @tableNeonBackgroundAccent;
-}
-.table-striped.neon tbody > tr:nth-child(2n+1) > td,
-.table-striped.neon tbody > tr:nth-child(2n+1) > th{
-	background-color: transparent;
-}
-.table-hover.neon{
-	tbody > tr:nth-child(2n):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-	tbody > tr:nth-child(2n+1):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-}
-// ______________________
-.table.natural{
-	background-color: transparent;
-	thead{
-		th{
-			background-image: url('../images/th-border-natural.jpg');
-			background-color: @tableNaturalTheadBackground;
-			color: @color_one;
-			font-family: 'Lato';
-			font-weight: bold;
-		}
-	}
-	tbody{
-		> tr {
-			&:first-child{
-				td{
-					border-top-color: @tableNaturalTheadBackground;
-				}
-			}
-			td{
-				font-family: 'Lato';
-			}
-		}
-	}
-}
-.table.natural.table-bordered {
-	.border-radius(4px 4px 4px 4px);
-	th{
-		border-left-color: @grayLighter;
-		&:first-child{
-			border-left-color: @tableBorder;
-		}
-	}
-}
-.table-bordered.natural thead:first-child tr:first-child > th:first-child,
-.table-bordered.natural tbody:first-child tr:first-child > td:first-child,
-.table-bordered.natural tbody:first-child tr:first-child > th:first-child{
-	border-top-left-radius:4px;
-}
-.table-bordered.natural thead:first-child tr:first-child > th:last-child,
-.table-bordered.natural tbody:first-child tr:first-child > td:last-child,
-.table-bordered.natural tbody:first-child tr:first-child > th:last-child{
-	border-top-right-radius:4px;
-}
-.table-bordered.natural thead:last-child tr:last-child > th:first-child,
-.table-bordered.natural tbody:last-child tr:last-child > td:first-child,
-.table-bordered.natural tbody:last-child tr:last-child > th:first-child,
-.table-bordered.natural tfoot:last-child tr:last-child > td:first-child,
-.table-bordered.natural tfoot:last-child tr:last-child > th:first-child{
-	border-bottom-left-radius:4px;
-}
-.table-bordered.natural thead:last-child tr:last-child > th:last-child,
-.table-bordered.natural tbody:last-child tr:last-child > td:last-child,
-.table-bordered.natural tbody:last-child tr:last-child > th:last-child,
-.table-bordered.natural tfoot:last-child tr:last-child > td:last-child,
-.table-bordered.natural tfoot:last-child tr:last-child > th:last-child{
-	border-bottom-right-radius:4px;
-}
-.table-striped.natural tbody > tr:nth-child(2n) > td,
-.table-striped.natural tbody > tr:nth-child(2n) > th{
-	background-color: @tableNaturalBackgroundAccent;
-}
-.table-striped.natural tbody > tr:nth-child(2n+1) > td,
-.table-striped.natural tbody > tr:nth-child(2n+1) > th{
-	background-color: transparent;
-}
-.table-hover.natural{
-	tbody > tr:nth-child(2n):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
-	}
-	tbody > tr:nth-child(2n+1):hover{
-		> td{
-			background-color: @tableBackgroundAccent;
-		}
 	}
 }
 
@@ -3249,6 +2754,38 @@ form {
 
 // Hikashop
 
+h1[id^="hikashop_"] {
+	.heading();
+}
+
+[id^="hikashop_"] {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	legend {
+
+		.heading();
+	}
+
+	.table-striped tbody > tr:nth-child(2n+1) > td,
+	.table-striped tbody > tr:nth-child(2n+1) > th {
+		background: #fff;
+	}
+
+	.table-striped tbody > tr:nth-child(2n) > td,
+	.table-striped tbody > tr:nth-child(2n) > th {
+		background: #f2f2f2;
+	}
+
+	legend {
+		border-bottom-color: @textColor;
+	}
+}
+
 .hikashop_product_stock {
 
 	table {
@@ -3332,7 +2869,6 @@ input.hikashop_product_quantity_field {
 	#hikashop_checkout_login_left_part,
 	#hikashop_checkout_login_right_part {
 
-
 		#com-form-login-username,
 		#com-form-login-password {
 
@@ -3345,13 +2881,140 @@ input.hikashop_product_quantity_field {
 
 
 		}
+
+		fieldset {
+
+			h2 {
+				margin-top: 0;
+			}
+		}
 	}
 
 	#hikashop_checkout_login_left_part {
-		
+		padding: 30px;
+		background: #f2f2f2;
+
+		ul {
+			list-style: none;
+			margin: 15px 0 0;
+
+			li {
+				margin-bottom: 5px;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		#com-form-login-remember {
+
+			label {
+				display: inline-block;
+			}
+
+			input {
+				margin-top: 0;
+			}
+		}
 	}
 
 	#hikashop_checkout_login_right_part {
+		padding: 30px;
+	}
 
+	#com-form-login-username,
+	#com-form-login-password {
+		margin-bottom: 0;
+	}
+}
+
+#hikashop_checkout_coupon_input {
+	margin-bottom: 0;
+}
+
+#hikashop_checkout_cart {
+
+	.hikashop_cart_product_quantity_refresh,
+	.hikashop_cart_product_quantity_delete {
+		display: inline-block;
+	}
+}
+
+#hikashop_payment_methods {
+
+	.hikashop_payment_methods_table {
+		margin-bottom: 20px;
+
+		label {
+			display: inline-block;
+			margin-bottom: 0;
+		}
+
+		td {
+			padding-right: 10px;
+			padding-bottom: 5px;
+
+			input[type="radio"] {
+				margin: 0;
+			}
+		}
+	}
+}
+
+#hikashop_checkout_shipping_address {
+	margin-bottom: 20px;
+
+	input[type="checkbox"] {
+		margin: 0;
+	}
+}
+
+#hikashop_checkout_billing_address {
+	margin-bottom: 20px;
+
+	.table {
+
+		tr {
+
+			td {
+				border-top: none;
+				padding: 0;
+			}
+		}
+	}
+}
+
+#hikashop_shipping_methods {
+	margin-bottom: 20px;
+
+	input[type="radio"] {
+		margin: 0;
+	}
+
+	table {
+
+		tr {
+
+			td {
+
+				br {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+#hikashop_paypal_form {
+
+	margin-top: 10px;
+}
+
+body.contentpane {
+	background: @white;
+
+	h1[id^="hikashop_"] {
+		font-size: 25px;
 	}
 }
