@@ -2997,6 +2997,8 @@ input.hikashop_product_quantity_field {
 		tr {
 
 			td {
+				padding-right: 5px;
+				padding-bottom: 5px;
 
 				br {
 					display: none;
@@ -3011,13 +3013,43 @@ select[id*="limit_hikashop_category_information_menu_"] {
 	margin-bottom: 5px;
 }
 
+[id^="hikashop_product_contact_"] {
+
+	dd {
+		margin-left: 0;
+		margin-bottom: 5px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	textarea {
+		.box-sizing(border-box);
+		width: 100%;
+	}
+
+	input[type="text"],
+	input[type="email"] {
+		min-height: 32px;
+	}
+
+	#toolbar {
+
+		button {
+
+			img {
+				display: none;
+			}
+		}
+	}
+}
+
+#hikashop_product_vote_mini,
 .hikashop_product_vote {
 	margin-bottom: 20px;
 	display: block;
 }
 
 #hikashop_paypal_form {
-
 	margin-top: 10px;
 }
 
