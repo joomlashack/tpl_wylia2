@@ -1,4 +1,4 @@
-//@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto+Slab:400,700');
 
 .heading() {
 	font-weight: bold;
@@ -1058,9 +1058,27 @@ ol.linenums {
 
 	.module {
 
-		&_ms1 {
+		&_ms1,
+		&_ms2,
+		&_ms3,
+		&_ms4,
+		&_ms5 {
 			border-color: @white;
 			color: @white;
+		}
+	}
+
+	[class*="module"] {
+
+		&.feat-tag,
+		&.new-tag,
+		&.hot-tag,
+		&.extra-tag {
+
+			&:before {
+				color: @linkColor;
+				background: @white;
+			}
 		}
 	}
 
