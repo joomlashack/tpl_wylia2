@@ -88,33 +88,6 @@ address{
 		color:@navtabsBg;
 	}
 }
-blockquote{
-	background-image: url('../images/bq-top.png');
-	background-repeat: no-repeat;
-	border-left: none;
-	color: @blockquoteColor;
-	font-style: italic;
-	padding: 16px 0 16px 24px;
-	p{
-		background-image: url('../images/bq-bottom.png');
-		background-position: right bottom;
-		background-repeat: no-repeat;
-		font-size: 22px;
-		padding-bottom: 16px;
-		padding-right: 24px;
-	}
-	small{
-		color:@blockquoteSmallColor;
-		font-size: 14px;
-		font-style: normal;
-		&:before{
-			content: '';
-		}
-		cite{
-			color: @linkColor;
-		}
-	}
-}
 cite{
 	color: @linkColor;
 }
@@ -135,42 +108,6 @@ blockquote.pull-right{
 	padding-right: 0;
 	small:after{
 		content: '';
-	}
-}
-blockquote.natural{
-	background-image: url('../images/bq-natural-top.png');
-	p{
-		background-image: url('../images/bq-natural-bottom.png');
-	}
-}
-blockquote.neon{
-	background-image: url('../images/bq-neon-top.png');
-	p{
-		background-image: url('../images/bq-neon-bottom.png');
-	}
-}
-blockquote.pop{
-	background-image: url('../images/bq-pop-top.png');
-	p{
-		background-image: url('../images/bq-pop-bottom.png');
-	}
-}
-blockquote.teen{
-	background-image: url('../images/bq-teen-top.png');
-	p{
-		background-image: url('../images/bq-teen-bottom.png');
-	}
-}
-blockquote.total-black{
-	background-image: url('../images/bq-total-black-top.png');
-	p{
-		background-image: url('../images/bq-total-black-bottom.png');
-	}
-}
-blockquote.vintage{
-	background-image: url('../images/bq-vintage-top.png');
-	p{
-		background-image: url('../images/bq-vintage-bottom.png');
 	}
 }
 code{
@@ -196,44 +133,6 @@ h6 {
 		text-transform: none;
 	}
 }
-hr{
-	border-bottom-color: @navtabsBg;
-	border-top-color: @navtabsBg;
-	&.wylia-hr-one{
-		background-image: url(../images/wylia-hr-one.png);
-		background-position: center top;
-		background-repeat: no-repeat;
-		border: none;
-		height: 10px;
-		margin-left:auto;
-		margin-right:auto;
-		width: 130px;
-	}
-	&.wylia-hr-two{
-		background-image: url(../images/wylia-hr-two.png);
-		background-position: center top;
-		background-repeat: no-repeat;
-		border: none;
-		height: 10px;
-		margin-left:auto;
-		margin-right:auto;
-		width: 90px;
-	}
-	&.wylia-hr-three{
-		border-bottom: 1px solid @borderColor;
-		border-top: none;
-		clear: both;
-		margin-bottom: 10px;
-		margin-top: 10px;
-		&.wylia-hr-three-full-width{
-
-		}
-	}
-	&.hr-footer{
-		margin: 0  0 10px;
-		border-bottom: none;
-	}
-}
 input.search-query{
 	.border-radius(0 0 0 0);
 }
@@ -251,20 +150,10 @@ p.p-base-font-size{
 }
 pre{
 	.border-radius(0 0 0 0);
-	background-color: @tableVintageBackgroundAccent !important;
+	background-color: @grayLighter !important;
 	border: none !important;
 	font-family: 'Courier';
-	padding-top: 23px !important;
 	position: relative;
-	&:before{
-		border-bottom: 2px solid @white;
-		content: '';
-		height: 10px;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
 }
 select, textarea, input[type="text"],
 input[type="password"], input[type="datetime"],
@@ -573,10 +462,6 @@ div.img-peak-bottom{
 	background-color: @white;
 	border-color: @grayLighter - #222;
 	margin-bottom: 5px;
-	padding: 10px;
-}
-.img-texture{
-	background-image: url('../images/bg-img-texture.jpg');
 	padding: 10px;
 }
 .img-intro-left, .img-fulltext-left,.img-intro-right, .img-fulltext-right{
@@ -971,7 +856,7 @@ div.img-peak-bottom{
 	color:@color_one !important;
 }
 .prettyprint{
-	background-color: @tableVintageBackgroundAccent !important;
+	background-color: @grayLighter !important;
 	font-family: 'Courier';
 	border: none !important;
 }
@@ -1145,12 +1030,6 @@ ol.linenums {
 
 .wrapper-menu{
 	margin-top: 10px;
-}
-.wylia-logo-footer{
-	background-image: url(../images/vintage/logo-footer.png);
-	background-repeat: no-repeat;
-	height: 93px;
-	width: 94px;
 }
 
 .wylia-price{
@@ -1548,32 +1427,6 @@ div{
 		}
 	}
 
-}
-.slidermanButtonsCont{
-	.sliderPrev,  .sliderNext{
-		background-position: 0 0;
-		height: 60px;
-		text-indent: -9999px;
-		width: 51px !important;
-		top: 45%;
-	}
-
-	.sliderPrev {
-		background-image: url(../images/ss-prev.png) !important;
-		left: 31px;
-	}
-	.sliderNext{
-		background-image: url(../images/ss-next.png) !important;
-		right: 31px;
-	}
-}
-
-.slidermanButtonsCont .sliderPrev, .slidermanButtonsCont .sliderNext{
-	top: ~"-webkit-calc(50% - 30px)";
-	top: ~"-moz-calc(50% - 30px)";
-	top: ~"-ms-calc(50% - 30px)";
-	top: ~"-o-calc(50% - 30px)";
-	top: ~"calc(50% - 30px)";
 }
 
 #main{
@@ -2123,6 +1976,7 @@ form {
 			a {
 				background-color: @navtabsBgHover;
 				color : @navtabsColorHover;
+				border-color: @navtabsBgHover;
 
 				.caret {
 					border-top-color: @navtabsColorHover;
@@ -2692,42 +2546,6 @@ form {
 		> li > a{
 			margin-left: -5px;
 			margin-right: -5px;
-		}
-	}
-}
-
-[class^="mostread"]{
-	li {
-		background-image: url(../images/wylia-hr-one.png);
-		background-position: center bottom;
-		background-repeat: no-repeat;
-		padding-bottom: 40px;
-		padding-top: 30px;
-		&:first-child{
-			padding-top: 15px;
-		}
-		&:last-child{
-			background-image: none;
-			padding-bottom: 30px;
-		}
-		a{
-			font-size: 16px;
-			font-weight: bold;
-			text-align: center;
-			&:hover{
-				background-color: transparent;
-			}
-			[class^="icon-"], [class*=" icon-"]{
-				display: none;
-			}
-		}
-	}
-	&.nav-list{
-		padding: 0;
-		>li>a{
-			margin-left: 0;
-			margin-right: 0;
-			padding: 0;
 		}
 	}
 }
