@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto+Slab:400,700');
+//@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto+Slab:400,700');
 
 .heading() {
 	font-weight: bold;
@@ -751,8 +751,7 @@ div.img-peak-bottom{
 .moduletable.hero-unit{
 	background-color: @heroUnitBackground;
 }
-[class^="module"],
-[class*="module"]{
+[class*="module"] {
 	position: relative;
 
 	[class*="span"] {
@@ -788,128 +787,123 @@ div.img-peak-bottom{
 		.heading();
 	}
 
-	&.wylia-new{
+	&.feat-tag,
+	&.new-tag,
+	&.hot-tag,
+	&.extra-tag {
 		position: relative;
-		padding-top: 24px !important;
 
-		&:before{
-			content: 'NEW';
+		&:before {
 			height: 24px;
-			width: 47px;
 			position: absolute;
 			top: 0;
-			left: 0;
+			right: 0;
 			line-height: 24px;
 			text-align: center;
-		}
-		&.wylia-new-primary:before{
-			background-color: @btnPrimaryBackground;
-		}
-		&.wylia-new-secondary:before{
-			background-color: @linkColor;
-			color:@white;
-		}
-		&.wylia-new-tertiary:before{
-			background-color: @color_one;
-			color:@white;
-		}
-		&.wylia-new-quaternary:before{
-			background-color: @borderColor;
+			text-transform: uppercase;
 		}
 	}
-	&.wylia-hot{
-		position: relative;
-		padding-top: 24px !important;
 
-		&:before{
-			content: 'HOT';
-			height: 24px;
-			width: 47px;
-			position: absolute;
-			top: 0;
-			left: 0;
-			line-height: 24px;
-			text-align: center;
-		}
-		&.wylia-hot-primary:before{
-			background-color: @btnPrimaryBackground;
-		}
-		&.wylia-hot-secondary:before{
-			background-color: @linkColor;
-			color:@white;
-		}
-		&.wylia-hot-tertiary:before{
-			background-color: @color_one;
-			color:@white;
-		}
-		&.wylia-hot-quaternary:before{
-			background-color: @borderColor;
-		}
-	}
-	.wylia-featured{
-		background-color: @borderColor;
-		padding:44px 10px 20px;
-		position: relative;
-		&:after{
+	&.new-tag {
+
+		&:before {
+			content: 'New';
 			background-color: @linkColor;
 			color: @white;
-			content: 'FEATURED';
-			font-size: 12px;
-			height: 24px;
-			left: 10px;
-			line-height: 24px;
-			padding: 0 7px;
-			position: absolute;
-			text-align: center;
-			top: 0;
-			width: 82px;
+			width: 47px;
 		}
-		&.wylia-featured-secondary{
-			background-color: @white;
-			border: 1px solid @borderColor;
+	}
+
+	&.feat-tag {
+
+		&:before {
+			content: 'Featured';
+			background-color: @btnPrimaryBackground;
+			color: @textColor;
+			width: 88px;
 		}
-		&.wylia-featured-tertiary:after{
-			background-color: @color_one;
+	}
+
+	&.hot-tag {
+
+		&:before {
+			content: 'Hot';
+			background-color: @red;
+			color: @white;
+			width: 47px;
 		}
-		&.wylia-featured-inverse{
-			background-color: @color_one;
-			color:@btnSecondaryColor;
-			&:after{
-				background-color: @btnPrimaryBackground;
-				color:@color_one;
-			}
+	}
+
+	&.extra-tag {
+
+		&:before {
+			content: 'Extra';
+			background-color: @textColor;
+			color: @white;
+			width: 60px;
 		}
 	}
 }
 .module {
 
 	&_ms1 {
-		border: 2px dashed @linkColor;
+		 border: 2px dashed @linkColor;
+		 padding: 20px;
+		 color: @linkColor;
+
+		 > h1,
+		 > h2,
+		 > h3,
+		 > h4,
+		 > h5,
+		 > h6 {
+			 color: @linkColor;
+
+			 span {
+				 color: @textColor;
+			 }
+		 }
+
+		 a:not(.btn):not(.button) {
+			 text-decoration: underline;
+		 }
+	}
+
+	&_ms2 {
+		border: 2px solid @linkColor;
 		padding: 20px;
-		color: @linkColor;
-
-		> h1,
-		> h2,
-		> h3,
-		> h4,
-		> h5,
-		> h6 {
-			color: @linkColor;
-
-			span {
-				color: @textColor;
-			}
-		}
 
 		a:not(.btn):not(.button) {
 			text-decoration: underline;
 		}
 	}
 
-	/*p:first-of-type:first-letter {
-		font-weight: bold;
-		font-size: 20px;
-	}*/
+	&_ms3 {
+		border: 2px solid @btnPrimaryBackground;
+		padding: 20px;
+
+		a:not(.btn):not(.button) {
+			text-decoration: underline;
+		}
+	}
+
+	&_ms4 {
+		border: 2px solid @red;
+		padding: 20px;
+
+		a:not(.btn):not(.button) {
+			text-decoration: underline;
+		}
+	}
+
+	&_ms5 {
+		border: 2px solid @textColor;
+		padding: 20px;
+
+		a:not(.btn):not(.button) {
+			text-decoration: underline;
+		}
+	}
 }
 
 [class^="newsflash"]{
@@ -1005,11 +999,6 @@ ol.linenums {
 		margin-bottom: 0!important;
 	}
 }
-.row-fluid{
-	> .module_ms3,>.moduletable_ms3,> .moduletext_ms3 > .well{
-		margin-top: 10px;
-	}
-}
 
 .table{
 	.border-radius(0 0 0 0);
@@ -1072,6 +1061,26 @@ ol.linenums {
 		&_ms1 {
 			border-color: @white;
 			color: @white;
+		}
+	}
+
+	code {
+		color: @white;
+	}
+
+	[class*="module"] {
+
+		> h1,
+		> h2,
+		> h3,
+		> h4,
+		> h5,
+		> h6 {
+			color: @white;
+
+			span {
+				color: @white;
+			}
 		}
 	}
 }
@@ -1278,7 +1287,7 @@ a.wylia-readmore{
 }
 // ______________________
 #above-content{
-
+	margin-bottom: 30px;
 }
 .rm-border-bottom{
 	border-bottom: none !important;
@@ -1290,8 +1299,8 @@ a.wylia-readmore{
 		padding-right: 0;
 	}
 }
-#below-content{
-
+#below-content {
+	margin-top: 30px;
 }
 
 #breadcrumbs,#breadcrumb{
@@ -2844,6 +2853,7 @@ input.hikashop_product_quantity_field {
 
 		.hikashop_subcontainer {
 			padding: 30px;
+			.box-sizing(border-box);
 
 			form {
 				margin: 0;

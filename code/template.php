@@ -52,7 +52,7 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php endif; ?>
             <?php if ($this->countModules('extra')) : ?>
-                <!-- grid-top3 -->
+                <!-- extra -->
                 <div id="extra">
                     <div class="inner-padding background-main spacing-bottom">
                         <w:module type="row-fluid" name="extra" chrome="wrightflexgrid" />
