@@ -2555,19 +2555,32 @@ form {
 #nav-menu,
 #nav-toolbar {
 
+   .nav > li.dropdown {
+
+	   > a .caret {
+		   margin-left: 5px;
+		   margin-right: 7px;
+		   border: none;
+
+		   &:before {
+			   content: "\f107";
+			   font-family: FontAwesome;
+			   font-size: 15px;
+			   top: 8px;
+			   position: absolute;
+		   }
+	   }
+   }
+}
+
+#nav-toolbar {
+
 	.nav > li.dropdown {
 
 		> a .caret {
-			margin-left: 5px;
-			margin-right: 7px;
-			border: none;
 
 			&:before {
-				content: "\f107";
-				font-family: FontAwesome;
-				font-size: 15px;
-				top: 8px;
-				position: absolute;
+				top: 11px;
 			}
 		}
 	}
