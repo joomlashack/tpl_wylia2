@@ -268,35 +268,60 @@ p.p-featured:first-letter{
 .btn.disabled, .btn[disabled]{
 	color: @white;
 }
-.btn-info{
+.btn-info {
 	border-color: darken(@blue ,10%);
+	background-color: darken(@blue ,10%);
+
 	&:hover,
-	&:focus{
+	&:focus,
+	&:active {
 		color: @white;
+		border-color: darken(@blue, 15%);
+		background-color: darken(@blue, 15%);
 	}
 }
-.btn-danger{
-	border-color: darken(@btnDangerBackground ,15%);
+.btn-danger {
+	border-color: darken(@btnDangerBackground, 10%);
+	background-color: darken(@btnDangerBackground, 10%);
+
 	&:hover,
-	&:focus{
+	&:focus,
+	&:active {
 		color: @white;
+		border-color: darken(@btnDangerBackground ,15%);
+		background-color: darken(@btnDangerBackground ,15%);
 	}
 }
-.btn-inverse{
+.btn-inverse {
 	border-color: darken(@color_one ,10%);
+	background-color: darken(@color_one ,10%);
 	color: @grayLight;
+
 	&:hover,
-	&:focus{
+	&:focus,
+	&:active {
 		color: @white;
+		border-color: darken(@color_one ,15%);
+		background-color: darken(@color_one ,15%);
 	}
 }
-.btn-link{
+.btn-link {
 	border: none;
 	color: @linkColor;
+	background: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		border: none;
+		color: @linkColorHover;
+		background: none;
+		text-decoration: none;
+	}
 }
 .btn-primary {
 	border-color: @linkColor;
-	background: @linkColor;
+	background-color: @linkColor;
 
 	&:hover,
 	&:focus,
@@ -305,18 +330,28 @@ p.p-featured:first-letter{
 		background: @linkColorHover;
 	}
 }
-.btn-success{
+.btn-success {
 	border-color: darken(@green ,10%);
+	background-color: darken(@green ,10%);
+
 	&:hover,
-	&:focus{
+	&:focus,
+	&:active {
 		color: @white;
+		border-color: darken(@green ,15%);
+		background-color: darken(@green ,15%);
 	}
 }
-.btn-warning{
+.btn-warning {
 	border-color: darken(@orange ,10%);
+	background-color: darken(@orange ,10%);
+
 	&:hover,
-	&:focus{
+	&:focus,
+	&:active {
 		color: @white;
+		background-color: darken(@orange ,15%);
+		border-color: darken(@orange ,15%);
 	}
 }
 
