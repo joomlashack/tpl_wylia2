@@ -1,7 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
-
 //
 // Variables
 // --------------------------------------------------
@@ -21,6 +17,10 @@
 @dropdownLinkGradient : false;
 @navbarInverseDropdownLinkGradient : false;
 
+@navbarInnerGradient : false;
+@navbarInverseInnerGradient : false;
+
+@buttonGradient: false;
 
 // Dropdown For navbar-inverse
 // -------------------------
@@ -44,7 +44,7 @@
 // Tabs
 @navtabsColor:@color_five;
 @navtabsColorHover:@color_three;
-@navtabsBg:#DFC08F;
+@navtabsBg:@linkColor;
 @navtabsBgHover:#3E4147;
 //_________________
 @pageHeaderBorder:#ddd;
@@ -71,11 +71,11 @@
 @tableNaturalBackgroundAccent:#C9F3D1;
 @tableNaturalTheadBackground:#77E393;
 // Btn Colors
-@btnPrimaryColor:#3E4147;
-@btnPrimaryBorder:#D4A968;
-@btnSecondaryColor:#FFFEDF;
+@btnPrimaryColor: 	@color_four;
+@btnPrimaryBorder: 	@color_four;
+@btnSecondaryColor:	#FFFEDF;
 @btnSecondaryBorder:#660000;
-@btnNavbar:#232629;
+@btnNavbar:			#232629;
 //
 // Variables
 // --------------------------------------------------
@@ -122,8 +122,8 @@
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@sansFontFamily:        'Lato', sans-serif;
+@serifFontFamily:       'Roboto Slab', serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;
@@ -278,10 +278,10 @@
 @navbarInverseBorder:                    #1C1D1F;
 
 @navbarInverseText:                      @color_three;
-@navbarInverseLinkColor:                 @color_two;
-@navbarInverseLinkColorHover:            @color_three;
-@navbarInverseLinkColorActive:           @color_three;
-@navbarInverseLinkBackgroundHover:       @btnPrimaryColor;
+@navbarInverseLinkColor:                 @navbarLinkColor;
+@navbarInverseLinkColorHover:            @navbarLinkColorHover;
+@navbarInverseLinkColorActive:           @navbarLinkColorHover;
+@navbarInverseLinkBackgroundHover:       @navtabsBgHover;
 @navbarInverseLinkBackgroundActive:      transparent;
 
 @navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);

@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Wylia
+ * @package     Wylia 2
  * @subpackage  Functions
  *
  * @copyright   Copyright (C) 2005 - 2015 Joomlashack. Meritage Assets.
@@ -37,5 +37,3 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
 }elseif ($this->countModules('sidebar1')) {
         $sidebarClass = ' sb1';
 }
-
-$moduleMain = ($this->params->get('wylia_module_main','0') == '1' ? true : false);

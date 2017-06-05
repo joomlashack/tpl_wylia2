@@ -1,7 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
-
 //
 // Variables
 // --------------------------------------------------
@@ -21,6 +17,10 @@
 @dropdownLinkGradient : false;
 @navbarInverseDropdownLinkGradient : false;
 
+@navbarInnerGradient : false;
+@navbarInverseInnerGradient : false;
+
+@buttonGradient: false;
 
 // Dropdown For navbar-inverse
 // -------------------------
@@ -44,7 +44,7 @@
 // Tabs
 @navtabsColor:@white;
 @navtabsColorHover:@color_three;
-@navtabsBg:@navbarLinkColor;
+@navtabsBg:@linkColor;
 @navtabsBgHover:#3E4147;
 //_________________
 @pageHeaderBorder:#ddd;
@@ -71,11 +71,11 @@
 @tableNaturalBackgroundAccent:#C9F3D1;
 @tableNaturalTheadBackground:#77E393;
 // Btn Colors
-@btnPrimaryColor:@color_one;
-@btnPrimaryBorder:#09A7B9;
-@btnSecondaryColor:#FFFEDF;
+@btnPrimaryColor: 	@color_four;
+@btnPrimaryBorder: 	@color_four;
+@btnSecondaryColor:	#FFFEDF;
 @btnSecondaryBorder:#C40E3B;
-@btnNavbar:#232629;
+@btnNavbar:			#232629;
 //
 // Variables
 // --------------------------------------------------
@@ -122,8 +122,8 @@
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Lato", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@sansFontFamily:        'Lato', sans-serif;
+@serifFontFamily:       'Roboto Slab', serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;

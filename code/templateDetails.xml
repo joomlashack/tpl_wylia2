@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
-<extension version="2.5" type="template" method="upgrade" client="site">
-	<name>js_wylia</name>
-	<creationDate>August 2016</creationDate>
+<extension version="3.0" type="template" method="upgrade" client="site">
+	<name>js_wylia2</name>
+	<creationDate>Jun 2017</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>https://www.joomlashack.com</authorUrl>
-	<copyright>Copyright Joomlashack 2016. All rights reserved</copyright>
+	<copyright>Copyright Joomlashack 2017. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>1.1.0</version>
-    <description>TPL_JS_WYLIA_XML_DESCRIPTION</description>
+	<version>2.0.0</version>
+    <description>TPL_JS_WYLIA2_XML_DESCRIPTION</description>
 
 	<languages folder="language">
 		<!-- en-GB -->
-		<language tag="en-GB">en-GB/en-GB.tpl_js_wylia.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_js_wylia.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_js_wylia2.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_js_wylia2.sys.ini</language>
 		<!-- es-ES -->
-		<language tag="es-ES">es-ES/es-ES.tpl_js_wylia.ini</language>
-		<language tag="es-ES">es-ES/es-ES.tpl_js_wylia.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.tpl_js_wylia2.ini</language>
+		<language tag="es-ES">es-ES/es-ES.tpl_js_wylia2.sys.ini</language>
 	</languages>
 
 	<files>
@@ -25,7 +25,6 @@
 		<filename>favicon.ico</filename>
 		<filename>functions.php</filename>
 		<filename>wrighttemplate.php</filename>
-		<filename>home.php</filename>
 		<filename>index.php</filename>
 		<filename>template.php</filename>
 		<filename>templateDetails.xml</filename>
@@ -58,17 +57,18 @@
 		<position>toolbar</position>
 		<position>top2</position>
 		<position>top</position>
+        <position>extra</position>
 	</positions>
 
 	<config>
-		<fields name="params" addfieldpath="/templates/js_wylia/wright/parameters/joomla_2.5">
+		<fields name="params" addfieldpath="/templates/js_wylia2/wright/parameters/joomla_3.0">
 			<fieldset name="basic">
                 <!-- Start of default Wright params -->
 				<field name="rebrand" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_LABEL" description="TPL_JS_WRIGHT_FIELD_REMOVE_BRANDING_DESC">
 				    <option value="1">JYES</option>
 				    <option value="0">JNO</option>
  				</field>
-				<field name="style" type="styles" default="generic" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+				<field name="style" type="styles" default="popstyle" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
 				<field name="lesscompile" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_LESS_COMPILE" description="TPL_JS_WRIGHT_LESS_COMPILE_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
@@ -87,7 +87,7 @@
 					<option value="0">JNO</option>
 				</field>
 				<field name="logo" type="logo" default="template" label="TPL_JS_WRIGHT_FIELD_LOGO_IMAGE_LABEL" description="TPL_JS_WRIGHT_FIELD_LOGO_IMAGE_DESC" />
-				<field name="logowidth" type="grid" default="4" label="TPL_JS_WRIGHT_FIELD_LOGO_WIDTH_LABEL" description="TPL_JS_WRIGHT_FIELD_LOGO_WIDTH_DESC" />
+				<field name="logowidth" type="grid" default="2" label="TPL_JS_WRIGHT_FIELD_LOGO_WIDTH_LABEL" description="TPL_JS_WRIGHT_FIELD_LOGO_WIDTH_DESC" />
 				<field name="body_font" type="typography" default="default" label="TPL_JS_WRIGHT_FIELD_BODY_FONT_LABEL" description="TPL_JS_WRIGHT_FIELD_BODY_FONT_DESC" />
 				<field name="header_font" type="typography" default="default" label="TPL_JS_WRIGHT_FIELD_HEADING_FONT_LABEL" description="TPL_JS_WRIGHT_FIELD_HEADING_FONT_DESC" />
 				<field name="columns" type="columns" default="sidebar1:3;main:6;sidebar2:3" sidebars="2" label="TPL_JS_WRIGHT_FIELD_COLUMNS_LABEL" description="TPL_JS_WRIGHT_FIELD_COLUMNS_DESC" />
@@ -114,18 +114,10 @@
 					<option value="img-circle">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_CIRCLE</option>
 					<option value="img-polaroid">TPL_JS_WRIGHT_BOOTSTRAP_IMAGES_POLAROID</option>
 				</field>
-
-				<field name="browserspacer" label="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_TITLE" description="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_TITLE_DESC" type="spacer" />
-				<field name="browsercompatibilityswitch" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_SWITCH" description="TPL_JS_WRIGHT_BROWSER_COMPATIBILITY_SWITCH_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
+				<field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
+				<field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
-				<field name="wylia_module_main" type="list" default="0" label="TPL_JS_WYLIA_MODULE_MAIN" description="TPL_JS_WYLIA_MODULE_MAIN_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-			</fieldset>
+            </fieldset>
 		</fields>
 	</config>
 </extension>
