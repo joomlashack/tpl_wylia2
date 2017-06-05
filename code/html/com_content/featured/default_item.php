@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Unlimited
+ * @package     Wylia 2
  * @subpackage  Overrider
  *
  * @copyright   Copyright (C) 2005 - 2017 Joomlashack. Meritage Assets.  All rights reserved.
