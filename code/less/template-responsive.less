@@ -354,6 +354,33 @@
 		float: left;
 		margin-top: -49px;
 	}
+
+	#bottom-menu {
+
+		.navbar-inner {
+			padding: 0;
+
+			.nav {
+
+				> li {
+
+					&:first-of-type {
+
+						a {
+							.border-radius(@baseBorderRadius 0 0 @baseBorderRadius);
+						}
+					}
+
+					&:last-of-type {
+
+						a {
+							.border-radius(0 @baseBorderRadius @baseBorderRadius 0);
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 767px) {
