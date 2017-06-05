@@ -119,12 +119,6 @@
 				<field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
             </fieldset>
-            <fieldset name="Wylia" label="TPL_JS_WYLIA2_OPTIONS">
-                <field name="wylia_module_main" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WYLIA2_MODULE_MAIN" description="TPL_JS_WYLIA2_MODULE_MAIN_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-			</fieldset>
 		</fields>
 	</config>
 </extension>

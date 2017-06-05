@@ -105,12 +105,7 @@ defined('_JEXEC') or die('Restricted access');
                         </div>
                     <?php endif; ?>
                     <div id="component-area">
-                        <?php if ($moduleMain) : ?>
-                            <w:module type="none" name="main" />
-                        <?php else : ?>
-                            <!-- component -->
-                            <w:content />
-                        <?php endif; ?>
+                        <w:content />
                     </div>
                     <?php if ($this->countModules('below-content')) : ?>
                         <!-- below-content -->

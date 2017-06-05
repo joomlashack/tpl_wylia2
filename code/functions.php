@@ -37,5 +37,3 @@ if ($this->countModules('sidebar1') && $this->countModules('sidebar2')){
 }elseif ($this->countModules('sidebar1')) {
         $sidebarClass = ' sb1';
 }
-
-$moduleMain = ($this->params->get('wylia_module_main','0') == '1' ? true : false);
