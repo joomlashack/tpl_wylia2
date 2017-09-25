@@ -117,7 +117,50 @@
 				<field name="mobilemenuspacer" label="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_label" description="TPL_JS_WRIGHT_MOBILE_MENU_TITLE_DESC" type="spacer" />
 				<field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
+                            
+                <field
+                    type="customfooter"
+                    name="customfooter"
+                    media="tpl_js_wylia2" />
             </fieldset>
 		</fields>
 	</config>
+
+    <scriptfile>script.installer.php</scriptfile>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Wylia2"><![CDATA[https://deploy.ostraining.com/client/update/pro/stable/tpl_js_wylia2]]></server>
+    </updateservers>
+
+    <variant>PRO</variant>
+
+    <alledia>
+        <element>tpl_js_wylia2</element>
+        <namespace>JS_Wylia2</namespace>
+        <name>JS Wylia2</name>
+        <license>pro</license>
+        <targetplatform>3.*</targetplatform>
+
+        <relatedExtensions>
+            <extension
+                type="library"
+                element="allediaframework">AllediaFramework</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="ossystem"
+                publish="true"
+                ordering="first">OSSystem</extension>
+
+            <extension
+                type="plugin"
+                group="system"
+                element="osmylicensesmanager"
+                publish="true"
+                ordering="last">OSMyLicensesManager</extension>
+        </relatedExtensions>
+
+        <include>AllediaFreeDefaultFiles</include>
+    </alledia>
 </extension>
