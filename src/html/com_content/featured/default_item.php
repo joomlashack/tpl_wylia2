@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 $app = JFactory::getApplication();
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 
-include_once(dirname(__FILE__) . '/../com_content.helper.php');
+include_once(JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/joomla_3.0/com_content/com_content.helper.php');
 
 $params     = &$this->item->params;
 $images     = json_decode($this->item->images);
