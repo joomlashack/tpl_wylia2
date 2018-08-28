@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="3.0" type="template" method="upgrade" client="site">
 	<name>js_wylia2</name>
 	<creationDate>October 04 2017</creationDate>
@@ -112,7 +111,7 @@
 				<field name="mobile_menu_text" type="text" default="" label="TPL_JS_WRIGHT_MOBILE_MENU_TEXT" description="TPL_JS_WRIGHT_MOBILE_MENU_TEXT_DESC" />
                 <!-- End of default Wright params -->
             </fieldset>
-            <fieldset name="footer" addfieldpath="/templates/js_wylia2/form/fields">     
+            <fieldset name="footer" addfieldpath="/templates/js_wylia2/form/fields">
                 <field
                     type="customfooter"
                     name="customfooter"
