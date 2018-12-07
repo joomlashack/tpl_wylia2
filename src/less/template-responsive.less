@@ -4,8 +4,51 @@
 
 @media (min-width: 980px) {
 
-	#logo {
+	#nav-menu,
+	#nav-toolbar {
 
+		.nav > li.dropdown {
+
+			> a .caret {
+				margin-left: 5px;
+				margin-right: 7px;
+				border: none;
+
+				&:before {
+					content: "\f107";
+					font-family: FontAwesome;
+					font-size: 15px;
+					top: 8px;
+					position: absolute;
+				}
+			}
+		}
+	}
+
+	#nav-toolbar {
+
+		.nav > li.dropdown {
+
+			> a .caret {
+
+				&:before {
+					top: 11px;
+				}
+			}
+		}
+	}
+
+	#nav-menu {
+
+		.nav > li.dropdown {
+
+			> a .caret {
+
+				&:before {
+					top: 10px;
+				}
+			}
+		}
 	}
 
 	#toolbar,
@@ -23,7 +66,7 @@
 				&.dropdown {
 
 					> .dropdown-menu {
-						margin-left: 10px;
+						//margin-left: 10px;
 
 						> li {
 
@@ -66,6 +109,41 @@
 
 	#menu_primary {
 		padding: 26px 0;
+	}
+
+	#bottom-menu,
+	#toolbar,
+	#menu {
+
+		.nav {
+
+			li {
+
+				&.dropdown {
+
+					> .dropdown-menu {
+
+						li {
+
+							a {
+
+								&:before {
+									width: 0;
+								}
+							}
+
+							&.parent > a:after {
+								//display: none;
+							}
+						}
+					}
+
+					> a .caret {
+						//display: none;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -138,7 +216,7 @@
 								margin-bottom: 0 !important;
 
 								&:before {
-									width: 0;
+									//width: 0;
 								}
 							}
 
@@ -159,7 +237,7 @@
 					}
 
 					> a .caret {
-						display: none;
+						//display: none;
 					}
 				}
 			}

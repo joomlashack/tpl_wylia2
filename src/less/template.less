@@ -2118,35 +2118,39 @@ form {
 
 						&.parent{
 							> a {
-								.caret{
-									border: 0;
-									border-bottom: 1px solid transparent;
-									height: 100%;
-									line-height: 29px;
-									margin: -1px 0 0 0;
-									position: absolute;
-									right: 0;
-									text-align: center;
-									top: 0;
-									width: 27px;
 
-								}
+								@media (min-width: 980px) {
 
-								&:after {
-									content: "\f105";
-									border: 0;
-									font-family: FontAwesome;
-									font-size: 20px;
-									height: 34px;
-									line-height: 34px;
-									margin-top: 8px;
-									margin: 0;
-									position: absolute;
-									right: 0;
-									top: 0;
-									width: 25px;
-									text-align: center;
-									color: @navbarInverseBackground;
+									.caret{
+										border: 0;
+										border-bottom: 1px solid transparent;
+										height: 100%;
+										line-height: 29px;
+										margin: -1px 0 0 0;
+										position: absolute;
+										right: 0;
+										text-align: center;
+										top: 0;
+										width: 27px;
+
+									}
+
+									&:after {
+										content: "\f105";
+										border: 0;
+										font-family: FontAwesome;
+										font-size: 20px;
+										height: 34px;
+										line-height: 34px;
+										margin-top: 8px;
+										margin: 0;
+										position: absolute;
+										right: 0;
+										top: 0;
+										width: 25px;
+										text-align: center;
+										color: @navbarInverseBackground;
+									}
 								}
 							}
 
@@ -2154,15 +2158,18 @@ form {
 
 								> a  {
 
-									.caret {
-										background-color: @color_one;
-										border: 0;
-										border-bottom: 1px solid @color_one;
-									}
+									@media (min-width: 980px) {
 
-									&:after {
-										background-color: @color_one;
-										color: @dropdownLinkColorHover;
+										.caret {
+											background-color: @color_one;
+											border: 0;
+											border-bottom: 1px solid @color_one;
+										}
+
+										&:after {
+											background-color: @color_one;
+											color: @dropdownLinkColorHover;
+										}
 									}
 								}
 							}
@@ -2177,17 +2184,20 @@ form {
 								    filter:none;
 							}
 
-							&:before {
-								background-color: @dropdownBackground;
-								border: 0;
-								border-bottom: 1px solid @dropdownBackground;
-								content: '';
-								height: 100%;
-								margin: 0;
-								position: absolute;
-								right: 100%;
-								top: 0;
-								width: 10px;
+							@media (min-width: 980px) {
+
+								&:before {
+									background-color: @dropdownBackground;
+									border: 0;
+									border-bottom: 1px solid @dropdownBackground;
+									content: '';
+									height: 100%;
+									margin: 0;
+									position: absolute;
+									right: 100%;
+									top: 0;
+									width: 10px;
+								}
 							}
 						}
 
@@ -2223,9 +2233,14 @@ form {
 							background-color: @color_one;
 							border: none;
 
-							&:before,&:after{
-								display: none;
+							@media (min-width: 980px) {
+
+								&:before,
+								&:after {
+									display: none;
+								}
 							}
+
 
 							li {
 								a {
@@ -2235,9 +2250,13 @@ form {
 										color: @dropdownLinkColor;
 									}
 
-									&:before {
-										display: none;
+									@media (min-width: 980px) {
+
+										&:before {
+											display: none;
+										}
 									}
+
 								}
 
 								&:hover {
@@ -2314,53 +2333,6 @@ form {
 
 	> li > a {
 		padding: 3px 25px 3px 15px;
-	}
-}
-
-#nav-menu,
-#nav-toolbar {
-
-   .nav > li.dropdown {
-
-	   > a .caret {
-		   margin-left: 5px;
-		   margin-right: 7px;
-		   border: none;
-
-		   &:before {
-			   content: "\f107";
-			   font-family: FontAwesome;
-			   font-size: 15px;
-			   top: 8px;
-			   position: absolute;
-		   }
-	   }
-   }
-}
-
-#nav-toolbar {
-
-	.nav > li.dropdown {
-
-		> a .caret {
-
-			&:before {
-				top: 11px;
-			}
-		}
-	}
-}
-
-#nav-menu {
-
-	.nav > li.dropdown {
-
-		> a .caret {
-
-			&:before {
-				top: 10px;
-			}
-		}
 	}
 }
 
