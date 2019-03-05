@@ -40,6 +40,8 @@
 @color_three:#FFFEDF;
 @color_four:#990819;
 @color_five:@color_one;
+@color_six: #f9e663; // Primary buttons
+@color_seven: #189F85; // Links and menus
 @borderColor:#ddd;
 // Tabs
 @navtabsColor:@white;
@@ -65,7 +67,7 @@
 @tableTotalBlackBackgroundAccent:#E6E5E5;
 @tableTotalBlackTheadBackground:#706C69;
 @tablePopBackgroundAccent:#FCEFA7;
-@tablePopTheadBackground:#F9E663;
+@tablePopTheadBackground: @color_six;
 @tableNeonBackgroundAccent:#BBF5FC;
 @tableNeonTheadBackground:#0BD4EA;
 @tableNaturalBackgroundAccent:#C9F3D1;
@@ -116,7 +118,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #189F85;
+@linkColor:             @color_seven;
 @linkColorHover:        darken(@linkColor, 10%);
 
 
@@ -166,8 +168,8 @@
 @btnBackgroundHighlight:            @navtabsBgHover;
 @btnBorder:                         @color_one;
 
-@btnPrimaryBackground:              #F9E663;
-@btnPrimaryBackgroundHighlight:     #F9E663;
+@btnPrimaryBackground:              @color_six;
+@btnPrimaryBackgroundHighlight:     @color_six;
 
 @btnInfoBackground:                 #5bc0de;
 @btnInfoBackgroundHighlight:        #2f96b4;
@@ -263,8 +265,8 @@
 @navbarBackground:                #1C1E21;
 @navbarBorder:                    #111;
 
-@navbarText:                      #F9E663;
-@navbarLinkColor:                 #F9E663;
+@navbarText:                      @color_six;
+@navbarLinkColor:                 @color_six;
 @navbarLinkColorHover:            @white;
 @navbarLinkColorActive:           @white;
 @navbarLinkBackgroundHover:       @navtabsBgHover;
