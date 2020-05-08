@@ -59,7 +59,6 @@
 		<position>sidebar1</position>
 		<position>sidebar2</position>
 		<position>toolbar</position>
-		<position>top2</position>
 		<position>top</position>
         <position>extra</position>
 	</positions>
