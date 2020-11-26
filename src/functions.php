@@ -3,7 +3,7 @@
  * @package     Wylia 2
  * @subpackage  Functions
  *
- * @copyright   Copyright (C) 2005 - 2015 Joomlashack. Meritage Assets.
+ * @copyright   Copyright (C) 2005 - 2020 Joomlashack. All rights reserved.
  *              All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
