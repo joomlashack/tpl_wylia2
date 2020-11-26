@@ -2546,9 +2546,9 @@ input.hikashop_product_quantity_field {
 
 			form {
 			  margin: 0 auto;
-              display: block;
               min-width: 170px;
               width: 170px;
+              display: table;
 			}
 		}
 	}
@@ -2793,6 +2793,25 @@ select[id*="limit_hikashop_category_information_menu_"] {
     .btn {
       float: left;
       margin-top: 1px;
+    }
+  }
+}
+
+table.hikashop_cart {
+    
+  thead tr th {
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  
+  tfoot,
+  tbody {
+    
+    tr td {
+      border-top: 1px solid @grayLighter;
+      padding-top: 5px;
+      padding-bottom: 5px;
     }
   }
 }
