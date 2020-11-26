@@ -2513,6 +2513,7 @@ input.hikashop_product_quantity_field {
 	display: table-cell;
 	width: 16px;
 	text-align: center;
+    line-height: 10px;
 
 	&:hover,
 	&:active,
@@ -2544,7 +2545,10 @@ input.hikashop_product_quantity_field {
 			.box-sizing(border-box);
 
 			form {
-				margin: 0;
+			  margin: 0 auto;
+              display: block;
+              min-width: 170px;
+              width: 170px;
 			}
 		}
 	}
@@ -2760,6 +2764,37 @@ select[id*="limit_hikashop_category_information_menu_"] {
 	.hikashop_product_price {
 		font-size: @baseFontSize * 2;
 	}
+    
+  [name="hikashop_product_form"] {
+    
+    table {
+      width: 67px;
+      float: left;
+      margin-right: 8px;
+    }
+    
+    .btn {
+      float: left;
+      margin-top: 1px;
+    }
+  }
+}
+
+.hikashop_products_listing {
+  
+  [name*="hikashop_product_form_"] {
+    
+    table {
+      width: 67px;
+      float: left;
+      margin-right: 8px;
+    }
+    
+    .btn {
+      float: left;
+      margin-top: 1px;
+    }
+  }
 }
 
 body.contentpane {
